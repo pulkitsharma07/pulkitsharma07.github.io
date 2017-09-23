@@ -35,7 +35,6 @@ if [ -d "$BUILD_DIR" ]; then
       if git push origin master; then
         echo "DEPLOYED SUCCESSFULLY !"
         echo $(basename $(git remote show -n origin | grep Fetch | cut -d: -f2-))
-        git checkout $CURRENT_BRANCH
       else
         echo "DEPLOY FAILED !"
       fi
@@ -46,3 +45,5 @@ if [ -d "$BUILD_DIR" ]; then
 else
     echo "JEKYLL: BUILD FAILURE"
 fi
+
+git checkout $CURRENT_BRANCH
