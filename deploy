@@ -1,0 +1,28 @@
+#! /bin/sh
+set -x
+
+BUILD_DIR="./_site"
+
+# Delete old build files if any
+rm -rf $BUILD_DIR
+
+# Build
+bundle exec jekyll build
+
+#If Build succeeds
+if [ -d "$BUILD_DIR" ]; then
+    echo "BUILD SUCCESS"
+
+    # Move BUILD_DIR to /tmp
+    mv $BUILD_DIR /tmp/jekyll_build
+
+    # Change branch to master
+    if git checkout master; then
+      echo "SUCCESSFULLY SWITCHED TO MASTER"
+    else
+      echo "CANNOT SWITCH BRANCH, ABORTING"
+    fi
+
+else
+    echo "BUILD FAILURE"
+fi
