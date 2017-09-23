@@ -14,6 +14,7 @@ bundle exec jekyll build
 # If Build succeeds
 if [ -d "$BUILD_DIR" ]; then
     echo "JEKYLL: BUILD SUCCESS"
+    rm -r $TMP_DIR
 
     # Move BUILD_DIR to /tmp
     mv $BUILD_DIR $TMP_DIR
