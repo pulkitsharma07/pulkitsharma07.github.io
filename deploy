@@ -3,6 +3,7 @@
 
 BUILD_DIR="./_site"
 TMP_DIR="/tmp/jekyll_build"
+CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
 # Delete old build files if any
 rm -rf $BUILD_DIR
@@ -33,6 +34,7 @@ if [ -d "$BUILD_DIR" ]; then
       if git push origin master; then
         echo "DEPLOYED SUCCESSFULLY !"
         echo $(basename $(git remote show -n origin | grep Fetch | cut -d: -f2-))
+        git checkout $CURRENT_BRANCH
       else
         echo "DEPLOY FAILED !"
       fi
