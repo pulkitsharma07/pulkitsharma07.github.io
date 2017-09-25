@@ -56,3 +56,5 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - deploy
+
+comments: true

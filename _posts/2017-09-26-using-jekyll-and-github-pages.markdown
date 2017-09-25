@@ -11,7 +11,7 @@ After reading numerous posts online for using Jekyll and Github Pages together, 
 * Github Pages does not supports all of the Jekyll Gem-based themes.
 * The ones [supported](https://pages.github.com/themes/) by Github are not exactly blog like.
 
-### I am lazy and wanted a easy way of getting the blog up and running with minimal efforts.
+### I am lazy and wanted an easy way of getting the blog up and running with minimal efforts.
 
 After spending considerable amount of time looking for a perfect theme (And giving up numerous times). I decided to go the basic whiteglass theme. It has support for Disqus comments and some other SEO stuff. I didn't want to spend time figuring stuff out, so I went ahead with it.
 
