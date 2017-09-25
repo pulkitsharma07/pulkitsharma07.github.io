@@ -6,7 +6,7 @@ permalink: /about/
 
 ## About me
 Hi, Pulkit here. It is 12:23 AM on 26th September 2017, a Monday.
-At the current point in life the only worthwhile thing I can tell of is that I am employed as a Software Engineer at [BrowserStack](http://www.browserstack.com). You can know more about things that I work on everyday on my [LinkedIn](https://www.linkedin.com/in/pulkitsharma07/) profile.
+I am currently employed as a Software Engineer at [BrowserStack](http://www.browserstack.com). You can know more about things that I work on everyday on my [LinkedIn](https://www.linkedin.com/in/pulkitsharma07/) profile.
 Also, I like to headbang when I am alone.
 
 ## About this Blog
