@@ -5,7 +5,7 @@
   
   <link href="https://pulkitsharma07.github.io/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://pulkitsharma07.github.io/" rel="alternate" type="text/html" />
-  <updated>2017-09-25T14:14:26+05:30</updated>
+  <updated>2017-09-26T01:39:22+05:30</updated>
   <id>https://pulkitsharma07.github.io//</id>
 
   
@@ -23,25 +23,96 @@
   
     <entry>
       
-      <title type="html">Welcome to Jekyll!</title>
+      <title type="html">Using Jekyll and Github Pages (in 2017)</title>
       
-      <link href="https://pulkitsharma07.github.io/2017/09/23/welcome-to-jekyll/" rel="alternate" type="text/html" title="Welcome to Jekyll!" />
+      <link href="https://pulkitsharma07.github.io/2017/09/23/using-jekyll-and-github-pages/" rel="alternate" type="text/html" title="Using Jekyll and Github Pages (in 2017)" />
       <published>2017-09-23T18:43:34+05:30</published>
       <updated>2017-09-23T18:43:34+05:30</updated>
-      <id>https://pulkitsharma07.github.io/2017/09/23/welcome-to-jekyll</id>
-      <content type="html" xml:base="https://pulkitsharma07.github.io/2017/09/23/welcome-to-jekyll/">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+      <id>https://pulkitsharma07.github.io/2017/09/23/using-jekyll-and-github-pages</id>
+      <content type="html" xml:base="https://pulkitsharma07.github.io/2017/09/23/using-jekyll-and-github-pages/">&lt;p&gt;After reading numerous posts online for using Jekyll and Github Pages together, I faced couple of issues. Lets take a look and see how I addressed some of them.&lt;/p&gt;
 
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Jekyll 3 now recommends using Gem-based themes. I was not able to find themes other than the ones mentioned &lt;a href=&quot;https://github.com/planetjekyll/awesome-jekyll-themes&quot;&gt;here&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Github Pages does not supports all of the Jekyll Gem-based themes.&lt;/li&gt;
+  &lt;li&gt;The ones &lt;a href=&quot;https://pages.github.com/themes/&quot;&gt;supported&lt;/a&gt; by Github are not exactly blog like.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;h3 id=&quot;i-am-lazy-and-wanted-a-easy-way-of-getting-the-blog-up-and-running-with-minimal-efforts&quot;&gt;I am lazy and wanted a easy way of getting the blog up and running with minimal efforts.&lt;/h3&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;After spending considerable amount of time looking for a perfect theme (And giving up numerous times). I decided to go the basic whiteglass theme. It has support for Disqus comments and some other SEO stuff. I didn’t want to spend time figuring stuff out, so I went ahead with it.&lt;/p&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content>
+&lt;p&gt;I cloned the repo and had the blog running locally, it was time to push to my &lt;code class=&quot;highlighter-rouge&quot;&gt;.github.io&lt;/code&gt; repo. After, refreshing 3-4 times all I was staring at was a blank white screen. Soon, I got a mail from Github regarding a build warning.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;You are attempting to use a Jekyll theme, “jekyll-whiteglass”, which is not supported by GitHub Pages&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;the-fix&quot;&gt;The Fix&lt;/h2&gt;
+
+&lt;p&gt;Instead of serving a Jekyll Project directly from the &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; branch of the &lt;code class=&quot;highlighter-rouge&quot;&gt;github.io&lt;/code&gt; repository, we can instead serve the static files generated from the &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll build&lt;/code&gt; command, i.e. the contents of the &lt;code class=&quot;highlighter-rouge&quot;&gt;_site&lt;/code&gt; directory.
+This way, we will remove dependency on Github Pages to build the Jekyll Project, instead it will only serve the static pages.&lt;/p&gt;
+
+&lt;p&gt;Since, the &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; branch will have the “built” website, where should we store the actual Jekyll Project ?&lt;/p&gt;
+
+&lt;p&gt;In my case I have stored it in the &lt;code class=&quot;highlighter-rouge&quot;&gt;development&lt;/code&gt; branch inside the same repository. I will work on the blog in this branch and will push the built website to the &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; branch. I have seen some repositories where people have written Travis jobs to do this exact thing. I feel that is an overkill, a slow process and downright exploitation of a free service. Please correct me I am wrong.&lt;/p&gt;
+
+&lt;p&gt;I have written a small shell script which will build the website and push the changes to the &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; branch. Here it is:&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#! /bin/sh&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;BUILD_DIR&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;./_site&quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;TMP_DIR&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/tmp/jekyll_build&quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;CURRENT_BRANCH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;git rev-parse --abbrev-ref HEAD&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Delete old build files if any&lt;/span&gt;
+rm -rf &lt;span class=&quot;nv&quot;&gt;$BUILD_DIR&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Build&lt;/span&gt;
+bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll build
+
+&lt;span class=&quot;c&quot;&gt;# If Build succeeds&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; -d &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$BUILD_DIR&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;; &lt;span class=&quot;k&quot;&gt;then
+    &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;JEKYLL: BUILD SUCCESS&quot;&lt;/span&gt;
+    rm -r &lt;span class=&quot;nv&quot;&gt;$TMP_DIR&lt;/span&gt;
+
+    &lt;span class=&quot;c&quot;&gt;# Move BUILD_DIR to /tmp&lt;/span&gt;
+    mv &lt;span class=&quot;nv&quot;&gt;$BUILD_DIR&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$TMP_DIR&lt;/span&gt;
+
+    &lt;span class=&quot;c&quot;&gt;# Change branch to master&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if &lt;/span&gt;git checkout master; &lt;span class=&quot;k&quot;&gt;then
+      &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;SUCCESSFULLY SWITCHED TO MASTER&quot;&lt;/span&gt;
+
+      &lt;span class=&quot;c&quot;&gt;# Cleanup&lt;/span&gt;
+      ls | xargs rm -r
+
+      &lt;span class=&quot;c&quot;&gt;# Get the build&lt;/span&gt;
+      mv &lt;span class=&quot;nv&quot;&gt;$TMP_DIR&lt;/span&gt;/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; .
+
+      &lt;span class=&quot;c&quot;&gt;# Commit&lt;/span&gt;
+      git add .
+      git commit -m &lt;span class=&quot;s2&quot;&gt;&quot;Deploy &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;date&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;if &lt;/span&gt;git push origin master; &lt;span class=&quot;k&quot;&gt;then
+        &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;DEPLOYED SUCCESSFULLY !&quot;&lt;/span&gt;
+        &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;basename &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;git remote show -n origin | grep Fetch | cut -d: -f2-&lt;span class=&quot;k&quot;&gt;))&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;else
+        &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;DEPLOY FAILED !&quot;&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;fi
+    else
+      &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;CANNOT SWITCH BRANCH, ABORTING&quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;fi
+
+else
+    &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;JEKYLL: BUILD FAILURE&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;fi
+
+&lt;/span&gt;git checkout &lt;span class=&quot;nv&quot;&gt;$CURRENT_BRANCH&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;This script lives in the &lt;code class=&quot;highlighter-rouge&quot;&gt;development&lt;/code&gt; branch.&lt;/p&gt;
+
+&lt;p&gt;After I am done doing my changes to the blog. I push it to &lt;code class=&quot;highlighter-rouge&quot;&gt;development&lt;/code&gt;, and then do &lt;code class=&quot;highlighter-rouge&quot;&gt;./deploy&lt;/code&gt;. The script will then make a new commit on &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; having your latest masterpiece.&lt;/p&gt;
+
+&lt;p&gt;Enjoy !&lt;/p&gt;
+
+&lt;p&gt;First  post , Yooo !&lt;/p&gt;</content>
 
       
       
@@ -54,13 +125,15 @@
       
         <category term="jekyll" />
       
-        <category term="update" />
+        <category term="blog" />
+      
+        <category term="github" />
       
 
       
 
       
-        <summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary>
+        <summary type="html">After reading numerous posts online for using Jekyll and Github Pages together, I faced couple of issues. Lets take a look and see how I addressed some of them.</summary>
       
 
       

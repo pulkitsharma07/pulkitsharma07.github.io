@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  
+  
+  <title>Using Jekyll and Github Pages (in 2017)</title>
+  <meta name="description" content="After reading numerous posts online for using Jekyll and Github Pages together, I faced couple of issues. Lets take a look and see how I addressed some of them.">
+  
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://pulkitsharma07.github.io/2017/09/23/using-jekyll-and-github-pages/">
+  
+  
+  <link rel="alternate" type="application/rss+xml" title="Pulkit Sharma" href="https://pulkitsharma07.github.io/feed.xml">
+
+  
+
+  
+  <meta name="twitter:card" content="summary">
+  
+  <meta name="twitter:title" content="Using Jekyll and Github Pages (in 2017)">
+  <meta name="twitter:description" content="After reading numerous posts online for using Jekyll and Github Pages together, I faced couple of issues. Lets take a look and see how I addressed some of them.">
+  
+  
+
+  <script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Bitter:400,700,400italic:latin' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
+</script>
+
+  
+
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Pulkit Sharma</a>
+
+    <nav class="site-nav">
+      
+        
+        <a class="page-link" href="/about/">About</a>
+      
+        
+        <a class="page-link" href="/archives/">Archives</a>
+      
+        
+        <a class="page-link" href="https://www.github.com/pulkitsharma07">GitHub</a>
+      
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    
+      <h1 class="post-title" itemprop="name headline">Using Jekyll and Github Pages (in 2017)</h1>
+    
+    <p class="post-meta"><time datetime="2017-09-23T18:43:34+05:30" itemprop="datePublished">Sep 23, 2017</time> • 
+  
+  
+    
+      <a href="/categories/jekyll/">jekyll</a>,
+    
+  
+    
+  
+    
+  
+
+  
+  
+    
+  
+    
+      <a href="/categories/blog/">blog</a>,
+    
+  
+    
+  
+
+  
+  
+    
+  
+    
+  
+    
+      <a href="/categories/github/">github</a>
+    
+  
+
+</p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>After reading numerous posts online for using Jekyll and Github Pages together, I faced couple of issues. Lets take a look and see how I addressed some of them.</p>
+
+<ul>
+  <li>Jekyll 3 now recommends using Gem-based themes. I was not able to find themes other than the ones mentioned <a href="https://github.com/planetjekyll/awesome-jekyll-themes">here</a>.</li>
+  <li>Github Pages does not supports all of the Jekyll Gem-based themes.</li>
+  <li>The ones <a href="https://pages.github.com/themes/">supported</a> by Github are not exactly blog like.</li>
+</ul>
+
+<h3 id="i-am-lazy-and-wanted-a-easy-way-of-getting-the-blog-up-and-running-with-minimal-efforts">I am lazy and wanted a easy way of getting the blog up and running with minimal efforts.</h3>
+
+<p>After spending considerable amount of time looking for a perfect theme (And giving up numerous times). I decided to go the basic whiteglass theme. It has support for Disqus comments and some other SEO stuff. I didn’t want to spend time figuring stuff out, so I went ahead with it.</p>
+
+<p>I cloned the repo and had the blog running locally, it was time to push to my <code class="highlighter-rouge">.github.io</code> repo. After, refreshing 3-4 times all I was staring at was a blank white screen. Soon, I got a mail from Github regarding a build warning.</p>
+
+<p><em>You are attempting to use a Jekyll theme, “jekyll-whiteglass”, which is not supported by GitHub Pages</em></p>
+
+<h2 id="the-fix">The Fix</h2>
+
+<p>Instead of serving a Jekyll Project directly from the <code class="highlighter-rouge">master</code> branch of the <code class="highlighter-rouge">github.io</code> repository, we can instead serve the static files generated from the <code class="highlighter-rouge">jekyll build</code> command, i.e. the contents of the <code class="highlighter-rouge">_site</code> directory.
+This way, we will remove dependency on Github Pages to build the Jekyll Project, instead it will only serve the static pages.</p>
+
+<p>Since, the <code class="highlighter-rouge">master</code> branch will have the “built” website, where should we store the actual Jekyll Project ?</p>
+
+<p>In my case I have stored it in the <code class="highlighter-rouge">development</code> branch inside the same repository. I will work on the blog in this branch and will push the built website to the <code class="highlighter-rouge">master</code> branch. I have seen some repositories where people have written Travis jobs to do this exact thing. I feel that is an overkill, a slow process and downright exploitation of a free service. Please correct me I am wrong.</p>
+
+<p>I have written a small shell script which will build the website and push the changes to the <code class="highlighter-rouge">master</code> branch. Here it is:</p>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="c">#! /bin/sh</span>
+
+<span class="nv">BUILD_DIR</span><span class="o">=</span><span class="s2">"./_site"</span>
+<span class="nv">TMP_DIR</span><span class="o">=</span><span class="s2">"/tmp/jekyll_build"</span>
+<span class="nv">CURRENT_BRANCH</span><span class="o">=</span><span class="k">$(</span>git rev-parse --abbrev-ref HEAD<span class="k">)</span>
+
+<span class="c"># Delete old build files if any</span>
+rm -rf <span class="nv">$BUILD_DIR</span>
+
+<span class="c"># Build</span>
+bundle <span class="nb">exec </span>jekyll build
+
+<span class="c"># If Build succeeds</span>
+<span class="k">if</span> <span class="o">[</span> -d <span class="s2">"</span><span class="nv">$BUILD_DIR</span><span class="s2">"</span> <span class="o">]</span>; <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"JEKYLL: BUILD SUCCESS"</span>
+    rm -r <span class="nv">$TMP_DIR</span>
+
+    <span class="c"># Move BUILD_DIR to /tmp</span>
+    mv <span class="nv">$BUILD_DIR</span> <span class="nv">$TMP_DIR</span>
+
+    <span class="c"># Change branch to master</span>
+    <span class="k">if </span>git checkout master; <span class="k">then
+      </span><span class="nb">echo</span> <span class="s2">"SUCCESSFULLY SWITCHED TO MASTER"</span>
+
+      <span class="c"># Cleanup</span>
+      ls | xargs rm -r
+
+      <span class="c"># Get the build</span>
+      mv <span class="nv">$TMP_DIR</span>/<span class="k">*</span> .
+
+      <span class="c"># Commit</span>
+      git add .
+      git commit -m <span class="s2">"Deploy </span><span class="k">$(</span>date<span class="k">)</span><span class="s2">"</span>
+      <span class="k">if </span>git push origin master; <span class="k">then
+        </span><span class="nb">echo</span> <span class="s2">"DEPLOYED SUCCESSFULLY !"</span>
+        <span class="nb">echo</span> <span class="k">$(</span>basename <span class="k">$(</span>git remote show -n origin | grep Fetch | cut -d: -f2-<span class="k">))</span>
+      <span class="k">else
+        </span><span class="nb">echo</span> <span class="s2">"DEPLOY FAILED !"</span>
+      <span class="k">fi
+    else
+      </span><span class="nb">echo</span> <span class="s2">"CANNOT SWITCH BRANCH, ABORTING"</span>
+    <span class="k">fi
+
+else
+    </span><span class="nb">echo</span> <span class="s2">"JEKYLL: BUILD FAILURE"</span>
+<span class="k">fi
+
+</span>git checkout <span class="nv">$CURRENT_BRANCH</span>
+</code></pre>
+</div>
+<p>This script lives in the <code class="highlighter-rouge">development</code> branch.</p>
+
+<p>After I am done doing my changes to the blog. I push it to <code class="highlighter-rouge">development</code>, and then do <code class="highlighter-rouge">./deploy</code>. The script will then make a new commit on <code class="highlighter-rouge">master</code> having your latest masterpiece.</p>
+
+<p>Enjoy !</p>
+
+<p>First  post , Yooo !</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <p>
+      
+
+&copy;  - Powered by <a href="https://jekyllrb.com">Jekyll</a> &amp; <a href="https://github.com/yous/whiteglass">whiteglass</a> - Subscribe via <a href="https://pulkitsharma07.github.io/feed.xml">RSS</a>
+
+    </p>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
