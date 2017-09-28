@@ -89,3 +89,5 @@ This is because most of the theme related code is now inside the gem's directory
 
 Gem based themes are good for people who are new to Jekyll and do not wish to modify the themes they use. Since, most of the theme related code is now present in some other directory, users will not be overwhelmed from the directory structure when they do `jekyll new`.
 But sooner or later, you'll need to make some changes to the theme (changing the font size for example). Doing those changes in some other directory and not inside version control is pretty cumbersome and will hurt in the future.
+
+**UPDATE**: Found out this [https://jekyllrb.com/docs/themes/#converting-gem-based-themes-to-regular-themes](https://jekyllrb.com/docs/themes/#converting-gem-based-themes-to-regular-themes), this will make your git repo to have all the code ! But then, what is the point of gem-based themes ?
