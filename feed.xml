@@ -5,7 +5,7 @@
   
   <link href="https://pulkitsharma07.github.io/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://pulkitsharma07.github.io/" rel="alternate" type="text/html" />
-  <updated>2017-09-28T00:02:13+05:30</updated>
+  <updated>2017-09-28T10:57:15+05:30</updated>
   <id>https://pulkitsharma07.github.io//</id>
 
   
@@ -33,13 +33,10 @@
 
 &lt;ul&gt;
   &lt;li&gt;Jekyll 3 now recommends using Gem-based themes. I was not able to find themes other than the ones mentioned &lt;a href=&quot;https://github.com/planetjekyll/awesome-jekyll-themes&quot;&gt;here&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;Github Pages does not supports all of the Jekyll Gem-based themes.&lt;/li&gt;
   &lt;li&gt;The ones &lt;a href=&quot;https://pages.github.com/themes/&quot;&gt;supported&lt;/a&gt; by Github are not exactly blog like.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;i-am-lazy-and-wanted-an-easy-way-of-getting-the-blog-up-and-running-with-minimal-efforts&quot;&gt;I am lazy and wanted an easy way of getting the blog up and running with minimal efforts.&lt;/h3&gt;
-
-&lt;p&gt;After spending considerable amount of time looking for a perfect theme (And giving up numerous times). I decided to go the basic whiteglass theme. It has support for Disqus comments and some other SEO stuff. I didn’t want to spend time figuring stuff out, so I went ahead with it.&lt;/p&gt;
+&lt;p&gt;After spending considerable amount of time looking for a perfect theme (And giving up numerous times). I decided to go with the &lt;code class=&quot;highlighter-rouge&quot;&gt;whiteglass&lt;/code&gt; theme.&lt;/p&gt;
 
 &lt;p&gt;I cloned the repo and had the blog running locally, it was time to push to my &lt;code class=&quot;highlighter-rouge&quot;&gt;.github.io&lt;/code&gt; repo. After, refreshing 3-4 times all I was staring at was a blank white screen. Soon, I got a mail from Github regarding a build warning.&lt;/p&gt;
 
@@ -52,7 +49,7 @@ This way, we will remove dependency on Github Pages to build the Jekyll Project,
 
 &lt;p&gt;Since, the &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; branch will have the “built” website, where should we store the actual Jekyll Project ?&lt;/p&gt;
 
-&lt;p&gt;In my case I have stored it in the &lt;code class=&quot;highlighter-rouge&quot;&gt;development&lt;/code&gt; branch inside the same repository. I will work on the blog in this branch and will push the built website to the &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; branch. I have seen some repositories where people have written Travis jobs to do this exact thing. I feel that is an overkill, a slow process and downright exploitation of a free service. Please correct me I am wrong.&lt;/p&gt;
+&lt;p&gt;In my case I have stored it in the &lt;code class=&quot;highlighter-rouge&quot;&gt;development&lt;/code&gt; branch inside the same repository. I will work on the blog in this branch and will push the built website to the &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; branch. I have seen some repositories where people have written Travis jobs to do this exact thing. I feel that is an overkill, a slow process and downright exploitation of a free service. Please correct me if I am wrong.&lt;/p&gt;
 
 &lt;p&gt;I have written a small shell script which will build the website and push the changes to the &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; branch. Here it is:&lt;/p&gt;
 
@@ -108,11 +105,16 @@ else
 &lt;/div&gt;
 &lt;p&gt;This script lives in the &lt;code class=&quot;highlighter-rouge&quot;&gt;development&lt;/code&gt; branch.&lt;/p&gt;
 
-&lt;p&gt;After I am done doing my changes to the blog. I push it to &lt;code class=&quot;highlighter-rouge&quot;&gt;development&lt;/code&gt;, and then do &lt;code class=&quot;highlighter-rouge&quot;&gt;./deploy&lt;/code&gt;. The script will then make a new commit on &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; having your latest masterpiece.&lt;/p&gt;
+&lt;p&gt;After I am done doing my changes to the blog. I push them to the &lt;code class=&quot;highlighter-rouge&quot;&gt;development&lt;/code&gt; branch, and then do &lt;code class=&quot;highlighter-rouge&quot;&gt;./deploy&lt;/code&gt;. The script will then make a new commit on &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; having your latest masterpiece.&lt;/p&gt;
 
-&lt;p&gt;Enjoy !&lt;/p&gt;
+&lt;h2 id=&quot;why-i-dont-like-the-gem-based-themes&quot;&gt;Why I don’t like the gem based themes.&lt;/h2&gt;
 
-&lt;p&gt;First  post , Yooo !&lt;/p&gt;</content>
+&lt;p&gt;I have added the &lt;code class=&quot;highlighter-rouge&quot;&gt;deploy&lt;/code&gt; script as a post-commit hook, but unfortunately some changes do not require a commit.&lt;/p&gt;
+
+&lt;p&gt;This is because most of the theme related code is now inside the gem’s directory (i.e. not inside my git repo). So, say If I want to change the Google Analytics tracking script, then I’ll need to do the changes in the &lt;code class=&quot;highlighter-rouge&quot;&gt;google_analytics.html&lt;/code&gt; file. Since, this file is inside the gem’s directory (in my case at &lt;code class=&quot;highlighter-rouge&quot;&gt;/Users/pulkit/.rvm/gems/ruby-2.2.5/gems/jekyll-whiteglass-1.3.0/_includes/&lt;/code&gt;), I cannot make a commit on &lt;code class=&quot;highlighter-rouge&quot;&gt;development&lt;/code&gt; to reflect this change.&lt;/p&gt;
+
+&lt;p&gt;Gem based themes are good for people who are new to Jekyll and do not wish to modify the themes they use. Since, most of the theme related code is now present in some other directory, users will not be overwhelmed from the directory structure when they do &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll new&lt;/code&gt;.
+But sooner or later, you’ll need to make some changes to the theme (changing the font size for example). Doing those changes in some other directory and not inside version control is pretty cumbersome and will hurt in the future.&lt;/p&gt;</content>
 
       
       
