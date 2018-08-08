@@ -5,9 +5,9 @@ date:   2018-08-09 03:30:00 +0530
 categories: shell vim learning
 ---
 
-Before I joined my job, I has been a heavy Windows user. Apart from the "UNIX Programming" course in college, I had barely used any of the shell commands.
+Before I joined my job, I had been a heavy Windows user. Apart from the "UNIX Programming" course in college, I had barely used any of the shell commands.
 
-In the initial days of the job, in order to run a previously executed shell command, I used to press the up arrow on the keyboard till I could find a particular command and I really thought it was a *cool* way to execute previously executed commands..And boy was I wrong :-)
+In the initial days of the job, in order to run a previously executed shell command, I used to press the up arrow key on the keyboard to search for it.
 
 ## Shell Reverse Search
 
