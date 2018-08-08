@@ -5,7 +5,7 @@
   
   <link href="https://pulkitsharma07.github.io/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://pulkitsharma07.github.io/" rel="alternate" type="text/html" />
-  <updated>2018-06-17T10:11:07+05:30</updated>
+  <updated>2018-08-09T03:56:12+05:30</updated>
   <id>https://pulkitsharma07.github.io//</id>
 
   
@@ -19,6 +19,123 @@
 
   
 
+  
+  
+    <entry>
+      
+      <title type="html">Managing Shell Commands</title>
+      
+      <link href="https://pulkitsharma07.github.io/2018/08/09/managing-shell-commands/" rel="alternate" type="text/html" title="Managing Shell Commands" />
+      <published>2018-08-09T03:30:00+05:30</published>
+      <updated>2018-08-09T03:30:00+05:30</updated>
+      <id>https://pulkitsharma07.github.io/2018/08/09/managing-shell-commands</id>
+      <content type="html" xml:base="https://pulkitsharma07.github.io/2018/08/09/managing-shell-commands/">&lt;p&gt;Before I joined my job, I has been a heavy Windows user. Apart from the “UNIX Programming” course in college, I had barely used any of the shell commands.&lt;/p&gt;
+
+&lt;p&gt;In the initial days of the job, in order to run a previously executed shell command, I used to press the up arrow on the keyboard till I could find a particular command and I really thought it was a &lt;em&gt;cool&lt;/em&gt; way to execute previously executed commands..And boy was I wrong :-)&lt;/p&gt;
+
+&lt;h2 id=&quot;shell-reverse-search&quot;&gt;Shell Reverse Search&lt;/h2&gt;
+
+&lt;p&gt;Turns out there is a neat way to search through your previously executed shell commands (All executed commands are stored in the bash history, for &lt;code class=&quot;highlighter-rouge&quot;&gt;zsh&lt;/code&gt; it is the &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.zsh_history&lt;/code&gt; file).
+All you have to do is press &lt;kbd&gt;CTRL&lt;/kbd&gt;+&lt;kbd&gt;r&lt;/kbd&gt; and then type some parts of the commands that you can recall.&lt;/p&gt;
+
+&lt;p&gt;For instance, if I know that sometime back, I had used a command to figure out the role of a particular Redis instance. Then all I have to do is &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;ctrl-r&amp;gt;role&lt;/code&gt; and the desired command while appear automagically !! (Keep pressing &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;ctrl-r&amp;gt;&lt;/code&gt; to cycle through the results)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/casts/reverse_search.svg&quot; alt=&quot;reverse-search&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;aliases&quot;&gt;Aliases&lt;/h2&gt;
+
+&lt;p&gt;One day, I was looking at my co-worker’s laptop while he was debugging some issue, and he started typing mysterious commands in the terminal like &lt;code class=&quot;highlighter-rouge&quot;&gt;gco master&lt;/code&gt;.
+Turns out &lt;code class=&quot;highlighter-rouge&quot;&gt;zsh&lt;/code&gt; comes with a set of &lt;code class=&quot;highlighter-rouge&quot;&gt;aliases&lt;/code&gt;, which are like shortcuts to entire shell commands.&lt;code class=&quot;highlighter-rouge&quot;&gt;gco&lt;/code&gt; is an alias for &lt;code class=&quot;highlighter-rouge&quot;&gt;git checkout&lt;/code&gt;. If you feel that there is a command that you need frequently, it is a good idea to make an alias for it. This avoids typing the entire command, and you can always reverse search for the alias, as it should be easy to remember.&lt;/p&gt;
+
+&lt;p&gt;To see existing aliases, you can run &lt;code class=&quot;highlighter-rouge&quot;&gt;alias -L&lt;/code&gt;. Creating a new alias is as simple as adding&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;ping_redis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'redis-cli -h 100.100.100.100 ping'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;to your rc file (For &lt;code class=&quot;highlighter-rouge&quot;&gt;zsh&lt;/code&gt; it is primarily &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.zshrc&lt;/code&gt;).&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;As you keep using the terminal, it may happen that you need some commands which are infrequently used but are important. For example one time configuration commands, installation steps, or some important queries to your database.&lt;/p&gt;
+
+&lt;p&gt;Making an alias does not make sense for each of these commands as they are not frequently used and you’ll get overloaded with aliases to remember. Reverse search might not work if you don’t remember any part of the command (or the bash history file got deleted/truncated).&lt;/p&gt;
+
+&lt;p&gt;I often found out that I had important commands scattered in different documents. Some of them might be in the OS X Notes app, some in an always running Sublime Text window or some found out by grepping &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.zsh_history&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Once, I would’ve found the command; the next step was to copy, go to the terminal window, paste and execute that command.&lt;/p&gt;
+
+&lt;h2 id=&quot;vim&quot;&gt;Vim&lt;/h2&gt;
+&lt;p&gt;Why not use Vim?&lt;/p&gt;
+
+&lt;p&gt;For me, I keep a &lt;code class=&quot;highlighter-rouge&quot;&gt;commands.sh&lt;/code&gt; file to take notes regarding all the important commands and use a handy little setting in the vimrc file to execute those commands from the file itself. Check out the demo…&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/casts/commands_vim_demo.svg&quot; alt=&quot;commands-demo-vim&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can select the appropriate shell command in &lt;code class=&quot;highlighter-rouge&quot;&gt;visual&lt;/code&gt; mode and run them by pressing &lt;code class=&quot;highlighter-rouge&quot;&gt;r&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Here are the appropriate vimrc settings for &lt;code class=&quot;highlighter-rouge&quot;&gt;zsh&lt;/code&gt;. I had to do some digging on StackOverflow to get it to load my aliases.&lt;/p&gt;
+
+&lt;div class=&quot;language-vim highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;shell&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;zsh
+vnoremap &lt;span class=&quot;k&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'&amp;lt;,'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;w&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;!&lt;/span&gt;zsh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;You need to ensure that your aliases are in &lt;code class=&quot;highlighter-rouge&quot;&gt;.zshenv&lt;/code&gt;, or you can make &lt;code class=&quot;highlighter-rouge&quot;&gt;.zshenv&lt;/code&gt; a symlink to &lt;code class=&quot;highlighter-rouge&quot;&gt;.zshrc&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Keeping the shell commands in &lt;code class=&quot;highlighter-rouge&quot;&gt;commands.sh&lt;/code&gt; will allow you to write commands that you can later automate.
+For instance, if you repeatedly SSH into a machine to run something in the Rails console, you can keep the following in your &lt;code class=&quot;highlighter-rouge&quot;&gt;commands.sh&lt;/code&gt; file instead:&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh -t 100.100.100.100 &lt;span class=&quot;s2&quot;&gt;&quot;cd /some/dir/rails/;bundle exec rails console staging &amp;lt;&amp;lt;&amp;lt; 'Trash.delete_all'&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;What are your thoughts? How do you manage the growing set of commands you work with?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;A neat way I found out today was to use comments to tag shell commands.
+For example:&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;find . -name &lt;span class=&quot;s2&quot;&gt;&quot;*sh&quot;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#find shell scripts&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Once you execute the above, you can reverse search by doing &lt;code class=&quot;highlighter-rouge&quot;&gt;find shell scripts&lt;/code&gt;.
+Sweet!&lt;/p&gt;
+
+&lt;h3 id=&quot;helpful-resources&quot;&gt;Helpful Resources:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/2575545/vim-pipe-selected-text-to-shell-cmd-and-receive-output-on-vim-info-command-line/5373376#5373376&quot;&gt;https://stackoverflow.com/questions/2575545/vim-pipe-selected-text-to-shell-cmd-and-receive-output-on-vim-info-command-line/5373376#5373376&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://unix.stackexchange.com/questions/113462/how-can-i-make-shell-aliases-available-when-shelling-out-from-vim/197135#197135&quot;&gt;https://unix.stackexchange.com/questions/113462/how-can-i-make-shell-aliases-available-when-shelling-out-from-vim/197135#197135&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://unix.stackexchange.com/questions/26245/how-to-quickly-store-and-access-often-used-commands/26263#26263&quot;&gt;https://unix.stackexchange.com/questions/26245/how-to-quickly-store-and-access-often-used-commands/26263#26263&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      
+
+      
+        <category term="shell" />
+      
+        <category term="vim" />
+      
+        <category term="learning" />
+      
+
+      
+
+      
+        <summary type="html">Before I joined my job, I has been a heavy Windows user. Apart from the “UNIX Programming” course in college, I had barely used any of the shell commands.</summary>
+      
+
+      
+      
+    </entry>
+  
   
   
     <entry>
