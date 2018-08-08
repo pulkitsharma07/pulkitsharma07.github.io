@@ -75,7 +75,7 @@ A neat way I found out today was to use comments to tag shell commands.
 For example:
 
 ```sh
-find . -name "*sh" #find shell scripts
+find . -name "*.sh" #find shell scripts
 ```
 
 Once you execute the above, you can reverse search by doing `find shell scripts`.
