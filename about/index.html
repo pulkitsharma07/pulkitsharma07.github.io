@@ -30,19 +30,32 @@
   
 
   <script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Bitter:400,700,400italic:latin' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
 </script>
 
   
   <!-- Google Analytics -->
-<!-- Global Site Tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107105922-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments)};
-  gtag('js', new Date());
-  gtag('config', 'UA-107105922-1');
-</script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+    ga('create', 'UA-107105922-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
 
 
 </head>
@@ -85,7 +98,6 @@
   <div class="post-content">
     <h2 id="about-me">About me</h2>
 <p>Hi, Pulkit here. It is 12:23 AM on 26th September 2017, a Monday.
-I am currently employed as a Software Engineer at <a href="http://www.browserstack.com">BrowserStack</a>. You can know more about things that I work on everyday on my <a href="https://www.linkedin.com/in/pulkitsharma07/">LinkedIn</a> profile.
 Also, I like to headbang when I am alone.</p>
 
 <h2 id="about-this-blog">About this Blog</h2>
