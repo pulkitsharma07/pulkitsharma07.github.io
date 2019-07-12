@@ -46,4 +46,4 @@ else
     echo "JEKYLL: BUILD FAILURE"
 fi
 
-git checkout $CURRENT_BRANCH
+git checkout $CURRENT_BRANCH --force
