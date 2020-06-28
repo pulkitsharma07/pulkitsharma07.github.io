@@ -56,3 +56,5 @@ I believe these questions are completely valid, and I will talk about them later
 * [Evolution of Modern Human Brain Shape](https://advances.sciencemag.org/content/4/1/eaao5961#:~:text=Our%20data%20show%20that%2C%20300%2C000,100%2C000%20and%2035%2C000%20years%20ago.)
 * [Wikipedia: Indian Philosophy](https://en.wikipedia.org/wiki/Indian_philosophy)
 * [Wikipedia: Life Expectancy](https://en.wikipedia.org/wiki/Life_expectancy)
+
+> Next post in continuation of this: [Source [1] - Bubbles]({% post_url 2020-06-28-source-1 %})

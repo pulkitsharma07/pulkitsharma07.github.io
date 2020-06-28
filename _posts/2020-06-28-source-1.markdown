@@ -1,0 +1,54 @@
+---
+layout: post
+title:  "Source [1] - Bubbles"
+date:   2020-06-28 15:05:00 +0530
+categories: philosophy random india history
+---
+> This post is in continuation of [Source [0]]({% post_url 2020-06-25-source-0 %})
+
+We all are vaguely familiar with the concepts of bubbles. Bubbles in the sense that each one of us is present in them and that bubble dictates which kind of information you consume, love, hate, and such. Bubbles can also be called a belief system. A belief system is not just about whether you believe in god or not, but it just tells in a broad sense what one believes about everything.
+
+As we grow up, we metaphorically also keep growing our bubble by having new experiences, meeting new people, going to new places, discovering new knowledge to state a few.
+
+Bubbles are generally used in a negative sense, for example, "That person seems to live in a bubble, he does not care about politics", but bubbles are very helpful.
+You see, we are unconsciously aware of this fact, you may not call it a bubble or not even call it anything, but you know everyone (including you) has a bubble. And it's just not people, we also put non-living things in a bubble. Like a religious book almost always gets put in a dogmatic bubble.
+
+By putting things and people inside their own bubble, our mind now takes the call as to whether it makes sense to read/question/argue/understand something/someone or not. It does this decision making by seeing your own bubble and the other thing's bubble, if they both align, i.e. they share some common beliefs, then the mind can allow us to continue, otherwise, the mind thinks that doing the activity in question will be a waste of time and energy.
+
+There are many positive benefits of doing this, that's how we have diverse thoughts, things, and persons. If the mind does not do it, countless amounts of energy will be spent by people in doing things that they don't really require in some sense.
+
+Conventional schooling systems do the same thing, they try to stop this automatic decision-making process of mind and forces us in doing things which don't really matter in the long run. You are not allowed to question why you are studying a particular subject. A counterargument to this can be that during childhood our bubbles are not mature enough, hence the way the schooling system is designed. My counterargument to that is, in retrospect, I do not think it managed to change my bubble significantly or increase the rate of how my bubble grew, at best it created a false impression for me (and the education system) that it grew bigger by passing exams which test regurgitation abilities.
+
+We have seen the positives of how the prioritization process of aligning bubbles done by our brain, that is it helps us in saving time and energy and helping us to grow, now it is time to see some downsides of that process.
+
+One important point to note that this decision process (of choosing which bubbles are good/bad for you) is not always a conscious process, it can be seen a long-running process in the subconscious mind which sometimes comes into the conscious realm. Whenever you think you make a decision, it's a conscious process, in other cases, your mind is making a lot of decisions subconsciously.
+
+Let's see an example, consider a person who is not interested in science and related topics as they consider these things to be "hard". That person now sees a video on YouTube titled: "Deep Dive into our Universe", chances are very low that a person will attempt to watch that video, as the decision would unconsciously have been made by the mind. There is a  caveat, due to the way modern internet operates, they will probably not even get into this situation as the recommendation algorithms will rarely show this content to the person. The internet giants have a better understanding of what your bubble is (better than we know it ourselves), therefore it will show you content that aligns with your bubble so that you consume it and then they can make money off ads. I am not saying that I have a better alternative, just stating the facts so you know how they operate by representing our bubbles via machine learning systems, using extensive monitoring/tracking.
+
+Consider that this person had the option to watch the video, but they did not, reasons can be that they thought that they would not be able to understand, why to spend time in it, how does this help me, and similar thoughts. Here's a fact, they might be completely right, watching this video may really not serve any purpose to them. In this way, bubble based judgments are really helpful in most cases.
+
+But let us consider another possibility, that they did watch the video, and it turns out that the video was deeply instructional in nature. They thought they would not understand any of it, but after watching some part of it they understood 20% of the content. That's a great thing!
+
+So, there is always a possibility that something that our mind clearly ignores or does not give much more thought to, it is possible that there is more meaning present there. To look at the extra meaning, you need to put in a conscious effort to discover or extract it.
+
+ "Effort" is an interesting word, from the following which thing takes more effort? watching a 1-hour movie, or 1-hour video of a college lecture. Again, if the lecture is in a subject you are interested in (i.e. aligns with your bubble) you may need almost zero effort to watch the lecture, but as you may know, it takes considerable effort to watch the lecture video if it does not align with your bubble, and most probably you won't watch it entirely, unlike in an actual lecture where you would have to sit through it even after you decide to stop making the effort to understand it, just to keep your physical self present in the lecture hall.
+
+Coming back to the judgment aspect of it, I want to give another personal example. Sometime back I wrote about a particular company charging too much for coding related courses, one of the comments from a major stakeholder in that company said: "You are making these claims as if you are intellectual thought leader of the country".  Obviously he was projecting what kind of bubble I need to belong to make sense to him, instead of looking at what I said and countering that.
+
+I see this is a major problem that limits all of us to new ideas, every time I have a judgment about something, I try to think, is that because of what someone said, or is that because who said it, or is it a mixture of both cases.  I saw an interesting comment on YouTube on a video, it said: "A debate should not be about who is right, but what is right".
+
+Now, let us resume from where we left in [Source [0]]({% post_url 2020-06-25-source-0 %}). For the sake of clarity, I am going to reiterate our established common ground.
+1. Philosophy is not just about talking in the air, it can contain some meaning which can in turn help us in widening our perspectives.
+2. Most religions have an essence that is deeply philosophical.
+3. In the case of India, a large number of sages spoke of deep philosophical concepts.
+4. We have a set of belief systems or bubbles in place which help in consuming things that align with who we are, but on the other hand, it can also prevent us from discovering something new.
+
+If you have reached so far, I hope that this content is aligning with you, so the purpose of writing this is fulfilled, I hope you continue reading but as a cautionary warning, I want to mention the target audience of this particular series of blogs for the future posts.
+
+Without digressing too much, I want to point out that there are several views on the [meaning of life](https://en.wikipedia.org/wiki/Meaning_of_life#Popular_views), one view says that the meaning of life is to do *good things*, another says that the meaning of life is to *achieve one's true potential*. The one view which I relate to a lot is the view that meaning of life is to *gather knowledge and wisdom*.
+
+By saying that, I am not claiming that other views are in some sense of lower stature than the view of *knowledge*. I just state that so that you can see which bubble I belong to (and in turn this series of blogs), this will help you in judging whether you want to spend more time reading it or not.
+
+With this in mind, I just want to point out that I have often found that expanding our own bubble never hurts and something good often comes out of it. For instance, reading the Bible would not magically convert you into a Christian, you'll just create your own interpretation of what it is written in it, which will definitely give you a fresh perspective on the world i.e. expand your bubble.
+
+In the next blog post, I will attempt to introduce you to some concepts related to the study of the nature of god and consciousness in ancient Indian philosophy, hopefully, the bubbles align and help in expanding yours.
