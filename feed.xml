@@ -5,7 +5,7 @@
   
   <link href="https://pulkitsharma07.github.io/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://pulkitsharma07.github.io/" rel="alternate" type="text/html" />
-  <updated>2020-06-28T17:35:18+05:30</updated>
+  <updated>2020-10-03T03:28:20+05:30</updated>
   <id>https://pulkitsharma07.github.io//</id>
 
   
@@ -19,6 +19,314 @@
 
   
 
+  
+  
+    <entry>
+      
+      <title type="html">Why most Hacktoberfest PRs are from India</title>
+      
+      <link href="https://pulkitsharma07.github.io/2020/10/02/hacktoberfest-india/" rel="alternate" type="text/html" title="Why most Hacktoberfest PRs are from India" />
+      <published>2020-10-02T15:05:00+05:30</published>
+      <updated>2020-10-02T15:05:00+05:30</updated>
+      <id>https://pulkitsharma07.github.io/2020/10/02/hacktoberfest-india</id>
+      <content type="html" xml:base="https://pulkitsharma07.github.io/2020/10/02/hacktoberfest-india/">&lt;p&gt;&lt;em&gt;Before reading the post&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Now that I have mentioned the name of a country in the title, please read the following points:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;I am an Indian and have been living in the country since my birth.&lt;/li&gt;
+  &lt;li&gt;I do not claim to be right on all of this and there are many anecdotal generalisations here. Somethings are more like human problems instead of Indian problems &lt;strong&gt;but&lt;/strong&gt; just the sheer number of people here puts India on everyone’s radar.&lt;/li&gt;
+  &lt;li&gt;This post is NOT to denigrate India. It is definitely critical of some of its social and psychological aspects. As a proof for that I want to mention that I am writing a series on the wisdom of ancient Indian philosophical ideas here: &lt;a href=&quot;/2020/06/25/source-0/&quot;&gt;Source [0]&lt;/a&gt;, just so you know that I am not writing all my posts with the sole intention to show what is “wrong” with India. We should be brave enough to face the good and bad of it.&lt;/li&gt;
+  &lt;li&gt;It is a shame that I need to write this header in the first place. But the reality is with or without this, people will still get offended.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;index&quot;&gt;Index&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#what&quot;&gt;What&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;#how&quot;&gt;How&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;#why&quot;&gt;Why&lt;/a&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#the-signalling-problem&quot;&gt;The Signalling Problem&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#the-jugaad-mentality&quot;&gt;The Jugaad Mentality&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#computer-science-education-in-india&quot;&gt;Computer Science Education in India&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#but-why-for-hacktoberfest&quot;&gt;But why for Hacktoberfest?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#the-problem-with-high-population-density&quot;&gt;The problem with high population density&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#hierarchy-of-needs&quot;&gt;Hierarchy of Needs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#closing-thoughts&quot;&gt;Closing Thoughts&lt;/a&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#probable-future&quot;&gt;Probable Future&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#improbable-future&quot;&gt;Improbable Future&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;what&quot;&gt;What&lt;/h2&gt;
+
+&lt;p&gt;As most of you may know, &lt;a href=&quot;https://hacktoberfest.digitalocean.com/&quot;&gt;Hacktoberfest&lt;/a&gt; started on 1st October 2020. And as it with most things in human life, people came with &lt;a href=&quot;https://mobile.twitter.com/shitoberfest&quot;&gt;different&lt;/a&gt; ways to hack hacktoberfest to get the free t-shirt.&lt;/p&gt;
+
+&lt;p&gt;Now apart from the sheer number of spam PRs which were opened, copious amount of time is being spent by the comparatively small number of open source maintainers who have comment, close and label each individual PR.&lt;/p&gt;
+
+&lt;p&gt;I became aware of this happening from this &lt;a href=&quot;https://news.ycombinator.com/item?id=24643894&quot;&gt;post&lt;/a&gt;, and in a days time several more &lt;a href=&quot;https://joel.net/how-one-guy-ruined-hacktoberfest2020-drama&quot;&gt;posts&lt;/a&gt; popped up. 
+I got motivated (triggered?) to write this post when I saw the following on HN:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/hacktober/hn_comment.png&quot; alt=&quot;hn-comment&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After some investigation, I found the original claim to be true, &lt;code class=&quot;highlighter-rouge&quot;&gt;more than 60% of the spam PRs are coming from one country: India&lt;/code&gt; and that is just 1 day after hacktoberfest started, I am sure the percentage will increase as days go by (unless DigitalOcean does something).&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;how&quot;&gt;How&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://joel.net/how-one-guy-ruined-hacktoberfest2020-drama&quot;&gt;This&lt;/a&gt; post talks about one Indian YouTube channel which apparently told people to open spammy PRs. After I looked around some people were claiming he was falsely accused, anyways the video is deleted now, so I can’t comment on that.&lt;/p&gt;
+
+&lt;p&gt;Anyways, it didn’t take long and I was able to find few more Indian YouTubers who were pretty directly promoting ways to open PRs to get those sweet T-Shirts. One created his own &lt;a href=&quot;https://github.com/seeditsolution/cprogram/pulls&quot;&gt;repo&lt;/a&gt; and encouraged people to google different programs and copy-paste them into a new PR against the empty repo.&lt;/p&gt;
+
+&lt;p&gt;I do not want to focus on the &lt;em&gt;How&lt;/em&gt;, you will find find plenty videos/blogs on it, I am sure some Indian YouTuber has started working on creating a video on it.&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;why&quot;&gt;Why&lt;/h2&gt;
+&lt;p&gt;One of the simplest explanation is that, DigitalOcean should have been very well anticipated that this is going to happen, after all they must have all the stats from the previous HacktoberFests.&lt;/p&gt;
+
+&lt;p&gt;We need to understand that Hacktoberfest is an marketing event. And all these spam and blogs posts around it is definitely serving their main purpose, there is no such thing as bad publicity indeed. Of course I could be totally wrong, all of this could be completely unintentional.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Now, coming to the Indian side of the ongoing issue. Out of all the countries why does India have the most spammy PRs ? As a seasoned armchair philosopher, the following are my thoughts on the “Why” of all this.&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;the-signalling-problem&quot;&gt;The Signalling Problem&lt;/h3&gt;
+&lt;p&gt;Whenever an online article/documentary/report claim to give a view into the “real” India, most of us (Indians) get offended.&lt;/p&gt;
+
+&lt;p&gt;I &lt;em&gt;was&lt;/em&gt; in the bubble which was in the “offended” bucket for long time. The reason was simple: I, the people around me and the societal structures around me were all part of the same bubble. We do not have to worry about paying school fees or rent, we do not have worry about sending part of salary back home just so that our parents can buy groceries to survive..&lt;/p&gt;
+
+&lt;p&gt;I can go on and on, the overall gist is that I got offended in seeing what other people claim as “real” India, because that India was not part of my reality. Sure, I saw that when travelling from one place to another, saw that on news, read about that in the newspaper; but I was at a very safe distance from all of that.&lt;/p&gt;
+
+&lt;p&gt;These days, I try to not get offended when people say India has problem X or problem Y, because I realise I am living inside a cocoon where all of my needs are met, and one of the most serious issues my country is facing right now is &lt;strike&gt;witch-hunting &lt;/strike&gt; nabbing the “drug mafia” amongst the Bollywood celebrities who allegedly murdered an actor by giving CBD oil (The absurdity of all this is unfathomable)&lt;/p&gt;
+
+&lt;p&gt;I mention all of this, because whenever I read posts which show India in some &lt;a href=&quot;https://news.ycombinator.com/item?id=24552047&quot;&gt;bad light&lt;/a&gt;, there is always someone somewhere who gives anecdotes of how that is not true.&lt;/p&gt;
+
+&lt;p&gt;Here are some facts: we have a culture of &lt;strong&gt;extreme signalling&lt;/strong&gt;. Signalling is the core building block of our society, most people don’t even realise that how big we are into signalling until they study about “signalling” as a phenomena and start becoming conscious of it. You notice that in the way your parents view you, how you make choices, how people around you make choices.&lt;/p&gt;
+
+&lt;p&gt;Of course, people will say “that is not an Indian problem, signalling is just a social construct and literally everyone does that on some level”. I am not denying not that, the very fact that I am writing this post is a kind of signalling I am doing.&lt;/p&gt;
+
+&lt;p&gt;It is well known fact that India is one of the densest countries on our &lt;a href=&quot;https://ourworldindata.org/grapher/population-density?time=2017&quot;&gt;planet&lt;/a&gt;, extreme siginalling is just one of the consequences of the myriad social problems created by high population density. Signalling in an high density environment is now ever more important as the people you interact or the people who notice your activities/accomplishments are multiples higher than in any other place on the planet.&lt;/p&gt;
+
+&lt;p&gt;We people like the wear the “tightly knit society” as badge of honour, let me tell you this “tightly knit society” has done more harm than good. We Indian people have no India of the amount of mental harassment we all go through, because that is just normalized as being just phases of “life”.&lt;/p&gt;
+
+&lt;p&gt;The prevalence of extreme signalling brews the classic and infamous &lt;em&gt;herd mentality&lt;/em&gt; in our minds. In middle school children have dreams to become a Pilot in the airforce, or maybe a Police officer, or maybe a Opera Singer ! But by the time of high school, everyone is just either on road to become an Engineer, a Doctor, a Lawyer, a Chartered Accountant …. or a &lt;strong&gt;failure&lt;/strong&gt;. This may seem harsh but that’s how most of the society operates here in India.&lt;/p&gt;
+
+&lt;p&gt;Now once your track is chosen for you (or fortunately, if you get to choose the track), you have some set goals you “must” achieve because they guarantee monetary success with an extremely high probability. If you are Engineer, you need to get into IIT. If you are a Doctor, you need to get into AIIMS. If you are doing management, you need to get into IIM.&lt;/p&gt;
+
+&lt;p&gt;Now, if you are an Engineer then your success criteria is not just any IIT, it should be one of the top ones (Bombay, Delhi, Kharagpur, Roorkee) and not just any branch in IIT, it should be &lt;em&gt;Computer Science&lt;/em&gt;. Because that’s how you get &lt;a href=&quot;https://www.newindianexpress.com/nation/2019/dec/04/five-iitians-bag-pay-packages-of-over-rs-15-crore-2071120.html&quot;&gt;Rs 1.5 crore “packages” (equivalent to 200K USD)&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;You can give me examples of how not all IIT toppers choose “Computer Science”, but that’s not the point, for the vast majority of people (more than a million), the success criteria is: getting Computer Science at IIT Bombay.&lt;/p&gt;
+
+&lt;p&gt;As might know (or have guessed) getting a seat in IIT Bombay is next to impossible for more than 99% people giving IIT, so they “lower” their goal by aiming for other IITs, but “Computer Science” remains the top priority.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-jugaad-mentality&quot;&gt;The Jugaad mentality&lt;/h3&gt;
+&lt;p&gt;Hacking systems is so ingrained in our society that we have a word for it: &lt;a href=&quot;https://en.wikipedia.org/wiki/Jugaad&quot;&gt;Jugaad&lt;/a&gt;. The whole scene with Hacktoberfest is just a demo of our Jugaad skills. Wait till you find out that &lt;a href=&quot;https://indianexpress.com/article/india/inside-indias-fake-research-paper-shops-pay-publish-profit-5265402&quot;&gt;most of the research papers&lt;/a&gt; published in India are &lt;a href=&quot;https://scroll.in/article/908230/indian-academics-lead-the-world-in-publishing-in-fake-journals-tarring-the-whole-education-sector&quot;&gt;fake&lt;/a&gt;. Even the orthodontist I was visiting for my checkup turned out to be fake and had forged her certificates (as told by by one other dentist).&lt;/p&gt;
+
+&lt;p&gt;The coaching industry actively promotes “cracking” these exams, and I am so tired writing on that topic that I do not want to write more about it here. Refer to my post on this &lt;a href=&quot;https://www.linkedin.com/pulse/coding-interviewing-coaching-industry-prologue-pulkit-sharma?articleId=6662006663559684097&quot;&gt;here&lt;/a&gt;. Some children start joining these coaching classes from as low as 5th grade! (apart from doing regular school), just to be able to “crack” the IITs after 7-8 years !&lt;/p&gt;
+
+&lt;p&gt;Now how is coaching industry a Jugaad ? Simply because from the point of view of IITs, attending regular school should be enough to prep you for the exams (I think). These coaching industries have made the process significantly harder as you can’t even hope of getting a low tier IIT without without attending the coaching classes.&lt;/p&gt;
+
+&lt;p&gt;The IIT coaching industry is minting fat cheques out of this entire situation, look at these ads on the front page of the news paper. These ads create a vicious cycle by reinforcing the core “signalling” construct of our society.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/hacktober/paper_1.png&quot; alt=&quot;hn-comment&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/hacktober/paper_2.png&quot; alt=&quot;hn-comment&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/hacktober/paper_3.png&quot; alt=&quot;hn-comment&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Do not quote me on this, but I think the IIT coaching industries make more &lt;a href=&quot;https://www.businessinsider.in/education/news/iits-iisc-say-that-patchy-funding-is-delaying-institute-of-eminence-plans/articleshow/72103538.cms&quot;&gt;money than the IITs&lt;/a&gt; themselves. I understand the purpose of IITs is not to directly generate money, but if it would have more resources they can probably improve the infrastructure, employ better professors and improve the overall level of education.&lt;/p&gt;
+
+&lt;h3 id=&quot;computer-science-education-in-india&quot;&gt;Computer Science Education in India&lt;/h3&gt;
+&lt;p&gt;For vast majority of engineers in India, Computer Science is  one of the subjects you study in order to succeed in life. Just like you study Chemistry, you “study” Computer Science and once you learn all the “concepts”, you get a good job. (Apologies for so many quoted words, I can’t help putting them in quotes because they carry so much weight for me).&lt;/p&gt;
+
+&lt;p&gt;When people are in an average Indian college and if they are are lucky, information about some permutation/combination of the following is spread amongst the students: &lt;em&gt;Codechef, ICPC, DS/Algorithms, Infosys -&amp;gt; road to USA, GSOC, Github,  Google, Facebook, 1.5cr “package”, MBA, MS in USA, .. yada yada yada&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Of course this is not given by college authorities as they have no idea of the external world.&lt;/p&gt;
+
+&lt;p&gt;Us Indians are very good at following rules (or guidelines depending on the way you look at it), just tell us what to do, and we’ll do exactly that. We do not need any reasons or justifications for the most part, (we haven’t been taught that by the society). Just follow the rules and everything will be “set” for you is what everyone says and does. See a sample of how we learn to &lt;a href=&quot;https://academia.stackexchange.com/questions/41687/what-is-behind-the-indian-undergrad-research-experience-spam&quot;&gt;write emails&lt;/a&gt; and prepare for &lt;a href=&quot;https://www.geeksforgeeks.org/company-interview-corner/&quot;&gt;software interviews&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;but-why-for-hacktoberfest&quot;&gt;But why for Hacktoberfest?&lt;/h3&gt;
+
+&lt;p&gt;Coming back to Hactkoberfest, it fell prey to the Jugaad nature of our existence. I personally know people who in-spite of being well paid software developers created dummy repos to create a circle of PR contributions for past Hacktoberfest events.&lt;/p&gt;
+
+&lt;p&gt;Of course, wherever there is any sort of incentive related to some metric, people will try to game that, whether that is LinkedIn connection counts, number of likes on Facebook or number of impressions on Instagram. There is nothing specifically Indian about it.&lt;/p&gt;
+
+&lt;p&gt;But there is one thing Indian that, the sheer number of people here who are out there to game everything which can give them some “profit”. The % of these people vary by their personal financial factors, perceived financial factors and of course the plethora of social constructs around them.&lt;/p&gt;
+
+&lt;p&gt;The problem is for most people gaming the system, that’s the actual system for them. They see hacking the system as part of the entire system itself. Things get so convoluted due to limited sources of information that people automatically think that hacking is just part of the process and something which is expected out of them. It’s a messy &lt;a href=&quot;https://fs.blog/2020/06/coordination-problems/&quot;&gt;coordination problem&lt;/a&gt; that we have caught ourselves into.&lt;/p&gt;
+
+&lt;p&gt;The way of the jugaad is now applied to things unknowingly by people even when it is not really required. So far everything we have done needs some sort of Jugaad, so why would we not do that for getting t-shirts, getting into colleges, getting jobs, getting promotions, getting salary increments ?&lt;/p&gt;
+
+&lt;p&gt;After all the entire system is corrupt, right ? Everyone is corrupt, So why should &lt;strong&gt;I&lt;/strong&gt; be the naive one and NOT try to actively game the system ? DigitalOcean is a big company, what would they lose if I just get one T-Shirt ?&lt;/p&gt;
+
+&lt;p&gt;^ That’s the thought process of a typical Indian developer.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-problem-with-high-population-density&quot;&gt;The problem with high population density&lt;/h3&gt;
+
+&lt;p&gt;Everything mentioned so far can be in some sense applied to humans all around the world, but the amount of people in India makes things more complicated.&lt;/p&gt;
+
+&lt;p&gt;It complicates things because the society now has formalise / organise all this knowledge and information, which then slowly seeps itself into our &lt;a href=&quot;https://en.wikipedia.org/wiki/Collective_unconscious&quot;&gt;collective unconscious&lt;/a&gt;. There is no overseer of this process, parents single-handedly pluck information from the collective unconscious and feed that to their children. And it’s &lt;strong&gt;NOT&lt;/strong&gt; their fault, they are doing their best. If they knew what exactly to do, they wouldn’t have ended up in a dire situation in the first place, so of course they cannot rely on their own conscience, which I think is absolutely the right thing to do.&lt;/p&gt;
+
+&lt;p&gt;Once these ruleset(/guidelines) are plucked from the collective unconscious and are concretised by the news, media and society, then an individual cannot question them. Because why would you question them ? Millions of others are doing the same ? Are you claiming you are better than them by questioning the rules ? How will your parents get bread if you don’t study hard enough and get a job in the city ?&lt;/p&gt;
+
+&lt;p&gt;I want everyone reading this to understand that you have a privilege that, sorry to say, has blinded you about the real issues and problems we are facing. Most of the humans of our planet and by that, most of the humans living in India, are doing nothing wrong (from their own frame of reference), who am I or you to say what is Right or Wrong… for them? The situation gets so complex and intertwined that what is Right or Wrong for the other person takes the backseat, all that matters is what is Right or Wrong for me.&lt;/p&gt;
+
+&lt;h3 id=&quot;hierarchy-of-needs&quot;&gt;Hierarchy of Needs&lt;/h3&gt;
+
+&lt;p&gt;Armed with the wisdom from the unconscious all of us are ready, with just one mission: financial success. Trust me, when I say this, “Financial success” is what matters the most for us Indians. When I see someone who decides to push back “financial success” in order for other priorities, I have massive respect for them.&lt;/p&gt;
+
+&lt;p&gt;You need money to buy stuff, your family needs money to buy stuff; after all lack of money is our main source of unhappiness, right ? So keep your head down and just work towards that.&lt;/p&gt;
+
+&lt;p&gt;Trust me, I cannot begin to be thankful of the privilege I have in my life. My sole purpose of life is not just to be “financially successful” and provide resources for people around me. If I was part of the real India with the same name, intelligence, whatever, I would sure as hell be in a completely different situation where the only thing I would care about was earning money in order to satisfy the basic needs of me and people dependent on me.&lt;/p&gt;
+
+&lt;p&gt;When I say &lt;code class=&quot;highlighter-rouge&quot;&gt;basic needs&lt;/code&gt; different thoughts can rise up, for some basic need is having just a house, for some basic need is a 3 bedroom house because they have their parents or grandparents to take care of, for some basic need is getting a job so they can get married and have children, for some it could be to just buy a car. In all, it is pretty subjective and you cannot convince people to let go of their basic needs, because for them, it is &lt;strong&gt;their basic&lt;/strong&gt; need.&lt;/p&gt;
+
+&lt;p&gt;For the average software engineer aspirant in India, the basic need is to just get &lt;em&gt;any&lt;/em&gt; 9-5 job. They don’t have the privilege to choose which company they want to work for, so they will join the first company which offers them a job.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;closing-thoughts&quot;&gt;Closing Thoughts&lt;/h2&gt;
+
+&lt;p&gt;It is without doubt that India has produced a lot of good programming talent and software, but we should not ignore the elephant in the room: &lt;a href=&quot;https://economictimes.indiatimes.com/jobs/only-6-of-those-passing-out-of-indias-engineering-colleges-are-fit-for-a-job/articleshow/64446292.cms&quot;&gt;most engineering graduates in India are not fit for hiring&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;People everywhere on this planet are just slaves of their circumstances and the societal constructs which surround them. When push comes to shove (which is the permanent state for most Indians), we only care about one thing, &lt;strong&gt;survival&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;So, it doesn’t really matter how one gets a Hacktoberfest T-Shirt, as people don’t really have the conscience to see the consequences of doing that. As everyone one around them is doing the same Jugaad, so why not join the herd ?&lt;/p&gt;
+
+&lt;h3 id=&quot;probable-future&quot;&gt;Probable Future&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;The probable future is simple to predict, the things which are happening today will keep on happening. This is a struggle for basic survival, and what others think takes the backseat in this game.&lt;/li&gt;
+  &lt;li&gt;Coding interviews will become harder. As I &lt;a href=&quot;https://www.linkedin.com/pulse/coding-interviewing-coaching-industry-prologue-pulkit-sharma?articleId=6662006663559684097&quot;&gt;mentioned in my post&lt;/a&gt;, coaching industries will pop-up to help “crack” coding interviews, GSOC and maybe later HN posts. Trust me it is completely possible, all it takes is one Indian Google Engineer to create a YouTube video and say that he had X karma points on HN mentioned on his resume and that’s how his resume got shortlisted for Google.&lt;/li&gt;
+  &lt;li&gt;Big coaching industries in India have already started charging Rs.1500 for lessons on C++ STL. Without doubt, this will continue to happen on a larger and broader spectrum.&lt;/li&gt;
+  &lt;li&gt;YouTubers will continue to provide low quality tips and tricks for people.
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;See what is happening to GSOC (I searched “GSOC” from a machine in Europe, to prevent geo based search results):
+&lt;img src=&quot;/assets/hacktober/gsoc.png&quot; alt=&quot;hn-comment&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Even Google’s Foobar challenge is not spared:
+&lt;img src=&quot;/assets/hacktober/foobar.png&quot; alt=&quot;hn-comment&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;People will get offended on how I am denigrating Mother India. These people will questions my credentials and also point out that &lt;code class=&quot;highlighter-rouge&quot;&gt;I am not a thought leader of the industry&lt;/code&gt; therefore all of my views are wrong by default.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;improbable-future&quot;&gt;Improbable Future&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Somehow people will realise that the metric they should focus on is the &lt;em&gt;love for computers&lt;/em&gt;, &lt;em&gt;respect for other developers&lt;/em&gt; and the &lt;em&gt;social impact of programming&lt;/em&gt; on the world; not ranking in some programming contest, or number of Github contributors, or number of Github stars etc.&lt;/li&gt;
+  &lt;li&gt;Somehow good Indian software engineers will create quality content, blog posts and show what their actual job are like. They need to show that cutting edge software engineering happens not just in FAANG, but also in startups.&lt;/li&gt;
+  &lt;li&gt;Children in school have complete visibility and guidance on what lies ahead. Parents will stop projecting their own failures/insecurities in life on their children.&lt;/li&gt;
+  &lt;li&gt;Somehow Indian parents will become self sufficient, so that children are free to do and discover what they actually want.&lt;/li&gt;
+  &lt;li&gt;Failure is appreciated in society.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;</content>
+
+      
+      
+      
+      
+      
+
+      
+
+      
+        <category term="india" />
+      
+        <category term="software" />
+      
+        <category term="blog" />
+      
+
+      
+
+      
+        <summary type="html">Before reading the post</summary>
+      
+
+      
+      
+    </entry>
+  
+  
+  
+    <entry>
+      
+      <title type="html">Retrospective - 1</title>
+      
+      <link href="https://pulkitsharma07.github.io/2020/06/28/retrospective-1/" rel="alternate" type="text/html" title="Retrospective - 1" />
+      <published>2020-06-28T15:05:00+05:30</published>
+      <updated>2020-06-28T15:05:00+05:30</updated>
+      <id>https://pulkitsharma07.github.io/2020/06/28/retrospective-1</id>
+      <content type="html" xml:base="https://pulkitsharma07.github.io/2020/06/28/retrospective-1/">&lt;p&gt;Writing this down since I keep forgetting things and because now I think it is really important to see how different events in life create a ripple effect to create one’s self.
+Obviously, I can’t possibly write down every possible thing, and some of my facts might be wrong here. Also things which I remember but didn’t right down also play a major role, but I am just going to write down things which are related to later events in my life.&lt;/p&gt;
+
+&lt;!-- Notes: --&gt;
+&lt;ul&gt;
+  &lt;li&gt;2001: Around this time father bought a computer for doing his office work, I was of around 7 years 
+at that time. At this time, I think we had Windows 98. There was no CD drive, I remember fiddling around with the metallic part which makes a click on releasing it [TODO: img]&lt;/li&gt;
+  &lt;li&gt;2002: Around this time, I played my first PC game. I think it was ‘Day of The Tentacle’ [TODO: img]. I wasn’t really able to understand anything in the game though, was just clicking around in random places and was just looking at the animations on the screen. I remember the name of the game since I found it while scrolling through a retro games website.&lt;/li&gt;
+  &lt;li&gt;2002: Roughly around this time, father started subscription for a magazine called “Digit” [TODO: img]. I loved reading that magazine, that subscription would go on for another 7-8 years. Digit was especially since it also came with a CD which had bunch of demo software and games. We had Windows XP and computer with CD-Drive now so I was able to browse around and install games from the Digit CDs. This went around for several years, it was like a sandboxed version of the internet which would refresh every month.&lt;/li&gt;
+  &lt;li&gt;2002: Played all the usual demo games which were popular during that time, I was getting them with the Digit CDs : Roadrash, Midtown Madness, Need for Speed, Virtua Cop. I took bunch of CDs and installed these games on my cousins’ PC. At this point in time I was on the same level in my tech “know-how” as my 5 year old elder brother. One time there was a software named “Nero Burning Rom” in Digit, Apparently you could store your own stuff in CDs. That was great, I carefully filtered through my Digit CD collection to find one which had the most useless software on it.
+Then I noted all the games I wanted to store in the CD (the entire directory which had the executable of course, I didn’t knew the difference between installers and executables). I launched Nero pretty excited to finally create a CD with my own stuff in it. Of course this was not a success and Nero promptly raised an error as the CD was not writable.&lt;/li&gt;
+  &lt;li&gt;2003: Eventually I wanted full versions of games as the demos didn’t last long. My brother one day brought home a CD which had no labels/stickers on it. He told me it had some of full games on it and had bought him from his “friend”. Piracy was pretty rampant in India (still is, people don’t want to pay for entertainment at home) but no one knew it was “piracy”, as everyone was buying it off of shops[TODO: img]. We never saw anything wrong in our actions.&lt;/li&gt;
+  &lt;li&gt;2004: Around this time the games started getting more advanced, and my computer was able to run some games and some not. That’s when I started reading the “Systems Requirement” section which was present in the magazine. I remember installing CPU-Z to find out the configuration of my own machine. Digit had a section where they had reviews/benchmarks of different PC components, all of that started to make some sense. But still, after installing every game there was this “excited anxiety” of sorts when the screen went black for couple of seconds. Either you could see the publisher logo and stuff or back to the dreaded windows explorer.&lt;/li&gt;
+  &lt;li&gt;2005: This was the first time I got a full game with Digit. It was “Ragnarok Online”, the CD had a really cool print on it and was present in a separate envelope. I didn’t knew what the ‘Online’ part in the name meant. I was unable to install the game, as I didn’t have an internet connection. I didn’t knew what the internet was at that point.&lt;/li&gt;
+  &lt;li&gt;2006: We moved to a township all the people worked in the same company. It was like a self sustaining mini city.  We had a library which had bunch of computers which were apparently connected to this internet. Days later I had Orkut [TODO: img] and Hi5 accounts, because thats what we do on the internet, right ? My online social circle was an exact replica of my physical one.&lt;/li&gt;
+  &lt;li&gt;2007: Got a dial-up connection at home, as everyone was getting it. Also now I could finally activate the “free” version of my antivirus ! But I had to register using an email account: I decided to create a new email account on ‘gmail’ this time with the most obvious name. I still use the same email, makes up for an interesting story.&lt;/li&gt;
+  &lt;li&gt;2007: My English was improving in terms of listening and reading all thanks to bunch of books, magazines and games. Internet was just Orkut/Hi5 for me. My comprehension was not that great, because I don’t remember the stories of any of the games I played at that time.&lt;/li&gt;
+  &lt;li&gt;2007: After much persuasion, We got a new PC, I don’t remember the specs, but I think it had Windows Vista at that point. Also with that PC I also got rid of the old CRT style monitor.&lt;/li&gt;
+  &lt;li&gt;2007: I played my first online game..No it wasn’t World of Warcraft, Counter-Strike… it was “Dance Mela” [TODO: img]. It was a rhythm based game which had some social aspects in it. I made some friends through it, and I eventually became “close” with a girl there. I wanted to know if she was “real” or not, so I asker for her number. I vividly remember how nervous I was, I went outside the house and behind a tree so that no one could see me talking on a phone (especially my parents). When she picked up, I couldn’t even say anything as that was the first time I was talking to a stranger. I dropped the call and called her again after some minutes. We talked about some random stuff I don’t recall, it was the only call we had. She eventually stopped coming online, and then after some months the server shutdown. It was a really fun game, but unfortunately internet in India had no penetrated much at that time and devs had to shut that game down, More info: https://www.medianama.com/2009/10/223-kreeda-begins-games-services-business/&lt;/li&gt;
+  &lt;li&gt;2008: Another freeware game I started playing, which came out on Digit too, was “Trackmania Nations” [TODO: img]. I was able to play it online even on a very slow internet connection. Even though it is a racing game, it is not “realtime” as such. Trackmania is probably my favorite racing game, and I am so happy to see that the series still lives on and the new TrackMania game is going to get released soon. They still stick to what made the first games so popular. I was practically addicted to TrackMania. There were not many players playing from India (or even Asia). About 2 years later I became on of the top 100 players in Asia.&lt;/li&gt;
+  &lt;li&gt;2008: Not much changed in my life, I was stagnant in a way, just playing random games and stuff. I was the infamous “computer guy” in school.&lt;/li&gt;
+  &lt;li&gt;2009: Shifted to a new city, this time was living in actual city which had multiple schools and stuff. Got a better internet connection, so now a song took 5 minutes to download instead of 15 minutes. Nobody around me played games/was interested in computers. So I changed too..I started getting into fights/doing stupid shit/making fun of others (low key bullying?) including teachers and various such things which I thought were very “cool”. Never really felt any kind of social awkwardness.&lt;/li&gt;
+  &lt;li&gt;2010: Shifted schools in the city. I got a really check, I found out that I wasn’t good at anything. I sucked at sports or even being “cool”. I noticed that I was the “short” one now. 90% of my class was taller than me. I continued my shenanigans for sometime, but eventually went back to my “gaming” life, as there I could just escape from all of this “physical” stuff.&lt;/li&gt;
+  &lt;li&gt;2011: Maybe I exagerrated a bit, but social life was pretty okay, I had couple of good friends and I was playing sports, going for classes and doing “coaching” for the dreaded IITs. The bane of existence for all the Indian school kids who chose PCM (Physics, Chemistry and Maths).&lt;/li&gt;
+  &lt;li&gt;2011: Around this time I made a very good friend, let’s call him G. G was/is like a genius who doesn’t want to admit he is a genius since the concept of someone being a “genius” seems too absurd and funny at the same time. Well, I don’t know what he thinks, its just my perception, we never talked about this stuff. Anyways, G was like a version of me which was properly “evolved” in all aspects. He was far better than me in the games we played, he was physically in a far better shape, he was better at school than me. I cannot lay a finger on something which we wasn’t objectively better than me (probably sports).&lt;/li&gt;
+  &lt;li&gt;2011: As I found more about G, it shattered my own distorted self of personal achievements and accomplishment. When I thought I was typing fast at 60 wpm, he was casually doing 90-100 wpm. I later found out he was playing WoW (World of Warcraft) since years and his typing speed improved because of that. Our friendship grew stronger, although we wouldn’t admit it during that time since for us the concept of “friends” was something for the girls to talk about.&lt;/li&gt;
+  &lt;li&gt;2011: Now that I think 2011 may be the most important event of my life. I had to chose one of “Physical Education” and “C++ programming” as one of the optional subjects during high school. I new nothing about programming, but G took “C++”, so obviously I took it.&lt;/li&gt;
+  &lt;li&gt;2011: In our “C++” class everyone was supposedly understanding everything but I was in the deep deep darkness. I understand absolutely nothing about programming. Sometimes you can sense that maybe the teacher is not teaching it the right way, but I didn’t like that to me. It felt that something was missing in my own “intellect” to understand programming.&lt;/li&gt;
+  &lt;li&gt;2011: I remember in one of the classes, the teacher was explaining “for loops in C++”. As always I was getting none of it, I became so frustrated with it that I decided to change my optional to “Physical Education”. I was convinced I was not made to do programming. I thought I cannot understand programming just as I cannot understand chemistry. I hated both things equally.&lt;/li&gt;
+  &lt;li&gt;2011: One day I told my parents about this “decision”&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      
+
+      
+        <category term="personal" />
+      
+        <category term="learning" />
+      
+        <category term="blog" />
+      
+
+      
+
+      
+        <summary type="html">Writing this down since I keep forgetting things and because now I think it is really important to see how different events in life create a ripple effect to create one’s self. Obviously, I can’t possibly write down every possible thing, and some of my facts might be wrong here. Also things which I remember but didn’t right down also play a major role, but I am just going to write down things which are related to later events in my life.</summary>
+      
+
+      
+      
+    </entry>
+  
   
   
     <entry>
