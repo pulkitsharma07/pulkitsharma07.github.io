@@ -109,7 +109,7 @@ Hacking systems is so ingrained in our society that we have a word for it: [Juga
 
 The coaching industry actively promotes "cracking" these exams, and I am so tired writing on that topic that I do not want to write more about it here. Refer to my post on this [here](https://www.linkedin.com/pulse/coding-interviewing-coaching-industry-prologue-pulkit-sharma?articleId=6662006663559684097). Some children start joining these coaching classes from as low as 5th grade! (apart from doing regular school), just to be able to "crack" the IITs after 7-8 years !
 
-Now how is coaching industry a Jugaad ? Simply because from the point of view of IITs, attending regular school should be enough to prep you for the exams (I think). These coaching industries have made the process significantly harder as you can't even hope of getting a low tier IIT without without attending the coaching classes.
+Now how is coaching industry a Jugaad ? Simply because from the point of view of IITs, attending regular school should be enough to prep you for the exams (I think). These coaching industries have made the process significantly harder as you can't even hope of getting a low tier IIT without attending the coaching classes.
 
 The IIT coaching industry is minting fat cheques out of this entire situation, look at these ads on the front page of the news paper. These ads create a vicious cycle by reinforcing the core "signalling" construct of our society.
 
@@ -185,7 +185,7 @@ It is without doubt that India has produced a lot of good programming talent and
 
 People everywhere on this planet are just slaves of their circumstances and the societal constructs which surround them. When push comes to shove (which is the permanent state for most Indians), we only care about one thing, **survival**.
 
-So, it doesn’t really matter how one gets a Hacktoberfest T-Shirt, as people don't really have the conscience to see the consequences of doing that. As everyone one around them is doing the same Jugaad, so why not join the herd ?
+So, it doesn’t really matter how one gets a Hacktoberfest T-Shirt, as people don't really have the conscience to see the consequences of doing that. As everyone around them is applying some Jugaad, so why not join the herd ?
 
 
 ### Probable Future ###
