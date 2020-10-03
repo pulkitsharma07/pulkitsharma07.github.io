@@ -207,4 +207,5 @@ So, it doesn’t really matter how one gets a Hacktoberfest T-Shirt, as people d
 * Somehow Indian parents will become self sufficient, so that children are free to do and discover what they actually want.
 * Failure is appreciated in society.
 
+*Find discussion on HackerNews [here](https://news.ycombinator.com/item?id=24667488).*
 <hr/>
