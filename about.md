@@ -5,13 +5,8 @@ permalink: /about/
 ---
 
 ## About me
-Hi, Pulkit here. It is 12:23 AM on 26th September 2017, a Monday.
-Also, I like to headbang when I am alone.
+Hi, my name is [Name] and I am a Principal Engineer with over 5 years of experience in the software engineering industry. I have a strong background in a variety of programming languages, including Ruby, Go, Node.js, Python, and Java. I have worked at companies such as BrowserStack and Gitlab, where I have gained valuable experience and honed my skills in the field.
 
-## About this Blog
-I plan to keep posts on this blog to be technical and related to programming in general.
-But I know it won't remain pristine in the coming days/years. I expect posts related to Music, Life in general to bleed in.
-When/If that happens too often, I will probably segregate the posts into separate blogs.
-But for now, expect a weird mixup of blog posts.
+In my current role, I lead a team of talented engineers and oversee the development and implementation of key initiatives, including managing a large mobile device cluster spanning multiple data centers around the world. I am always looking for new ways to improve my skills and stay up to date with the latest technologies in the field, and I am currently learning Elixir and Phoenix.
 
-I am content about that fact that I have started to write. And I am grateful for my life. I do not see any reason, why you should not be :-)
+Outside of work, I am passionate about percussion instruments and electronic music, and I enjoy playing the drums and guitar. I am excited to connect with other professionals in the software engineering industry and explore opportunities for collaboration and growth. Thank you for visiting my blog, and I hope you find the content helpful and informative.

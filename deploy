@@ -5,12 +5,6 @@ BUILD_DIR="./_site"
 TMP_DIR="/tmp/jekyll_build"
 CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
-# Delete old build files if any
-rm -rf $BUILD_DIR
-
-# Build
-bundle exec jekyll build
-
 # If Build succeeds
 if [ -d "$BUILD_DIR" ]; then
     echo "JEKYLL: BUILD SUCCESS"
