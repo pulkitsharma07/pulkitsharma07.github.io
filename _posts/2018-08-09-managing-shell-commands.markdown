@@ -1,9 +1,11 @@
 ---
 layout: post
-title:  "Managing Shell Commands"
+title:  "Managing Shell Commands through Vim"
 date:   2018-08-09 03:30:00 +0530
 categories: shell vim learning
 ---
+
+> A look at into how I used Vim to notes about frequently used shell commands at my new job 
 
 Before I joined my job, I had been a heavy Windows user. Apart from the "UNIX Programming" course in college, I had barely used any of the shell commands.
 

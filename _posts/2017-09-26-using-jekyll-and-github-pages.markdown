@@ -5,7 +5,7 @@ date:   2017-09-23 18:43:34 +0530
 categories: jekyll blog github
 ---
 
-After reading numerous posts online for using Jekyll and Github Pages together, I faced couple of issues. Lets take a look and see how I addressed some of them.
+> After reading numerous posts online for using Jekyll and Github Pages together, I faced couple of issues. Lets take a look and see how I addressed some of them.
 
 * Jekyll 3 now recommends using Gem-based themes. I was not able to find themes other than the ones mentioned [here](https://github.com/planetjekyll/awesome-jekyll-themes).
 * The ones [supported](https://pages.github.com/themes/) by Github are not exactly blog like.

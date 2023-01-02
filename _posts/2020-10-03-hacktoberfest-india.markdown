@@ -6,6 +6,7 @@ published: true
 categories: india software blog
 ---
 
+> A look into why most of the Hacktoberfest PRs "manufactured" in India
 
 *Before reading the post*
 
