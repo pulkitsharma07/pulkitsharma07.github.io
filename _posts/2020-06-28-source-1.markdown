@@ -4,7 +4,7 @@ title:  "Source [1] - Bubbles"
 date:   2020-06-28 15:05:00 +0530
 categories: philosophy random india history
 ---
-> This post is in continuation of [Source [0]]({% post_url 2020-06-25-source-0 %})
+> This essay is in continuation of [Source [0]]({% post_url 2020-06-25-source-0 %})
 
 We all are vaguely familiar with the concepts of bubbles. Bubbles in the sense that each one of us is present in them and that bubble dictates which kind of information you consume, love, hate, and such. Bubbles can also be called a belief system. A belief system is not just about whether you believe in god or not, but it just tells in a broad sense what one believes about everything.
 
