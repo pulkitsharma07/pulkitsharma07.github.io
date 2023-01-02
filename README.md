@@ -9,5 +9,5 @@ This was done because Github Pages does not allow the jekyll-whiteglass theme. (
 * `git checkout development`
 * Make changes
 * Build and Run docker container: `docker build . -t blog; docker run -v $(pwd):/home/pulkitsharma07.github.io/ -it blog`
-* Inside the container run: `bundle install; bundle exec jekyll build`
-* Outside the container run: `./deploy.sh`
+* Inside the container run: `bundle install; bundle exec jekyll build --watch`
+* From out of the container run: `./deploy.sh`, whenever you want to deploy to prod.
