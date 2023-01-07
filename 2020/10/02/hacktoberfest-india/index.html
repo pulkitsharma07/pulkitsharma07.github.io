@@ -1,187 +1,167 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
   <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
 
-  
-  
-  
-  <title>Why most Hacktoberfest PRs are from India</title>
-  <meta name="description" content="A look into why most of the Hacktoberfest PRs are “manufactured” in India">
-  
+<!-- begin _includes/seo.html --><title>Why most Hacktoberfest PRs are from India - Pulkit Sharma</title>
+<meta name="description" content="A look into why most of the Hacktoberfest PRs are “manufactured” in India">
 
-  <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="https://pulkitsharma07.github.io/2020/10/02/hacktoberfest-india/">
-  
-  
-  <link rel="alternate" type="application/rss+xml" title="Pulkit Sharma" href="https://pulkitsharma07.github.io/feed.xml">
 
+  <meta name="author" content="Pulkit Sharma">
+  
+  <meta property="article:author" content="Pulkit Sharma">
   
 
-  
-  <meta name="twitter:card" content="summary">
-  
-  <meta name="twitter:title" content="Why most Hacktoberfest PRs are from India">
-  <meta name="twitter:description" content="A look into why most of the Hacktoberfest PRs are “manufactured” in India">
-  
-  
 
-  <script type="text/javascript">
-  WebFontConfig = {
-    google: { families: [ 'Bitter:400,700,400italic:latin' ] }
-  };
-  (function() {
-    var wf = document.createElement('script');
-    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-    wf.type = 'text/javascript';
-    wf.async = 'true';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(wf, s);
-  })();
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Pulkit Sharma">
+<meta property="og:title" content="Why most Hacktoberfest PRs are from India">
+<meta property="og:url" content="http://localhost:4000/2020/10/02/hacktoberfest-india/">
+
+
+  <meta property="og:description" content="A look into why most of the Hacktoberfest PRs are “manufactured” in India">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2020-10-02T15:05:00+05:30">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/2020/10/02/hacktoberfest-india/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/"
+    
+  }
 </script>
 
-  
-  <!-- Google Analytics -->
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-107105922-1', 'auto');
-    ga('send', 'pageview');
-
-  </script>
 
 
-</head>
 
 
-  <body>
 
-    <header class="site-header">
 
-  <div class="wrapper">
+<!-- end _includes/seo.html -->
 
-    <a class="site-title" href="/">Pulkit Sharma</a>
 
-    <nav class="site-nav">
-      
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Pulkit Sharma Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
         
-        <a class="page-link" href="/about/">About</a>
-      
+        <a class="site-title" href="/">
+          Pulkit Sharma
+          <span class="site-subtitle">Personal Opinions</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/categories/">Categories</a>
+            </li></ul>
         
-        <a class="page-link" href="/archives/">Archives</a>
-      
-        
-        <a class="page-link" href="https://www.github.com/pulkitsharma07">GitHub</a>
-      
-    </nav>
-
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
   </div>
+</div>
 
-</header>
+
+    <div class="initial-content">
+      
 
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
-    
-      <h1 class="post-title" itemprop="name headline">Why most Hacktoberfest PRs are from India</h1>
-    
-    <p class="post-meta"><time datetime="2020-10-02T09:35:00+00:00" itemprop="datePublished">Oct 2, 2020</time> • 
-  
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-      <a href="/categories/india/">india</a>,
-    
-  
-    
-  
-    
+<div id="main" role="main">
   
 
-  
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-      <a href="/categories/software/">software</a>,
-    
-  
 
-  
-  
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Why most Hacktoberfest PRs are from India">
+    <meta itemprop="description" content="  A look into why most of the Hacktoberfest PRs are “manufactured” in India">
+    <meta itemprop="datePublished" content="2020-10-02T15:05:00+05:30">
     
-  
-    
-      <a href="/categories/blog/">blog</a>
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
 
-</p>
-  </header>
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Why most Hacktoberfest PRs are from India
+</h1>
+          
 
-  <div class="post-content" itemprop="articleBody">
-    <blockquote>
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <blockquote>
   <p>A look into why most of the Hacktoberfest PRs are “manufactured” in India</p>
 </blockquote>
 
@@ -233,7 +213,7 @@ I got motivated (triggered?) to write this post when I saw the following on HN:<
 
 <p><img src="/assets/hacktober/hn_comment.png" alt="hn-comment" class="img-responsive" /></p>
 
-<p>After some investigation, I found the original claim to be true, <code class="highlighter-rouge">more than 60% of the spam PRs are coming from one country: India</code> and that is just 1 day after hacktoberfest started, I am sure the percentage will increase as days go by (unless DigitalOcean does something).</p>
+<p>After some investigation, I found the original claim to be true, <code class="language-plaintext highlighter-rouge">more than 60% of the spam PRs are coming from one country: India</code> and that is just 1 day after hacktoberfest started, I am sure the percentage will increase as days go by (unless DigitalOcean does something).</p>
 <hr />
 
 <h2 id="how">How</h2>
@@ -344,7 +324,7 @@ I got motivated (triggered?) to write this post when I saw the following on HN:<
 
 <p>Trust me, I cannot begin to be thankful of the privilege I have in my life. My sole purpose of life is not just to be “financially successful” and provide resources for people around me. If I was part of the real India with the same name, intelligence, whatever, I would sure as hell be in a completely different situation where the only thing I would care about was earning money in order to satisfy the basic needs of me and people dependent on me.</p>
 
-<p>When I say <code class="highlighter-rouge">basic needs</code> different thoughts can rise up, for some basic need is having just a house, for some basic need is a 3 bedroom house because they have their parents or grandparents to take care of, for some basic need is getting a job so they can get married and have children, for some it could be to just buy a car. In all, it is pretty subjective and you cannot convince people to let go of their basic needs, because for them, it is <strong>their basic</strong> need.</p>
+<p>When I say <code class="language-plaintext highlighter-rouge">basic needs</code> different thoughts can rise up, for some basic need is having just a house, for some basic need is a 3 bedroom house because they have their parents or grandparents to take care of, for some basic need is getting a job so they can get married and have children, for some it could be to just buy a car. In all, it is pretty subjective and you cannot convince people to let go of their basic needs, because for them, it is <strong>their basic</strong> need.</p>
 
 <p>For the average software engineer aspirant in India, the basic need is to just get <em>any</em> 9-5 job. They don’t have the privilege to choose which company they want to work for, so they will join the first company which offers them a job.</p>
 
@@ -375,7 +355,7 @@ I got motivated (triggered?) to write this post when I saw the following on HN:<
       </li>
     </ul>
   </li>
-  <li>People will get offended on how I am denigrating Mother India. These people will questions my credentials and also point out that <code class="highlighter-rouge">I am not a thought leader of the industry</code> therefore all of my views are wrong by default.</li>
+  <li>People will get offended on how I am denigrating Mother India. These people will questions my credentials and also point out that <code class="language-plaintext highlighter-rouge">I am not a thought leader of the industry</code> therefore all of my views are wrong by default.</li>
 </ul>
 
 <h3 id="improbable-future">Improbable Future</h3>
@@ -391,29 +371,80 @@ I got motivated (triggered?) to write this post when I saw the following on HN:<
 <hr />
 
 
-  </div>
+        
+      </section>
 
-</article>
+      <footer class="page__meta">
+        
+        
 
-      </div>
-    </main>
 
-    <footer class="site-footer">
+        
 
-  <div class="wrapper">
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-10-02T15:05:00+05:30">October 2, 2020</time></p>
 
-    <p>
+
+      </footer>
+
       
 
-&copy;  - Powered by <a href="https://jekyllrb.com">Jekyll</a> &amp; <a href="https://github.com/yous/whiteglass">whiteglass</a> - Subscribe via <a href="https://pulkitsharma07.github.io/feed.xml">RSS</a>
+      
+  <nav class="pagination">
+    
+      <a href="/2020/06/28/source-1/" class="pagination--pager" title="Source [1] - Bubbles
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
 
-    </p>
+    </div>
 
-  </div>
+    
+  </article>
 
-</footer>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 Pulkit Sharma. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
 
 
   </body>
-
 </html>
