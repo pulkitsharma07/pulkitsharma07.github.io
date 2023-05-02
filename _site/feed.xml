@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <generator uri="http://jekyllrb.com" version="3.5.2">Jekyll</generator>
+  
+  
+  <link href="https://pulkit.cc/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://pulkit.cc/" rel="alternate" type="text/html" />
+  <updated>2023-05-02T19:25:46+00:00</updated>
+  <id>https://pulkit.cc//</id>
+
+  
+    <title type="html">Pulkit Sharma</title>
+  
+
+  
+    <subtitle>Pulkit Sharma's Personal Opinions
+</subtitle>
+  
+
+  
+
+  
+  
+    <entry>
+      
+      <title type="html">Why most Hacktoberfest PRs are from India</title>
+      
+      <link href="https://pulkit.cc/2020/10/02/hacktoberfest-india/" rel="alternate" type="text/html" title="Why most Hacktoberfest PRs are from India" />
+      <published>2020-10-02T09:35:00+00:00</published>
+      <updated>2020-10-02T09:35:00+00:00</updated>
+      <id>https://pulkit.cc/2020/10/02/hacktoberfest-india</id>
+      <content type="html" xml:base="https://pulkit.cc/2020/10/02/hacktoberfest-india/">&lt;blockquote&gt;
+  &lt;p&gt;A look into why most of the Hacktoberfest PRs are “manufactured” in India&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;Before reading the post&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Now that I have mentioned the name of a country in the title, please read the following points:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;I am an Indian and have been living in the country since my birth.&lt;/li&gt;
+  &lt;li&gt;I do not claim to be right on all of this and there are many anecdotal generalisations here. Somethings are more like human problems instead of Indian problems &lt;strong&gt;but&lt;/strong&gt; just the sheer number of people here puts India on everyone’s radar.&lt;/li&gt;
+  &lt;li&gt;This post is NOT to denigrate India. It is definitely critical of some of its social and psychological aspects. As a proof for that I want to mention that I am writing a series on the wisdom of ancient Indian philosophical ideas here: &lt;a href=&quot;/2020/06/25/source-0/&quot;&gt;Source [0]&lt;/a&gt;, just so you know that I am not writing all my posts with the sole intention to show what is “wrong” with India. We should be brave enough to face the good and bad of it.&lt;/li&gt;
+  &lt;li&gt;It is a shame that I need to write this header in the first place. But the reality is with or without this, people will still get offended.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;index&quot;&gt;Index&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#what&quot;&gt;What&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;#how&quot;&gt;How&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;a href=&quot;#why&quot;&gt;Why&lt;/a&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#the-signalling-problem&quot;&gt;The Signalling Problem&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#the-jugaad-mentality&quot;&gt;The Jugaad Mentality&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#computer-science-education-in-india&quot;&gt;Computer Science Education in India&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#but-why-for-hacktoberfest&quot;&gt;But why for Hacktoberfest?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#the-problem-with-high-population-density&quot;&gt;The problem with high population density&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#hierarchy-of-needs&quot;&gt;Hierarchy of Needs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#closing-thoughts&quot;&gt;Closing Thoughts&lt;/a&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#probable-future&quot;&gt;Probable Future&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#improbable-future&quot;&gt;Improbable Future&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;what&quot;&gt;What&lt;/h2&gt;
+
+&lt;p&gt;As most of you may know, &lt;a href=&quot;https://hacktoberfest.digitalocean.com/&quot;&gt;Hacktoberfest&lt;/a&gt; started on 1st October 2020. And as it with most things in human life, people came with &lt;a href=&quot;https://mobile.twitter.com/shitoberfest&quot;&gt;different&lt;/a&gt; ways to hack hacktoberfest to get the free t-shirt.&lt;/p&gt;
+
+&lt;p&gt;Now apart from the sheer number of spam PRs which were opened, copious amount of time is being spent by the comparatively small number of open source maintainers who have comment, close and label each individual PR.&lt;/p&gt;
+
+&lt;p&gt;I became aware of this happening from this &lt;a href=&quot;https://news.ycombinator.com/item?id=24643894&quot;&gt;post&lt;/a&gt;, and in a days time several more &lt;a href=&quot;https://joel.net/how-one-guy-ruined-hacktoberfest2020-drama&quot;&gt;posts&lt;/a&gt; popped up. 
+I got motivated (triggered?) to write this post when I saw the following on HN:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/hacktober/hn_comment.png&quot; alt=&quot;hn-comment&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After some investigation, I found the original claim to be true, &lt;code class=&quot;highlighter-rouge&quot;&gt;more than 60% of the spam PRs are coming from one country: India&lt;/code&gt; and that is just 1 day after hacktoberfest started, I am sure the percentage will increase as days go by (unless DigitalOcean does something).&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;how&quot;&gt;How&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://joel.net/how-one-guy-ruined-hacktoberfest2020-drama&quot;&gt;This&lt;/a&gt; post talks about one Indian YouTube channel which apparently told people to open spammy PRs. After I looked around some people were claiming he was falsely accused, anyways the video is deleted now, so I can’t comment on that.&lt;/p&gt;
+
+&lt;p&gt;Anyways, it didn’t take long and I was able to find few more Indian YouTubers who were pretty directly promoting ways to open PRs to get those sweet T-Shirts. One created his own &lt;a href=&quot;https://github.com/seeditsolution/cprogram/pulls&quot;&gt;repo&lt;/a&gt; and encouraged people to google different programs and copy-paste them into a new PR against the empty repo.&lt;/p&gt;
+
+&lt;p&gt;I do not want to focus on the &lt;em&gt;How&lt;/em&gt;, you will find find plenty videos/blogs on it, I am sure some Indian YouTuber has started working on creating a video on it.&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;why&quot;&gt;Why&lt;/h2&gt;
+&lt;p&gt;One of the simplest explanation is that, DigitalOcean should have been very well anticipated that this is going to happen, after all they must have all the stats from the previous HacktoberFests.&lt;/p&gt;
+
+&lt;p&gt;We need to understand that Hacktoberfest is an marketing event. And all these spam and blogs posts around it is definitely serving their main purpose, there is no such thing as bad publicity indeed. Of course I could be totally wrong, all of this could be completely unintentional.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Now, coming to the Indian side of the ongoing issue. Out of all the countries why does India have the most spammy PRs ? As a seasoned armchair philosopher, the following are my thoughts on the “Why” of all this.&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;the-signalling-problem&quot;&gt;The Signalling Problem&lt;/h3&gt;
+&lt;p&gt;Whenever an online article/documentary/report claim to give a view into the “real” India, most of us (Indians) get offended.&lt;/p&gt;
+
+&lt;p&gt;I &lt;em&gt;was&lt;/em&gt; in the bubble which was in the “offended” bucket for long time. The reason was simple: I, the people around me and the societal structures around me were all part of the same bubble. We do not have to worry about paying school fees or rent, we do not have worry about sending part of salary back home just so that our parents can buy groceries to survive..&lt;/p&gt;
+
+&lt;p&gt;I can go on and on, the overall gist is that I got offended in seeing what other people claim as “real” India, because that India was not part of my reality. Sure, I saw that when travelling from one place to another, saw that on news, read about that in the newspaper; but I was at a very safe distance from all of that.&lt;/p&gt;
+
+&lt;p&gt;These days, I try to not get offended when people say India has problem X or problem Y, because I realise I am living inside a cocoon where all of my needs are met, and one of the most serious issues my country is facing right now is &lt;strike&gt;witch-hunting &lt;/strike&gt; nabbing the “drug mafia” amongst the Bollywood celebrities who allegedly murdered an actor by giving CBD oil (The absurdity of all this is unfathomable)&lt;/p&gt;
+
+&lt;p&gt;I mention all of this, because whenever I read posts which show India in some &lt;a href=&quot;https://news.ycombinator.com/item?id=24552047&quot;&gt;bad light&lt;/a&gt;, there is always someone somewhere who gives anecdotes of how that is not true.&lt;/p&gt;
+
+&lt;p&gt;Here are some facts: we have a culture of &lt;strong&gt;extreme signalling&lt;/strong&gt;. Signalling is the core building block of our society, most people don’t even realise that how big we are into signalling until they study about “signalling” as a phenomena and start becoming conscious of it. You notice that in the way your parents view you, how you make choices, how people around you make choices.&lt;/p&gt;
+
+&lt;p&gt;Of course, people will say “that is not an Indian problem, signalling is just a social construct and literally everyone does that on some level”. I am not denying not that, the very fact that I am writing this post is a kind of signalling I am doing.&lt;/p&gt;
+
+&lt;p&gt;It is well known fact that India is one of the densest countries on our &lt;a href=&quot;https://ourworldindata.org/grapher/population-density?time=2017&quot;&gt;planet&lt;/a&gt;, extreme siginalling is just one of the consequences of the myriad social problems created by high population density. Signalling in an high density environment is now ever more important as the people you interact or the people who notice your activities/accomplishments are multiples higher than in any other place on the planet.&lt;/p&gt;
+
+&lt;p&gt;We people like the wear the “tightly knit society” as badge of honour, let me tell you this “tightly knit society” has done more harm than good. We Indian people have no India of the amount of mental harassment we all go through, because that is just normalized as being just phases of “life”.&lt;/p&gt;
+
+&lt;p&gt;The prevalence of extreme signalling brews the classic and infamous &lt;em&gt;herd mentality&lt;/em&gt; in our minds. In middle school children have dreams to become a Pilot in the airforce, or maybe a Police officer, or maybe a Opera Singer ! But by the time of high school, everyone is just either on road to become an Engineer, a Doctor, a Lawyer, a Chartered Accountant …. or a &lt;strong&gt;failure&lt;/strong&gt;. This may seem harsh but that’s how most of the society operates here in India.&lt;/p&gt;
+
+&lt;p&gt;Now once your track is chosen for you (or fortunately, if you get to choose the track), you have some set goals you “must” achieve because they guarantee monetary success with an extremely high probability. If you are Engineer, you need to get into IIT. If you are a Doctor, you need to get into AIIMS. If you are doing management, you need to get into IIM.&lt;/p&gt;
+
+&lt;p&gt;Now, if you are an Engineer then your success criteria is not just any IIT, it should be one of the top ones (Bombay, Delhi, Kharagpur, Roorkee) and not just any branch in IIT, it should be &lt;em&gt;Computer Science&lt;/em&gt;. Because that’s how you get &lt;a href=&quot;https://www.newindianexpress.com/nation/2019/dec/04/five-iitians-bag-pay-packages-of-over-rs-15-crore-2071120.html&quot;&gt;Rs 1.5 crore “packages” (equivalent to 200K USD)&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;You can give me examples of how not all IIT toppers choose “Computer Science”, but that’s not the point, for the vast majority of people (more than a million), the success criteria is: getting Computer Science at IIT Bombay.&lt;/p&gt;
+
+&lt;p&gt;As might know (or have guessed) getting a seat in IIT Bombay is next to impossible for more than 99% people giving IIT, so they “lower” their goal by aiming for other IITs, but “Computer Science” remains the top priority.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-jugaad-mentality&quot;&gt;The Jugaad mentality&lt;/h3&gt;
+&lt;p&gt;Hacking systems is so ingrained in our society that we have a word for it: &lt;a href=&quot;https://en.wikipedia.org/wiki/Jugaad&quot;&gt;Jugaad&lt;/a&gt;. The whole scene with Hacktoberfest is just a demo of our Jugaad skills. Wait till you find out that &lt;a href=&quot;https://indianexpress.com/article/india/inside-indias-fake-research-paper-shops-pay-publish-profit-5265402&quot;&gt;most of the research papers&lt;/a&gt; published in India are &lt;a href=&quot;https://scroll.in/article/908230/indian-academics-lead-the-world-in-publishing-in-fake-journals-tarring-the-whole-education-sector&quot;&gt;fake&lt;/a&gt;. Even the orthodontist I was visiting for my checkup turned out to be fake and had forged her certificates (as told by by one other dentist).&lt;/p&gt;
+
+&lt;p&gt;The coaching industry actively promotes “cracking” these exams, and I am so tired writing on that topic that I do not want to write more about it here. Refer to my post on this &lt;a href=&quot;https://www.linkedin.com/pulse/coding-interviewing-coaching-industry-prologue-pulkit-sharma?articleId=6662006663559684097&quot;&gt;here&lt;/a&gt;. Some children start joining these coaching classes from as low as 5th grade! (apart from doing regular school), just to be able to “crack” the IITs after 7-8 years !&lt;/p&gt;
+
+&lt;p&gt;Now how is coaching industry a Jugaad ? Simply because from the point of view of IITs, attending regular school should be enough to prep you for the exams (I think). These coaching industries have made the process significantly harder as you can’t even hope of getting a low tier IIT without attending the coaching classes.&lt;/p&gt;
+
+&lt;p&gt;The IIT coaching industry is minting fat cheques out of this entire situation, look at these ads on the front page of the news paper. These ads create a vicious cycle by reinforcing the core “signalling” construct of our society.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/hacktober/paper_1.png&quot; alt=&quot;hn-comment&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/hacktober/paper_2.png&quot; alt=&quot;hn-comment&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/hacktober/paper_3.png&quot; alt=&quot;hn-comment&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Do not quote me on this, but I think the IIT coaching industries make more &lt;a href=&quot;https://www.businessinsider.in/education/news/iits-iisc-say-that-patchy-funding-is-delaying-institute-of-eminence-plans/articleshow/72103538.cms&quot;&gt;money than the IITs&lt;/a&gt; themselves. I understand the purpose of IITs is not to directly generate money, but if it would have more resources they can probably improve the infrastructure, employ better professors and improve the overall level of education.&lt;/p&gt;
+
+&lt;h3 id=&quot;computer-science-education-in-india&quot;&gt;Computer Science Education in India&lt;/h3&gt;
+&lt;p&gt;For vast majority of engineers in India, Computer Science is  one of the subjects you study in order to succeed in life. Just like you study Chemistry, you “study” Computer Science and once you learn all the “concepts”, you get a good job. (Apologies for so many quoted words, I can’t help putting them in quotes because they carry so much weight for me).&lt;/p&gt;
+
+&lt;p&gt;When people are in an average Indian college and if they are are lucky, information about some permutation/combination of the following is spread amongst the students: &lt;em&gt;Codechef, ICPC, DS/Algorithms, Infosys -&amp;gt; road to USA, GSOC, Github,  Google, Facebook, 1.5cr “package”, MBA, MS in USA, .. yada yada yada&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Of course this is not given by college authorities as they have no idea of the external world.&lt;/p&gt;
+
+&lt;p&gt;Us Indians are very good at following rules (or guidelines depending on the way you look at it), just tell us what to do, and we’ll do exactly that. We do not need any reasons or justifications for the most part, (we haven’t been taught that by the society). Just follow the rules and everything will be “set” for you is what everyone says and does. See a sample of how we learn to &lt;a href=&quot;https://academia.stackexchange.com/questions/41687/what-is-behind-the-indian-undergrad-research-experience-spam&quot;&gt;write emails&lt;/a&gt; and prepare for &lt;a href=&quot;https://www.geeksforgeeks.org/company-interview-corner/&quot;&gt;software interviews&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;but-why-for-hacktoberfest&quot;&gt;But why for Hacktoberfest?&lt;/h3&gt;
+
+&lt;p&gt;Coming back to Hactkoberfest, it fell prey to the Jugaad nature of our existence. I personally know people who in-spite of being well paid software developers created dummy repos to create a circle of PR contributions for past Hacktoberfest events.&lt;/p&gt;
+
+&lt;p&gt;Of course, wherever there is any sort of incentive related to some metric, people will try to game that, whether that is LinkedIn connection counts, number of likes on Facebook or number of impressions on Instagram. There is nothing specifically Indian about it.&lt;/p&gt;
+
+&lt;p&gt;But there is one thing Indian that, the sheer number of people here who are out there to game everything which can give them some “profit”. The % of these people vary by their personal financial factors, perceived financial factors and of course the plethora of social constructs around them.&lt;/p&gt;
+
+&lt;p&gt;The problem is for most people gaming the system, that’s the actual system for them. They see hacking the system as part of the entire system itself. Things get so convoluted due to limited sources of information that people automatically think that hacking is just part of the process and something which is expected out of them. It’s a messy &lt;a href=&quot;https://fs.blog/2020/06/coordination-problems/&quot;&gt;coordination problem&lt;/a&gt; that we have caught ourselves into.&lt;/p&gt;
+
+&lt;p&gt;The way of the jugaad is now applied to things unknowingly by people even when it is not really required. So far everything we have done needs some sort of Jugaad, so why would we not do that for getting t-shirts, getting into colleges, getting jobs, getting promotions, getting salary increments ?&lt;/p&gt;
+
+&lt;p&gt;After all the entire system is corrupt, right ? Everyone is corrupt, So why should &lt;strong&gt;I&lt;/strong&gt; be the naive one and NOT try to actively game the system ? DigitalOcean is a big company, what would they lose if I just get one T-Shirt ?&lt;/p&gt;
+
+&lt;p&gt;^ That’s the thought process of a typical Indian developer.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-problem-with-high-population-density&quot;&gt;The problem with high population density&lt;/h3&gt;
+
+&lt;p&gt;Everything mentioned so far can be in some sense applied to humans all around the world, but the amount of people in India makes things more complicated.&lt;/p&gt;
+
+&lt;p&gt;It complicates things because the society now has formalise / organise all this knowledge and information, which then slowly seeps itself into our &lt;a href=&quot;https://en.wikipedia.org/wiki/Collective_unconscious&quot;&gt;collective unconscious&lt;/a&gt;. There is no overseer of this process, parents single-handedly pluck information from the collective unconscious and feed that to their children. And it’s &lt;strong&gt;NOT&lt;/strong&gt; their fault, they are doing their best. If they knew what exactly to do, they wouldn’t have ended up in a dire situation in the first place, so of course they cannot rely on their own conscience, which I think is absolutely the right thing to do.&lt;/p&gt;
+
+&lt;p&gt;Once these ruleset(/guidelines) are plucked from the collective unconscious and are concretised by the news, media and society, then an individual cannot question them. Because why would you question them ? Millions of others are doing the same ? Are you claiming you are better than them by questioning the rules ? How will your parents get bread if you don’t study hard enough and get a job in the city ?&lt;/p&gt;
+
+&lt;p&gt;I want everyone reading this to understand that you have a privilege that, sorry to say, has blinded you about the real issues and problems we are facing. Most of the humans of our planet and by that, most of the humans living in India, are doing nothing wrong (from their own frame of reference), who am I or you to say what is Right or Wrong… for them? The situation gets so complex and intertwined that what is Right or Wrong for the other person takes the backseat, all that matters is what is Right or Wrong for me.&lt;/p&gt;
+
+&lt;h3 id=&quot;hierarchy-of-needs&quot;&gt;Hierarchy of Needs&lt;/h3&gt;
+
+&lt;p&gt;Armed with the wisdom from the unconscious all of us are ready, with just one mission: financial success. Trust me, when I say this, “Financial success” is what matters the most for us Indians. When I see someone who decides to push back “financial success” in order for other priorities, I have massive respect for them.&lt;/p&gt;
+
+&lt;p&gt;You need money to buy stuff, your family needs money to buy stuff; after all lack of money is our main source of unhappiness, right ? So keep your head down and just work towards that.&lt;/p&gt;
+
+&lt;p&gt;Trust me, I cannot begin to be thankful of the privilege I have in my life. My sole purpose of life is not just to be “financially successful” and provide resources for people around me. If I was part of the real India with the same name, intelligence, whatever, I would sure as hell be in a completely different situation where the only thing I would care about was earning money in order to satisfy the basic needs of me and people dependent on me.&lt;/p&gt;
+
+&lt;p&gt;When I say &lt;code class=&quot;highlighter-rouge&quot;&gt;basic needs&lt;/code&gt; different thoughts can rise up, for some basic need is having just a house, for some basic need is a 3 bedroom house because they have their parents or grandparents to take care of, for some basic need is getting a job so they can get married and have children, for some it could be to just buy a car. In all, it is pretty subjective and you cannot convince people to let go of their basic needs, because for them, it is &lt;strong&gt;their basic&lt;/strong&gt; need.&lt;/p&gt;
+
+&lt;p&gt;For the average software engineer aspirant in India, the basic need is to just get &lt;em&gt;any&lt;/em&gt; 9-5 job. They don’t have the privilege to choose which company they want to work for, so they will join the first company which offers them a job.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;closing-thoughts&quot;&gt;Closing Thoughts&lt;/h2&gt;
+
+&lt;p&gt;It is without doubt that India has produced a lot of good programming talent and software, but we should not ignore the elephant in the room: &lt;a href=&quot;https://economictimes.indiatimes.com/jobs/only-6-of-those-passing-out-of-indias-engineering-colleges-are-fit-for-a-job/articleshow/64446292.cms&quot;&gt;most engineering graduates in India are not fit for hiring&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;People everywhere on this planet are just slaves of their circumstances and the societal constructs which surround them. When push comes to shove (which is the permanent state for most Indians), we only care about one thing, &lt;strong&gt;survival&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;So, it doesn’t really matter how one gets a Hacktoberfest T-Shirt, as people don’t really have the conscience to see the consequences of doing that. As everyone around them is applying some Jugaad, so why not join the herd ?&lt;/p&gt;
+
+&lt;h3 id=&quot;probable-future&quot;&gt;Probable Future&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;The probable future is simple to predict, the things which are happening today will keep on happening. This is a struggle for basic survival, and what others think takes the backseat in this game.&lt;/li&gt;
+  &lt;li&gt;Coding interviews will become harder. As I &lt;a href=&quot;https://www.linkedin.com/pulse/coding-interviewing-coaching-industry-prologue-pulkit-sharma?articleId=6662006663559684097&quot;&gt;mentioned in my post&lt;/a&gt;, coaching industries will pop-up to help “crack” coding interviews, GSOC and maybe later HN posts. Trust me it is completely possible, all it takes is one Indian Google Engineer to create a YouTube video and say that he had X karma points on HN mentioned on his resume and that’s how his resume got shortlisted for Google.&lt;/li&gt;
+  &lt;li&gt;Big coaching industries in India have already started charging Rs.1500 for lessons on C++ STL. Without doubt, this will continue to happen on a larger and broader spectrum.&lt;/li&gt;
+  &lt;li&gt;YouTubers will continue to provide low quality tips and tricks for people.
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;See what is happening to GSOC (I searched “GSOC” from a machine in Europe, to prevent geo based search results):
+&lt;img src=&quot;/assets/hacktober/gsoc.png&quot; alt=&quot;hn-comment&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Even Google’s Foobar challenge is not spared:
+&lt;img src=&quot;/assets/hacktober/foobar.png&quot; alt=&quot;hn-comment&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;People will get offended on how I am denigrating Mother India. These people will questions my credentials and also point out that &lt;code class=&quot;highlighter-rouge&quot;&gt;I am not a thought leader of the industry&lt;/code&gt; therefore all of my views are wrong by default.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;improbable-future&quot;&gt;Improbable Future&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Somehow people will realise that the metric they should focus on is the &lt;em&gt;love for computers&lt;/em&gt;, &lt;em&gt;respect for other developers&lt;/em&gt; and the &lt;em&gt;social impact of programming&lt;/em&gt; on the world; not ranking in some programming contest, or number of Github contributors, or number of Github stars etc.&lt;/li&gt;
+  &lt;li&gt;Somehow good Indian software engineers will create quality content, blog posts and show what their actual job are like. They need to show that cutting edge software engineering happens not just in FAANG, but also in startups.&lt;/li&gt;
+  &lt;li&gt;Children in school have complete visibility and guidance on what lies ahead. Parents will stop projecting their own failures/insecurities in life on their children.&lt;/li&gt;
+  &lt;li&gt;Somehow Indian parents will become self sufficient, so that children are free to do and discover what they actually want.&lt;/li&gt;
+  &lt;li&gt;Failure is appreciated in society.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Find discussion on HackerNews &lt;a href=&quot;https://news.ycombinator.com/item?id=24667488&quot;&gt;here&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;hr /&gt;</content>
+
+      
+      
+      
+      
+      
+
+      
+
+      
+        <category term="india" />
+      
+        <category term="software" />
+      
+        <category term="blog" />
+      
+
+      
+
+      
+        <summary type="html">A look into why most of the Hacktoberfest PRs are “manufactured” in India</summary>
+      
+
+      
+      
+    </entry>
+  
+  
+  
+    <entry>
+      
+      <title type="html">Source [1] - Bubbles</title>
+      
+      <link href="https://pulkit.cc/2020/06/28/source-1/" rel="alternate" type="text/html" title="Source [1] - Bubbles" />
+      <published>2020-06-28T09:35:00+00:00</published>
+      <updated>2020-06-28T09:35:00+00:00</updated>
+      <id>https://pulkit.cc/2020/06/28/source-1</id>
+      <content type="html" xml:base="https://pulkit.cc/2020/06/28/source-1/">&lt;blockquote&gt;
+  &lt;p&gt;This essay is in continuation of &lt;a href=&quot;/2020/06/25/source-0/&quot;&gt;Source [0]&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;We all are vaguely familiar with the concepts of bubbles. Bubbles in the sense that each one of us is present in them and that bubble dictates which kind of information you consume, love, hate, and such. Bubbles can also be called a belief system. A belief system is not just about whether you believe in god or not, but it just tells in a broad sense what one believes about everything.&lt;/p&gt;
+
+&lt;p&gt;As we grow up, we metaphorically also keep growing our bubble by having new experiences, meeting new people, going to new places, discovering new knowledge to state a few.&lt;/p&gt;
+
+&lt;p&gt;Bubbles are generally used in a negative sense, for example, “That person seems to live in a bubble, he does not care about politics”, but bubbles are very helpful.
+You see, we are unconsciously aware of this fact, you may not call it a bubble or not even call it anything, but you know everyone (including you) has a bubble. And it’s just not people, we also put non-living things in a bubble. Like a religious book almost always gets put in a dogmatic bubble.&lt;/p&gt;
+
+&lt;p&gt;By putting things and people inside their own bubble, our mind now takes the call as to whether it makes sense to read/question/argue/understand something/someone or not. It does this decision making by seeing your own bubble and the other thing’s bubble, if they both align, i.e. they share some common beliefs, then the mind can allow us to continue, otherwise, the mind thinks that doing the activity in question will be a waste of time and energy.&lt;/p&gt;
+
+&lt;p&gt;There are many positive benefits of doing this, that’s how we have diverse thoughts, things, and persons. If the mind does not do it, countless amounts of energy will be spent by people in doing things that they don’t really require in some sense.&lt;/p&gt;
+
+&lt;p&gt;Conventional schooling systems do the same thing, they try to stop this automatic decision-making process of mind and forces us in doing things which don’t really matter in the long run. You are not allowed to question why you are studying a particular subject. A counterargument to this can be that during childhood our bubbles are not mature enough, hence the way the schooling system is designed. My counterargument to that is, in retrospect, I do not think it managed to change my bubble significantly or increase the rate of how my bubble grew, at best it created a false impression for me (and the education system) that it grew bigger by passing exams which test regurgitation abilities.&lt;/p&gt;
+
+&lt;p&gt;We have seen the positives of how the prioritization process of aligning bubbles done by our brain, that is it helps us in saving time and energy and helping us to grow, now it is time to see some downsides of that process.&lt;/p&gt;
+
+&lt;p&gt;One important point to note that this decision process (of choosing which bubbles are good/bad for you) is not always a conscious process, it can be seen a long-running process in the subconscious mind which sometimes comes into the conscious realm. Whenever you think you make a decision, it’s a conscious process, in other cases, your mind is making a lot of decisions subconsciously.&lt;/p&gt;
+
+&lt;p&gt;Let’s see an example, consider a person who is not interested in science and related topics as they consider these things to be “hard”. That person now sees a video on YouTube titled: “Deep Dive into our Universe”, chances are very low that a person will attempt to watch that video, as the decision would unconsciously have been made by the mind. There is a  caveat, due to the way modern internet operates, they will probably not even get into this situation as the recommendation algorithms will rarely show this content to the person. The internet giants have a better understanding of what your bubble is (better than we know it ourselves), therefore it will show you content that aligns with your bubble so that you consume it and then they can make money off ads. I am not saying that I have a better alternative, just stating the facts so you know how they operate by representing our bubbles via machine learning systems, using extensive monitoring/tracking.&lt;/p&gt;
+
+&lt;p&gt;Consider that this person had the option to watch the video, but they did not, reasons can be that they thought that they would not be able to understand, why to spend time in it, how does this help me, and similar thoughts. Here’s a fact, they might be completely right, watching this video may really not serve any purpose to them. In this way, bubble based judgments are really helpful in most cases.&lt;/p&gt;
+
+&lt;p&gt;But let us consider another possibility, that they did watch the video, and it turns out that the video was deeply instructional in nature. They thought they would not understand any of it, but after watching some part of it they understood 20% of the content. That’s a great thing!&lt;/p&gt;
+
+&lt;p&gt;So, there is always a possibility that something that our mind clearly ignores or does not give much more thought to, it is possible that there is more meaning present there. To look at the extra meaning, you need to put in a conscious effort to discover or extract it.&lt;/p&gt;
+
+&lt;p&gt;“Effort” is an interesting word, from the following which thing takes more effort? watching a 1-hour movie, or 1-hour video of a college lecture. Again, if the lecture is in a subject you are interested in (i.e. aligns with your bubble) you may need almost zero effort to watch the lecture, but as you may know, it takes considerable effort to watch the lecture video if it does not align with your bubble, and most probably you won’t watch it entirely, unlike in an actual lecture where you would have to sit through it even after you decide to stop making the effort to understand it, just to keep your physical self present in the lecture hall.&lt;/p&gt;
+
+&lt;p&gt;Coming back to the judgment aspect of it, I want to give another personal example. Sometime back I wrote about a particular company charging too much for coding related courses, one of the comments from a major stakeholder in that company said: “You are making these claims as if you are intellectual thought leader of the country”.  Obviously he was projecting what kind of bubble I need to belong to make sense to him, instead of looking at what I said and countering that.&lt;/p&gt;
+
+&lt;p&gt;I see this is a major problem that limits all of us to new ideas, every time I have a judgment about something, I try to think, is that because of what someone said, or is that because who said it, or is it a mixture of both cases.  I saw an interesting comment on YouTube on a video, it said: “A debate should not be about who is right, but what is right”.&lt;/p&gt;
+
+&lt;p&gt;Now, let us resume from where we left in &lt;a href=&quot;/2020/06/25/source-0/&quot;&gt;Source [0]&lt;/a&gt;. For the sake of clarity, I am going to reiterate our established common ground.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Philosophy is not just about talking in the air, it can contain some meaning which can in turn help us in widening our perspectives.&lt;/li&gt;
+  &lt;li&gt;Most religions have an essence that is deeply philosophical.&lt;/li&gt;
+  &lt;li&gt;In the case of India, a large number of sages spoke of deep philosophical concepts.&lt;/li&gt;
+  &lt;li&gt;We have a set of belief systems or bubbles in place which help in consuming things that align with who we are, but on the other hand, it can also prevent us from discovering something new.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;If you have reached so far, I hope that this content is aligning with you, so the purpose of writing this is fulfilled, I hope you continue reading but as a cautionary warning, I want to mention the target audience of this particular series of blogs for the future posts.&lt;/p&gt;
+
+&lt;p&gt;Without digressing too much, I want to point out that there are several views on the &lt;a href=&quot;https://en.wikipedia.org/wiki/Meaning_of_life#Popular_views&quot;&gt;meaning of life&lt;/a&gt;, one view says that the meaning of life is to do &lt;em&gt;good things&lt;/em&gt;, another says that the meaning of life is to &lt;em&gt;achieve one’s true potential&lt;/em&gt;. The one view which I relate to a lot is the view that meaning of life is to &lt;em&gt;gather knowledge and wisdom&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;By saying that, I am not claiming that other views are in some sense of lower stature than the view of &lt;em&gt;knowledge&lt;/em&gt;. I just state that so that you can see which bubble I belong to (and in turn this series of blogs), this will help you in judging whether you want to spend more time reading it or not.&lt;/p&gt;
+
+&lt;p&gt;With this in mind, I just want to point out that I have often found that expanding our own bubble never hurts and something good often comes out of it. For instance, reading the Bible would not magically convert you into a Christian, you’ll just create your own interpretation of what it is written in it, which will definitely give you a fresh perspective on the world i.e. expand your bubble.&lt;/p&gt;
+
+&lt;p&gt;In the next blog post, I will attempt to introduce you to some concepts related to the study of the nature of god and consciousness in ancient Indian philosophy, hopefully, the bubbles align and help in expanding yours.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      
+
+      
+        <category term="philosophy" />
+      
+        <category term="random" />
+      
+        <category term="india" />
+      
+        <category term="history" />
+      
+
+      
+
+      
+        <summary type="html">This essay is in continuation of Source [0]</summary>
+      
+
+      
+      
+    </entry>
+  
+  
+  
+    <entry>
+      
+      <title type="html">Source [0]</title>
+      
+      <link href="https://pulkit.cc/2020/06/25/source-0/" rel="alternate" type="text/html" title="Source [0]" />
+      <published>2020-06-25T09:35:00+00:00</published>
+      <updated>2020-06-25T09:35:00+00:00</updated>
+      <id>https://pulkit.cc/2020/06/25/source-0</id>
+      <content type="html" xml:base="https://pulkit.cc/2020/06/25/source-0/">&lt;blockquote&gt;
+  &lt;p&gt;Series of essays exploring Indian Philosophy/Sprituality&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I’ll start with a word: &lt;strong&gt;Dissatisfaction&lt;/strong&gt;. It is a word most of us try to run away from. We do not want to feel dissatisfied. Why do we not want to feel dissatisfied, but we are okay with feeling satisfied?
+Is life full of satisfaction with small pieces of dissatisfaction in between (like raisins on a cookie), or the other way round, wherein life is full of dissatisfaction inside which we find small moments of satisfaction. Or the extremes like, life is either just dissatisfaction or just satisfaction.
+These statements are pretty obvious but can be inspected a bit more (As later you will see this process of continuous inspection leads us to some uncharted territories).&lt;/p&gt;
+
+&lt;p&gt;These are important questions. The importance of something is of course subjective, so let’s assume them to be important for the sake of reading this text.&lt;/p&gt;
+
+&lt;p&gt;A possible reaction for a layperson while reading so far maybe: this guy (me, writer) is depressed about life, or some thought close to this in a similar direction.
+The reason why I say so, is because I would (could?) react in a similar manner. Whenever someone writes about something so-called “sad”, the knee jerk reaction is, “this person must’ve been through something difficult”. It is an important point to consider.&lt;/p&gt;
+
+&lt;p&gt;Another possible reaction is: Why is all this important? What is your point? Why are you making pointless statements/questions?
+Again, these are possible reactions, but just for the sake of reading this text, let’s assume that you may find something useful here.&lt;/p&gt;
+
+&lt;p&gt;Now that we’ve loaded a big pile of assumptions, I’ll come to the central point of this text.&lt;/p&gt;
+
+&lt;p&gt;Let’s look at some facts, most of our modern education/upbringing is orchestrated in a way that places importance on our external existence. And this has brought us tremendous success/results. Human life expectancy has drastically increased in the past 200 years, and of course, with the advent of the internet, we have started to innovate more rapidly.&lt;/p&gt;
+
+&lt;p&gt;Now the age-old question, have we become happier? Since this question can be cringe-inducing, let’s look at it from a different perspective.&lt;/p&gt;
+
+&lt;p&gt;From the human evolutionary standpoint, the modern world which we see ourselves in has been around for a minute fraction of the entire human existence (Homo Sapiens have been around for about 500,000 years).&lt;/p&gt;
+
+&lt;p&gt;And we have not grown any smarter, in the sense that our brain has not evolved in the past 50,000 years or so. Of course, here my assumption is that our smartness is proportional to the size of our brain.&lt;/p&gt;
+
+&lt;p&gt;This fact raises a question: if we assume that we have the same intellectual capacity for the past 50,000 years, why did modern science only emerge recently, i.e. in the past 2000 years, why did all this not happen any earlier? Why did we discover nuclear power now and not 30,000 years ago?&lt;/p&gt;
+
+&lt;p&gt;Another way to look is, what were the people before our modern age doing with their life (when they had the same intellectual capacity).&lt;/p&gt;
+
+&lt;p&gt;These are treacherous grounds I am entering here. You may notice that I did not use the term IQ, instead, I went ahead with something like “intellectual capacity” in order to comment quantifiably on our ancestor’s intelligence. The thing to note here is that IQ (or any other measure of intelligence) is a modern way to measure modern intelligence, so it can not be applied to them (humans thousands of years ago).&lt;/p&gt;
+
+&lt;p&gt;To give an example, the human species survived and evolved for millions of years all without the presence of spoken language, is that not sufficient display of intelligence? A million years is an unfathomable duration of time.&lt;/p&gt;
+
+&lt;p&gt;It is difficult to comment (from my uneducated perspective) what were the intellectual pursuits of our ancestors. We definitely see the beginnings of religions/cults at that time, as a way to organize and create a system of information distribution glued together by doctrines and dogmas.&lt;/p&gt;
+
+&lt;p&gt;What I can comment on is what people in ancient India did.&lt;/p&gt;
+
+&lt;p&gt;Before that let’s take a small detour to understand philosophy, to establish some common ground.&lt;/p&gt;
+
+&lt;p&gt;Philosophy is often misunderstood as “talking in the air” or air talk. One way I think about philosophy is that any questions/statements that cannot be answered literally or create a feeling of profoundness or create a deeper need for further inspection, can be considered as philosophical. You can obviously find better definitions in other resources, I am not a philosopher.&lt;/p&gt;
+
+&lt;p&gt;With our modern age, India’s philosophical history is tied very deeply with religion, even ingrained in it. In fact, it’s not just about India, most of the modern religions are deeply philosophical in essence.&lt;/p&gt;
+
+&lt;p&gt;Coming back to ancient India, you may already know that India was a country of sages, who were deeply revered. I do not feel hesitation in saying that these sages are what can be called philosophers in modern-day. But since they wear saffron and pray to some god, their statements/teachings are consumed very rarely by non-religious people, I will go one step further and say that these teachings are not even understood clearly by most religious people.&lt;/p&gt;
+
+&lt;p&gt;Which brings us to the questions, why should we even listen to these great ancient philosophers? What “knowledge” can they have which can be applied to our modern world, which is so drastically different from ancient times? How can these philosophers say something which can apply to me?&lt;/p&gt;
+
+&lt;p&gt;I believe these questions are completely valid, and I will talk about them later in further posts.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;References&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://advances.sciencemag.org/content/4/1/eaao5961#:~:text=Our%20data%20show%20that%2C%20300%2C000,100%2C000%20and%2035%2C000%20years%20ago.&quot;&gt;Evolution of Modern Human Brain Shape&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Indian_philosophy&quot;&gt;Wikipedia: Indian Philosophy&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Life_expectancy&quot;&gt;Wikipedia: Life Expectancy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Next post in continuation of this: &lt;a href=&quot;/2020/06/28/source-1/&quot;&gt;Source [1] - Bubbles&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content>
+
+      
+      
+      
+      
+      
+
+      
+
+      
+        <category term="philosophy" />
+      
+        <category term="random" />
+      
+        <category term="india" />
+      
+        <category term="history" />
+      
+
+      
+
+      
+        <summary type="html">Series of essays exploring Indian Philosophy/Sprituality</summary>
+      
+
+      
+      
+    </entry>
+  
+  
+  
+    <entry>
+      
+      <title type="html">Managing Shell Commands through Vim</title>
+      
+      <link href="https://pulkit.cc/2018/08/09/managing-shell-commands/" rel="alternate" type="text/html" title="Managing Shell Commands through Vim" />
+      <published>2018-08-08T22:00:00+00:00</published>
+      <updated>2018-08-08T22:00:00+00:00</updated>
+      <id>https://pulkit.cc/2018/08/09/managing-shell-commands</id>
+      <content type="html" xml:base="https://pulkit.cc/2018/08/09/managing-shell-commands/">&lt;blockquote&gt;
+  &lt;p&gt;A look at into how I used Vim to notes about frequently used shell commands at my new job&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Before I joined my job, I had been a heavy Windows user. Apart from the “UNIX Programming” course in college, I had barely used any of the shell commands.&lt;/p&gt;
+
+&lt;p&gt;In the initial days of the job, in order to run a previously executed shell command, I used to press the up arrow key on the keyboard to search for it.&lt;/p&gt;
+
+&lt;h2 id=&quot;shell-reverse-search&quot;&gt;Shell Reverse Search&lt;/h2&gt;
+
+&lt;p&gt;Turns out there is a neat way to search through your previously executed shell commands (All executed commands are stored in the bash history, for &lt;code class=&quot;highlighter-rouge&quot;&gt;zsh&lt;/code&gt; it is the &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.zsh_history&lt;/code&gt; file).
+All you have to do is press &lt;kbd&gt;CTRL&lt;/kbd&gt;+&lt;kbd&gt;r&lt;/kbd&gt; and then type some parts of the commands that you can recall.&lt;/p&gt;
+
+&lt;p&gt;For instance, if I know that sometime back, I had used a command to figure out the role of a particular Redis instance. Then all I have to do is &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;ctrl-r&amp;gt;role&lt;/code&gt; and the desired command while appear automagically !! (Keep pressing &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;ctrl-r&amp;gt;&lt;/code&gt; to cycle through the results)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/casts/reverse_search.svg&quot; alt=&quot;reverse-search&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;aliases&quot;&gt;Aliases&lt;/h2&gt;
+
+&lt;p&gt;One day, I was looking at my co-worker’s laptop while he was debugging some issue, and he started typing mysterious commands in the terminal like &lt;code class=&quot;highlighter-rouge&quot;&gt;gco master&lt;/code&gt;.
+Turns out &lt;code class=&quot;highlighter-rouge&quot;&gt;zsh&lt;/code&gt; comes with a set of &lt;code class=&quot;highlighter-rouge&quot;&gt;aliases&lt;/code&gt;, which are like shortcuts to entire shell commands.&lt;code class=&quot;highlighter-rouge&quot;&gt;gco&lt;/code&gt; is an alias for &lt;code class=&quot;highlighter-rouge&quot;&gt;git checkout&lt;/code&gt;. If you feel that there is a command that you need frequently, it is a good idea to make an alias for it. This avoids typing the entire command, and you can always reverse search for the alias, as it should be easy to remember.&lt;/p&gt;
+
+&lt;p&gt;To see existing aliases, you can run &lt;code class=&quot;highlighter-rouge&quot;&gt;alias -L&lt;/code&gt;. Creating a new alias is as simple as adding&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;ping_redis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'redis-cli -h 100.100.100.100 ping'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;to your rc file (For &lt;code class=&quot;highlighter-rouge&quot;&gt;zsh&lt;/code&gt; it is primarily &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.zshrc&lt;/code&gt;).&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;As you keep using the terminal, it may happen that you need some commands which are infrequently used but are important. For example one time configuration commands, installation steps, or some important queries to your database.&lt;/p&gt;
+
+&lt;p&gt;Making an alias does not make sense for each of these commands as they are not frequently used and you’ll get overloaded with aliases to remember. Reverse search might not work if you don’t remember any part of the command (or the bash history file got deleted/truncated).&lt;/p&gt;
+
+&lt;p&gt;I often found out that I had important commands scattered in different documents. Some of them might be in the OS X Notes app, some in an always running Sublime Text window or some found out by grepping &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.zsh_history&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Once, I would’ve found the command; the next step was to copy, go to the terminal window, paste and execute that command.&lt;/p&gt;
+
+&lt;h2 id=&quot;vim&quot;&gt;Vim&lt;/h2&gt;
+&lt;p&gt;Why not use Vim?&lt;/p&gt;
+
+&lt;p&gt;For me, I keep a &lt;code class=&quot;highlighter-rouge&quot;&gt;commands.sh&lt;/code&gt; file to take notes regarding all the important commands and use a handy little setting in the vimrc file to execute those commands from the file itself. Check out the demo…&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/casts/commands_vim_demo.svg&quot; alt=&quot;commands-demo-vim&quot; class=&quot;img-responsive&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can select the appropriate shell command in &lt;code class=&quot;highlighter-rouge&quot;&gt;visual&lt;/code&gt; mode and run them by pressing &lt;code class=&quot;highlighter-rouge&quot;&gt;r&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Here are the appropriate vimrc settings for &lt;code class=&quot;highlighter-rouge&quot;&gt;zsh&lt;/code&gt;. I had to do some digging on StackOverflow to get it to load my aliases.&lt;/p&gt;
+
+&lt;div class=&quot;language-vim highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;shell&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;zsh
+vnoremap &lt;span class=&quot;k&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'&amp;lt;,'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;w&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;!&lt;/span&gt;zsh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;You need to ensure that your aliases are in &lt;code class=&quot;highlighter-rouge&quot;&gt;.zshenv&lt;/code&gt;, or you can make &lt;code class=&quot;highlighter-rouge&quot;&gt;.zshenv&lt;/code&gt; a symlink to &lt;code class=&quot;highlighter-rouge&quot;&gt;.zshrc&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Keeping the shell commands in &lt;code class=&quot;highlighter-rouge&quot;&gt;commands.sh&lt;/code&gt; will allow you to write commands that you can later automate.
+For instance, if you repeatedly SSH into a machine to run something in the Rails console, you can keep the following in your &lt;code class=&quot;highlighter-rouge&quot;&gt;commands.sh&lt;/code&gt; file instead:&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh -t 100.100.100.100 &lt;span class=&quot;s2&quot;&gt;&quot;cd /some/dir/rails/;bundle exec rails console staging &amp;lt;&amp;lt;&amp;lt; 'Trash.delete_all'&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;What are your thoughts? How do you manage the growing set of commands you work with?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;A neat way I found out today was to use comments to tag shell commands.
+For example:&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;find . -name &lt;span class=&quot;s2&quot;&gt;&quot;*.sh&quot;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#find shell scripts&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Once you execute the above, you can reverse search by doing &lt;code class=&quot;highlighter-rouge&quot;&gt;find shell scripts&lt;/code&gt;.
+Sweet!&lt;/p&gt;
+
+&lt;h3 id=&quot;helpful-resources&quot;&gt;Helpful Resources:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/2575545/vim-pipe-selected-text-to-shell-cmd-and-receive-output-on-vim-info-command-line/5373376#5373376&quot;&gt;https://stackoverflow.com/questions/2575545/vim-pipe-selected-text-to-shell-cmd-and-receive-output-on-vim-info-command-line/5373376#5373376&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://unix.stackexchange.com/questions/113462/how-can-i-make-shell-aliases-available-when-shelling-out-from-vim/197135#197135&quot;&gt;https://unix.stackexchange.com/questions/113462/how-can-i-make-shell-aliases-available-when-shelling-out-from-vim/197135#197135&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://unix.stackexchange.com/questions/26245/how-to-quickly-store-and-access-often-used-commands/26263#26263&quot;&gt;https://unix.stackexchange.com/questions/26245/how-to-quickly-store-and-access-often-used-commands/26263#26263&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      
+
+      
+        <category term="shell" />
+      
+        <category term="vim" />
+      
+        <category term="learning" />
+      
+
+      
+
+      
+        <summary type="html">A look at into how I used Vim to notes about frequently used shell commands at my new job</summary>
+      
+
+      
+      
+    </entry>
+  
+  
+  
+    <entry>
+      
+      <title type="html">Using Jekyll and Github Pages (in 2017)</title>
+      
+      <link href="https://pulkit.cc/2017/09/23/using-jekyll-and-github-pages/" rel="alternate" type="text/html" title="Using Jekyll and Github Pages (in 2017)" />
+      <published>2017-09-23T13:13:34+00:00</published>
+      <updated>2017-09-23T13:13:34+00:00</updated>
+      <id>https://pulkit.cc/2017/09/23/using-jekyll-and-github-pages</id>
+      <content type="html" xml:base="https://pulkit.cc/2017/09/23/using-jekyll-and-github-pages/">&lt;blockquote&gt;
+  &lt;p&gt;After reading numerous posts online for using Jekyll and Github Pages together, I faced couple of issues. Lets take a look and see how I addressed some of them.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Jekyll 3 now recommends using Gem-based themes. I was not able to find themes other than the ones mentioned &lt;a href=&quot;https://github.com/planetjekyll/awesome-jekyll-themes&quot;&gt;here&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;The ones &lt;a href=&quot;https://pages.github.com/themes/&quot;&gt;supported&lt;/a&gt; by Github are not exactly blog like.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;After spending considerable amount of time looking for a perfect theme (And giving up numerous times). I decided to go with the &lt;code class=&quot;highlighter-rouge&quot;&gt;whiteglass&lt;/code&gt; theme.&lt;/p&gt;
+
+&lt;p&gt;I cloned the repo and had the blog running locally, it was time to push to my &lt;code class=&quot;highlighter-rouge&quot;&gt;.github.io&lt;/code&gt; repo. After, refreshing 3-4 times all I was staring at was a blank white screen. Soon, I got a mail from Github regarding a build warning.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;You are attempting to use a Jekyll theme, “jekyll-whiteglass”, which is not supported by GitHub Pages&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;the-fix&quot;&gt;The Fix&lt;/h2&gt;
+
+&lt;p&gt;Instead of serving a Jekyll Project directly from the &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; branch of the &lt;code class=&quot;highlighter-rouge&quot;&gt;github.io&lt;/code&gt; repository, we can instead serve the static files generated from the &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll build&lt;/code&gt; command, i.e. the contents of the &lt;code class=&quot;highlighter-rouge&quot;&gt;_site&lt;/code&gt; directory.
+This way, we will remove dependency on Github Pages to build the Jekyll Project, instead it will only serve the static pages.&lt;/p&gt;
+
+&lt;p&gt;Since, the &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; branch will have the “built” website, where should we store the actual Jekyll Project ?&lt;/p&gt;
+
+&lt;p&gt;In my case I have stored it in the &lt;code class=&quot;highlighter-rouge&quot;&gt;development&lt;/code&gt; branch inside the same repository. I will work on the blog in this branch and will push the built website to the &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; branch. I have seen some repositories where people have written Travis jobs to do this exact thing. I feel that is an overkill, a slow process and downright exploitation of a free service. Please correct me if I am wrong.&lt;/p&gt;
+
+&lt;p&gt;I have written a small shell script which will build the website and push the changes to the &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; branch. Here it is:&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#! /bin/sh&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;BUILD_DIR&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;./_site&quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;TMP_DIR&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/tmp/jekyll_build&quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;CURRENT_BRANCH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;git rev-parse --abbrev-ref HEAD&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Delete old build files if any&lt;/span&gt;
+rm -rf &lt;span class=&quot;nv&quot;&gt;$BUILD_DIR&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Build&lt;/span&gt;
+bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll build
+
+&lt;span class=&quot;c&quot;&gt;# If Build succeeds&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; -d &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$BUILD_DIR&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;; &lt;span class=&quot;k&quot;&gt;then
+    &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;JEKYLL: BUILD SUCCESS&quot;&lt;/span&gt;
+    rm -r &lt;span class=&quot;nv&quot;&gt;$TMP_DIR&lt;/span&gt;
+
+    &lt;span class=&quot;c&quot;&gt;# Move BUILD_DIR to /tmp&lt;/span&gt;
+    mv &lt;span class=&quot;nv&quot;&gt;$BUILD_DIR&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$TMP_DIR&lt;/span&gt;
+
+    &lt;span class=&quot;c&quot;&gt;# Change branch to master&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if &lt;/span&gt;git checkout master; &lt;span class=&quot;k&quot;&gt;then
+      &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;SUCCESSFULLY SWITCHED TO MASTER&quot;&lt;/span&gt;
+
+      &lt;span class=&quot;c&quot;&gt;# Cleanup&lt;/span&gt;
+      ls | xargs rm -r
+
+      &lt;span class=&quot;c&quot;&gt;# Get the build&lt;/span&gt;
+      mv &lt;span class=&quot;nv&quot;&gt;$TMP_DIR&lt;/span&gt;/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; .
+
+      &lt;span class=&quot;c&quot;&gt;# Commit&lt;/span&gt;
+      git add .
+      git commit -m &lt;span class=&quot;s2&quot;&gt;&quot;Deploy &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;date&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;if &lt;/span&gt;git push origin master; &lt;span class=&quot;k&quot;&gt;then
+        &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;DEPLOYED SUCCESSFULLY !&quot;&lt;/span&gt;
+        &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;basename &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;git remote show -n origin | grep Fetch | cut -d: -f2-&lt;span class=&quot;k&quot;&gt;))&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;else
+        &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;DEPLOY FAILED !&quot;&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;fi
+    else
+      &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;CANNOT SWITCH BRANCH, ABORTING&quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;fi
+
+else
+    &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;JEKYLL: BUILD FAILURE&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;fi
+
+&lt;/span&gt;git checkout &lt;span class=&quot;nv&quot;&gt;$CURRENT_BRANCH&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;This script lives in the &lt;code class=&quot;highlighter-rouge&quot;&gt;development&lt;/code&gt; branch.&lt;/p&gt;
+
+&lt;p&gt;After I am done doing my changes to the blog. I push them to the &lt;code class=&quot;highlighter-rouge&quot;&gt;development&lt;/code&gt; branch, and then do &lt;code class=&quot;highlighter-rouge&quot;&gt;./deploy&lt;/code&gt;. The script will then make a new commit on &lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt; having your latest masterpiece.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-i-dont-like-the-gem-based-themes&quot;&gt;Why I don’t like the gem based themes.&lt;/h2&gt;
+
+&lt;p&gt;I have added the &lt;code class=&quot;highlighter-rouge&quot;&gt;deploy&lt;/code&gt; script as a post-commit hook, but unfortunately some changes do not require a commit.&lt;/p&gt;
+
+&lt;p&gt;This is because most of the theme related code is now inside the gem’s directory (i.e. not inside my git repo). So, say If I want to change the Google Analytics tracking script, then I’ll need to do the changes in the &lt;code class=&quot;highlighter-rouge&quot;&gt;google_analytics.html&lt;/code&gt; file. Since, this file is inside the gem’s directory (in my case at &lt;code class=&quot;highlighter-rouge&quot;&gt;/Users/pulkit/.rvm/gems/ruby-2.2.5/gems/jekyll-whiteglass-1.3.0/_includes/&lt;/code&gt;), I cannot make a commit on &lt;code class=&quot;highlighter-rouge&quot;&gt;development&lt;/code&gt; to reflect this change.&lt;/p&gt;
+
+&lt;p&gt;Gem based themes are good for people who are new to Jekyll and do not wish to modify the themes they use. Since, most of the theme related code is now present in some other directory, users will not be overwhelmed from the directory structure when they do &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll new&lt;/code&gt;.
+But sooner or later, you’ll need to make some changes to the theme (changing the font size for example). Doing those changes in some other directory and not inside version control is pretty cumbersome and will hurt in the future.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;UPDATE&lt;/strong&gt;: Found out this &lt;a href=&quot;https://jekyllrb.com/docs/themes/#converting-gem-based-themes-to-regular-themes&quot;&gt;https://jekyllrb.com/docs/themes/#converting-gem-based-themes-to-regular-themes&lt;/a&gt;, this will make your git repo to have all the code ! But then, what is the point of gem-based themes ?&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Discussion on &lt;a href=&quot;https://news.ycombinator.com/item?id=15354908&quot;&gt;HackerNews&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      
+
+      
+        <category term="jekyll" />
+      
+        <category term="blog" />
+      
+        <category term="github" />
+      
+
+      
+
+      
+        <summary type="html">After reading numerous posts online for using Jekyll and Github Pages together, I faced couple of issues. Lets take a look and see how I addressed some of them.</summary>
+      
+
+      
+      
+    </entry>
+  
+  
+</feed>
