@@ -14,7 +14,7 @@ if [ -d "$BUILD_DIR" ]; then
     mv $BUILD_DIR $TMP_DIR
 
     # Change branch to master
-    if git checkout master; then
+    if git checkout rpi_hosted; then
       echo "SUCCESSFULLY SWITCHED TO MASTER"
 
       # Cleanup
@@ -26,7 +26,7 @@ if [ -d "$BUILD_DIR" ]; then
       # Commit
       git add .
       git commit -m "Deploy $(date)"
-      if git push origin master; then
+      if git push origin rpi_hosted; then
         echo "DEPLOYED SUCCESSFULLY !"
         echo $(basename $(git remote show -n origin | grep Fetch | cut -d: -f2-))
       else
