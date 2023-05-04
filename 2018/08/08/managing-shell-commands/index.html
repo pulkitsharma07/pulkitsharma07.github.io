@@ -1,0 +1,340 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Managing Shell Commands through Vim - Pulkit Sharma</title>
+<meta name="description" content="A look at into how I used Vim to notes about frequently used shell commands at my new job">
+
+
+  <meta name="author" content="Pulkit Sharma">
+  
+  <meta property="article:author" content="Pulkit Sharma">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Pulkit Sharma">
+<meta property="og:title" content="Managing Shell Commands through Vim">
+<meta property="og:url" content="https://pulkit.cc/2018/08/08/managing-shell-commands/">
+
+
+  <meta property="og:description" content="A look at into how I used Vim to notes about frequently used shell commands at my new job">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2018-08-08T22:00:00+00:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://pulkit.cc/2018/08/08/managing-shell-commands/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "https://pulkit.cc/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Pulkit Sharma Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Pulkit Sharma
+          <span class="site-subtitle">Personal Opinions</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/categories/">Categories</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Managing Shell Commands through Vim">
+    <meta itemprop="description" content="  A look at into how I used Vim to notes about frequently used shell commands at my new job">
+    <meta itemprop="datePublished" content="2018-08-08T22:00:00+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Managing Shell Commands through Vim
+</h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <blockquote>
+  <p>A look at into how I used Vim to notes about frequently used shell commands at my new job</p>
+</blockquote>
+
+<p>Before I joined my job, I had been a heavy Windows user. Apart from the “UNIX Programming” course in college, I had barely used any of the shell commands.</p>
+
+<p>In the initial days of the job, in order to run a previously executed shell command, I used to press the up arrow key on the keyboard to search for it.</p>
+
+<h2 id="shell-reverse-search">Shell Reverse Search</h2>
+
+<p>Turns out there is a neat way to search through your previously executed shell commands (All executed commands are stored in the bash history, for <code class="language-plaintext highlighter-rouge">zsh</code> it is the <code class="language-plaintext highlighter-rouge">~/.zsh_history</code> file).
+All you have to do is press <kbd>CTRL</kbd>+<kbd>r</kbd> and then type some parts of the commands that you can recall.</p>
+
+<p>For instance, if I know that sometime back, I had used a command to figure out the role of a particular Redis instance. Then all I have to do is <code class="language-plaintext highlighter-rouge">&lt;ctrl-r&gt;role</code> and the desired command while appear automagically !! (Keep pressing <code class="language-plaintext highlighter-rouge">&lt;ctrl-r&gt;</code> to cycle through the results)</p>
+
+<p><img src="/assets/casts/reverse_search.svg" alt="reverse-search" class="img-responsive" /></p>
+
+<h2 id="aliases">Aliases</h2>
+
+<p>One day, I was looking at my co-worker’s laptop while he was debugging some issue, and he started typing mysterious commands in the terminal like <code class="language-plaintext highlighter-rouge">gco master</code>.
+Turns out <code class="language-plaintext highlighter-rouge">zsh</code> comes with a set of <code class="language-plaintext highlighter-rouge">aliases</code>, which are like shortcuts to entire shell commands.<code class="language-plaintext highlighter-rouge">gco</code> is an alias for <code class="language-plaintext highlighter-rouge">git checkout</code>. If you feel that there is a command that you need frequently, it is a good idea to make an alias for it. This avoids typing the entire command, and you can always reverse search for the alias, as it should be easy to remember.</p>
+
+<p>To see existing aliases, you can run <code class="language-plaintext highlighter-rouge">alias -L</code>. Creating a new alias is as simple as adding</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">alias </span><span class="nv">ping_redis</span><span class="o">=</span><span class="s1">'redis-cli -h 100.100.100.100 ping'</span>
+</code></pre></div></div>
+<p>to your rc file (For <code class="language-plaintext highlighter-rouge">zsh</code> it is primarily <code class="language-plaintext highlighter-rouge">~/.zshrc</code>).</p>
+
+<hr />
+
+<p>As you keep using the terminal, it may happen that you need some commands which are infrequently used but are important. For example one time configuration commands, installation steps, or some important queries to your database.</p>
+
+<p>Making an alias does not make sense for each of these commands as they are not frequently used and you’ll get overloaded with aliases to remember. Reverse search might not work if you don’t remember any part of the command (or the bash history file got deleted/truncated).</p>
+
+<p>I often found out that I had important commands scattered in different documents. Some of them might be in the OS X Notes app, some in an always running Sublime Text window or some found out by grepping <code class="language-plaintext highlighter-rouge">~/.zsh_history</code>.</p>
+
+<p>Once, I would’ve found the command; the next step was to copy, go to the terminal window, paste and execute that command.</p>
+
+<h2 id="vim">Vim</h2>
+<p>Why not use Vim?</p>
+
+<p>For me, I keep a <code class="language-plaintext highlighter-rouge">commands.sh</code> file to take notes regarding all the important commands and use a handy little setting in the vimrc file to execute those commands from the file itself. Check out the demo…</p>
+
+<p><img src="/assets/casts/commands_vim_demo.svg" alt="commands-demo-vim" class="img-responsive" /></p>
+
+<p>You can select the appropriate shell command in <code class="language-plaintext highlighter-rouge">visual</code> mode and run them by pressing <code class="language-plaintext highlighter-rouge">r</code></p>
+
+<p>Here are the appropriate vimrc settings for <code class="language-plaintext highlighter-rouge">zsh</code>. I had to do some digging on StackOverflow to get it to load my aliases.</p>
+
+<div class="language-vim highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">set</span> <span class="k">shell</span><span class="p">=</span>zsh
+vnoremap <span class="k">r</span> <span class="p">:</span><span class="s1">'&lt;,'</span><span class="p">&gt;</span><span class="k">w</span> <span class="p">!</span>zsh
+</code></pre></div></div>
+
+<p>You need to ensure that your aliases are in <code class="language-plaintext highlighter-rouge">.zshenv</code>, or you can make <code class="language-plaintext highlighter-rouge">.zshenv</code> a symlink to <code class="language-plaintext highlighter-rouge">.zshrc</code>.</p>
+
+<p>Keeping the shell commands in <code class="language-plaintext highlighter-rouge">commands.sh</code> will allow you to write commands that you can later automate.
+For instance, if you repeatedly SSH into a machine to run something in the Rails console, you can keep the following in your <code class="language-plaintext highlighter-rouge">commands.sh</code> file instead:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh <span class="nt">-t</span> 100.100.100.100 <span class="s2">"cd /some/dir/rails/;bundle exec rails console staging &lt;&lt;&lt; 'Trash.delete_all'"</span>
+</code></pre></div></div>
+
+<hr />
+
+<p><strong>What are your thoughts? How do you manage the growing set of commands you work with?</strong></p>
+
+<p>A neat way I found out today was to use comments to tag shell commands.
+For example:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find <span class="nb">.</span> <span class="nt">-name</span> <span class="s2">"*.sh"</span> <span class="c">#find shell scripts</span>
+</code></pre></div></div>
+
+<p>Once you execute the above, you can reverse search by doing <code class="language-plaintext highlighter-rouge">find shell scripts</code>.
+Sweet!</p>
+
+<h3 id="helpful-resources">Helpful Resources:</h3>
+<ul>
+  <li><a href="https://stackoverflow.com/questions/2575545/vim-pipe-selected-text-to-shell-cmd-and-receive-output-on-vim-info-command-line/5373376#5373376">https://stackoverflow.com/questions/2575545/vim-pipe-selected-text-to-shell-cmd-and-receive-output-on-vim-info-command-line/5373376#5373376</a></li>
+  <li><a href="https://unix.stackexchange.com/questions/113462/how-can-i-make-shell-aliases-available-when-shelling-out-from-vim/197135#197135">https://unix.stackexchange.com/questions/113462/how-can-i-make-shell-aliases-available-when-shelling-out-from-vim/197135#197135</a></li>
+  <li><a href="https://unix.stackexchange.com/questions/26245/how-to-quickly-store-and-access-often-used-commands/26263#26263">https://unix.stackexchange.com/questions/26245/how-to-quickly-store-and-access-often-used-commands/26263#26263</a></li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-08-08T22:00:00+00:00">August 8, 2018</time></p>
+
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/2017/09/23/using-jekyll-and-github-pages/" class="pagination--pager" title="Using Jekyll and Github Pages (in 2017)
+">Previous</a>
+    
+    
+      <a href="/2020/06/25/source-0/" class="pagination--pager" title="Source [0]
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 Pulkit Sharma. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
