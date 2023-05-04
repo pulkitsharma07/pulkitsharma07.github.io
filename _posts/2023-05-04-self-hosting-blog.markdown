@@ -19,10 +19,6 @@ gallery_hardware:
 * Experiment with some DevOps stuff.
 * Feels cool to have a server running 24x7 in your home.
 
-## Pure vs Impure Self-Hosting
-I understand that relying on a third-party service like Cloudflare, is not actually self-hosting of the purest form. But I am okay with this impurity based on the time saved and features provided.
-
-
 # Architecture
 Wanted to keep this as simple as possible.
 * The Rpi is hooked directly into my wifi router using an ethernet cable. 
@@ -30,6 +26,10 @@ Wanted to keep this as simple as possible.
 * [Cloudflare Tunnels](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/#how-it-works) to expose the Rpi to the internet quite securely.
   * this is completely free ! (as of writing this)
   * More details explained in the `Software` section below.
+
+## Pure vs Impure Self-Hosting
+I understand that relying on a third-party service like Cloudflare, is not actually self-hosting of the purest form. But I am okay with this impurity based on the time saved and features provided.
+
 
 
 # Hardware
