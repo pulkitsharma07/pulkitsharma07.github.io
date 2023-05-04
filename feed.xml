@@ -1,13 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://pulkit.cc/feed.xml" rel="self" type="application/atom+xml" /><link href="https://pulkit.cc/" rel="alternate" type="text/html" /><updated>2023-05-04T17:19:06+00:00</updated><id>https://pulkit.cc/</id><title type="html">Pulkit Sharma</title><subtitle>Pulkit Sharma's Personal Blog and Opinions
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://pulkit.cc/feed.xml" rel="self" type="application/atom+xml" /><link href="https://pulkit.cc/" rel="alternate" type="text/html" /><updated>2023-05-04T17:21:13+00:00</updated><id>https://pulkit.cc/</id><title type="html">Pulkit Sharma</title><subtitle>Pulkit Sharma's Personal Blog and Opinions
 </subtitle><author><name>Pulkit Sharma</name></author><entry><title type="html">My Self Hosting Stack for 2023</title><link href="https://pulkit.cc/2023/05/04/self-hosting-blog/" rel="alternate" type="text/html" title="My Self Hosting Stack for 2023" /><published>2023-05-04T04:35:00+00:00</published><updated>2023-05-04T04:35:00+00:00</updated><id>https://pulkit.cc/2023/05/04/self-hosting-blog</id><content type="html" xml:base="https://pulkit.cc/2023/05/04/self-hosting-blog/">&lt;h1 id=&quot;why-self-host-&quot;&gt;Why Self-Host ?&lt;/h1&gt;
 &lt;ul&gt;
   &lt;li&gt;Make use of the Raspberry Pi I had laying around.&lt;/li&gt;
   &lt;li&gt;Experiment with some DevOps stuff.&lt;/li&gt;
   &lt;li&gt;Feels cool to have a server running 24x7 in your home.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&quot;pure-vs-impure-self-hosting&quot;&gt;Pure vs Impure Self-Hosting&lt;/h2&gt;
-&lt;p&gt;I understand that relying on a third-party service like Cloudflare, is not actually self-hosting of the purest form. But I am okay with this impurity based on the time saved and features provided.&lt;/p&gt;
 
 &lt;h1 id=&quot;architecture&quot;&gt;Architecture&lt;/h1&gt;
 &lt;p&gt;Wanted to keep this as simple as possible.&lt;/p&gt;
@@ -24,6 +21,9 @@
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h2 id=&quot;pure-vs-impure-self-hosting&quot;&gt;Pure vs Impure Self-Hosting&lt;/h2&gt;
+&lt;p&gt;I understand that relying on a third-party service like Cloudflare, is not actually self-hosting of the purest form. But I am okay with this impurity based on the time saved and features provided.&lt;/p&gt;
 
 &lt;h1 id=&quot;hardware&quot;&gt;Hardware&lt;/h1&gt;
 
