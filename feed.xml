@@ -1,5 +1,140 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://pulkit.cc/feed.xml" rel="self" type="application/atom+xml" /><link href="https://pulkit.cc/" rel="alternate" type="text/html" /><updated>2023-05-04T06:41:02+00:00</updated><id>https://pulkit.cc/</id><title type="html">Pulkit Sharma</title><subtitle>Pulkit Sharma's Personal Blog and Opinions
-</subtitle><author><name>Pulkit Sharma</name></author><entry><title type="html">Why most Hacktoberfest PRs are from India</title><link href="https://pulkit.cc/2020/10/02/hacktoberfest-india/" rel="alternate" type="text/html" title="Why most Hacktoberfest PRs are from India" /><published>2020-10-02T09:35:00+00:00</published><updated>2020-10-02T09:35:00+00:00</updated><id>https://pulkit.cc/2020/10/02/hacktoberfest-india</id><content type="html" xml:base="https://pulkit.cc/2020/10/02/hacktoberfest-india/">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://pulkit.cc/feed.xml" rel="self" type="application/atom+xml" /><link href="https://pulkit.cc/" rel="alternate" type="text/html" /><updated>2023-05-04T17:17:29+00:00</updated><id>https://pulkit.cc/</id><title type="html">Pulkit Sharma</title><subtitle>Pulkit Sharma's Personal Blog and Opinions
+</subtitle><author><name>Pulkit Sharma</name></author><entry><title type="html">My Self Hosting Stack for 2023</title><link href="https://pulkit.cc/2023/05/04/self-hosting-blog/" rel="alternate" type="text/html" title="My Self Hosting Stack for 2023" /><published>2023-05-04T04:35:00+00:00</published><updated>2023-05-04T04:35:00+00:00</updated><id>https://pulkit.cc/2023/05/04/self-hosting-blog</id><content type="html" xml:base="https://pulkit.cc/2023/05/04/self-hosting-blog/">&lt;h1 id=&quot;why-self-host-&quot;&gt;Why Self-Host ?&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Make use of the Raspberry Pi I had laying around.&lt;/li&gt;
+  &lt;li&gt;Experiment with some DevOps stuff.&lt;/li&gt;
+  &lt;li&gt;Feels cool to have a server running 24x7 in your home.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;pure-vs-impure-self-hosting&quot;&gt;Pure vs Impure Self-Hosting&lt;/h2&gt;
+&lt;p&gt;I understand that relying on a third-party service like Cloudflare, is not actually self-hosting of the purest form. But I am okay with this impurity based on the time saved and features provided.&lt;/p&gt;
+
+&lt;h1 id=&quot;architecture&quot;&gt;Architecture&lt;/h1&gt;
+&lt;p&gt;Wanted to keep this as simple as possible.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The Rpi is hooked directly into my wifi router using an ethernet cable.
+    &lt;ul&gt;
+      &lt;li&gt;The router is configured to assign a static private IP to the Rpi.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/#how-it-works&quot;&gt;Cloudflare Tunnels&lt;/a&gt; to expose the Rpi to the internet quite securely.
+    &lt;ul&gt;
+      &lt;li&gt;this is completely free ! (as of writing this)&lt;/li&gt;
+      &lt;li&gt;More details explained in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Software&lt;/code&gt; section below.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;hardware&quot;&gt;Hardware&lt;/h1&gt;
+
+&lt;figure class=&quot;half &quot;&gt;
+  
+    
+      &lt;img src=&quot;https://assets.raspberrypi.com/static/raspberry-pi-4-labelled-f5e5dcdf6a34223235f83261fa42d1e8.png&quot; alt=&quot;Raspberry Pi 4B&quot; /&gt;
+    
+  
+    
+      &lt;img src=&quot;https://cdn.shopify.com/s/files/1/0556/1660/2177/products/AR1-V2_04_350x.jpg&quot; alt=&quot;Argon V2 Case&quot; /&gt;
+    
+  
+  
+    &lt;figcaption&gt;Raspberry Pi 4B along with Argon V2 Case
+&lt;/figcaption&gt;
+  
+&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Raspberry Pi 4 Model B Rev 1.2
+    &lt;ul&gt;
+      &lt;li&gt;Has 4GB of RAM and 4 core 1.8 Ghz CPU&lt;/li&gt;
+      &lt;li&gt;Provisioned to run Raspbian OS.&lt;/li&gt;
+      &lt;li&gt;32 GB sdcard for persistent storage (SanDisk Extreme 32GB microSDHC UHS-3 Card)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Argon ONE V2 Case
+    &lt;ul&gt;
+      &lt;li&gt;Integrated fan really helps in keeping temperatures under control&lt;/li&gt;
+      &lt;li&gt;Prevents dust build up&lt;/li&gt;
+      &lt;li&gt;All ports are neatly accessible on one side&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;software&quot;&gt;Software&lt;/h1&gt;
+&lt;h2 id=&quot;development&quot;&gt;Development&lt;/h2&gt;
+&lt;p&gt;I wanted to setup a development environment similar to the setup on my work Macbook.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Shell: zsh&lt;/li&gt;
+  &lt;li&gt;Editor/IDE: neovim (Specifically &lt;a href=&quot;https://astronvim.com/&quot;&gt;Astronvim&lt;/a&gt;)
+    &lt;ul&gt;
+      &lt;li&gt;I had to compile neovim from source because there were no ARM v7 releases for that.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;tmux
+    &lt;ul&gt;
+      &lt;li&gt;Pretty much standard to allow long running shell sessions.&lt;/li&gt;
+      &lt;li&gt;Can have native iTerm experience with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tmux -CC&lt;/code&gt;. More info &lt;a href=&quot;https://iterm2.com/documentation-tmux-integration.html&quot;&gt;here&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;hosting&quot;&gt;Hosting&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/#how-it-works&quot;&gt;Cloudflare Tunnels&lt;/a&gt; do the heavy lifting for exposing the pi to the internet.
+    &lt;ul&gt;
+      &lt;li&gt;A daemon runs on the pi which opens a persistent connection with cloudflare infra. The cloudflare infra then receives requests from the internet and forwards them onto your pi via the daemon.&lt;/li&gt;
+      &lt;li&gt;You can expose multiple services via a single tunnel and also restrict public access via authentication.&lt;/li&gt;
+      &lt;li&gt;Watch &lt;a href=&quot;https://www.youtube.com/watch?v=ZvIdFs3M5ic&quot;&gt;this&lt;/a&gt; for more info.&lt;/li&gt;
+      &lt;li&gt;A SystemD service unit file spawns the daemon on every boot.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Docker
+    &lt;ul&gt;
+      &lt;li&gt;I am running all my containers with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--restart=unless-stopped&lt;/code&gt;. This will auto run the containers after boot. Check &lt;a href=&quot;https://docs.docker.com/config/containers/start-containers-automatically/&quot;&gt;this&lt;/a&gt; for more info.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Deployment
+    &lt;ul&gt;
+      &lt;li&gt;I run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nginx:alpine&lt;/code&gt; container which has the blog’s codebase mounted as a volume during runtime.&lt;/li&gt;
+      &lt;li&gt;Since this is a static website, I just go into the directory and do a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git pull&lt;/code&gt; and the new version becomes active.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;monitoring&quot;&gt;Monitoring&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;I run &lt;a href=&quot;https://n8n.io/&quot;&gt;n8n&lt;/a&gt; on the pi to monitor services and run other automations.
+    &lt;ul&gt;
+      &lt;li&gt;This is integrated with my Telegram account which acts as a central place to receive notifications&lt;/li&gt;
+      &lt;li&gt;Every day it sends me a health report of the pi.&lt;/li&gt;
+      &lt;li&gt;I plan to add more workflows in the future for personal projects here.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Cloudflare Tunnel Notifications
+    &lt;ul&gt;
+      &lt;li&gt;This is a neat feature where you will get notified if pi loses internet connectivity.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;For metrics I run &lt;a href=&quot;https://prometheus.io/&quot;&gt;Prometheus&lt;/a&gt; on the pi with a retention of 30days
+    &lt;ul&gt;
+      &lt;li&gt;It can collect the pi metrics (temperature, cpu, ram, etc) and also collect metrics from the &lt;a href=&quot;https://docs.docker.com/config/daemon/prometheus/&quot;&gt;docker daemon&lt;/a&gt; about running containers.&lt;/li&gt;
+      &lt;li&gt;Once I am able to get the hang of PromQL, I will be Using &lt;a href=&quot;https://prometheus.io/docs/alerting/overview/&quot;&gt;Alerts&lt;/a&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;future-work&quot;&gt;Future Work&lt;/h1&gt;
+&lt;p&gt;Obviously the things documented in the blog are just the current state and these things will keep on evolving.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Setup Grafana to plot prometheus metrics.&lt;/li&gt;
+  &lt;li&gt;I definitely need to start taking backups.&lt;/li&gt;
+  &lt;li&gt;Related to the above, I thing I would like to look into is automating provisioning of the pi server(s) from scratch.
+    &lt;ul&gt;
+      &lt;li&gt;IMO the playbook or recipe based approaches are difficult to test from scratch, so I would prefer some modifiable “image” based approach (where I can change hostname etc).&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Probably Host &lt;a href=&quot;https://plausible.io/docs/self-hosting&quot;&gt;Plausible Analytics&lt;/a&gt; on the Pi for the blog.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Pulkit Sharma</name></author><summary type="html">Why Self-Host ? Make use of the Raspberry Pi I had laying around. Experiment with some DevOps stuff. Feels cool to have a server running 24x7 in your home.</summary></entry><entry><title type="html">Why most Hacktoberfest PRs are from India</title><link href="https://pulkit.cc/2020/10/02/hacktoberfest-india/" rel="alternate" type="text/html" title="Why most Hacktoberfest PRs are from India" /><published>2020-10-02T09:35:00+00:00</published><updated>2020-10-02T09:35:00+00:00</updated><id>https://pulkit.cc/2020/10/02/hacktoberfest-india</id><content type="html" xml:base="https://pulkit.cc/2020/10/02/hacktoberfest-india/">&lt;blockquote&gt;
   &lt;p&gt;A look into why most of the Hacktoberfest PRs are “manufactured” in India&lt;/p&gt;
 &lt;/blockquote&gt;
 
