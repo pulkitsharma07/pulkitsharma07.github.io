@@ -1,3 +1,6 @@
+# Self Hosting on Raspberry-pi
+* Refer to `launch.sh`
+
 The **master** branch contains the built website. It is generated automatically using the `deploy` script in the **development** branch.
 **master** is essentially the contents of the `_site` folder after running `jekyll build`
 

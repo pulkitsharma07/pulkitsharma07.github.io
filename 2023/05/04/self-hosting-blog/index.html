@@ -1,0 +1,405 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>My Self Hosting Stack for 2023 - Pulkit Sharma</title>
+<meta name="description" content="Why Self-Host ?    Make use of the Raspberry Pi I had laying around.   Experiment with some DevOps stuff.   Feels cool to have a server running 24x7 in your home.">
+
+
+  <meta name="author" content="Pulkit Sharma">
+  
+  <meta property="article:author" content="Pulkit Sharma">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Pulkit Sharma">
+<meta property="og:title" content="My Self Hosting Stack for 2023">
+<meta property="og:url" content="http://0.0.0.0:4000/2023/05/04/self-hosting-blog/">
+
+
+  <meta property="og:description" content="Why Self-Host ?    Make use of the Raspberry Pi I had laying around.   Experiment with some DevOps stuff.   Feels cool to have a server running 24x7 in your home.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2023-05-04T04:35:00+00:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://0.0.0.0:4000/2023/05/04/self-hosting-blog/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://0.0.0.0:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Pulkit Sharma Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Pulkit Sharma
+          <span class="site-subtitle">Personal Opinions</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/categories/">Categories</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="My Self Hosting Stack for 2023">
+    <meta itemprop="description" content="Why Self-Host ?  Make use of the Raspberry Pi I had laying around.  Experiment with some DevOps stuff.  Feels cool to have a server running 24x7 in your home.">
+    <meta itemprop="datePublished" content="2023-05-04T04:35:00+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">My Self Hosting Stack for 2023
+</h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          6 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#why-self-host-">Why Self-Host ?</a></li><li><a href="#architecture">Architecture</a><ul><li><a href="#pure-vs-impure-self-hosting">Pure vs Impure Self-Hosting</a></li></ul></li><li><a href="#hardware">Hardware</a></li><li><a href="#software">Software</a><ul><li><a href="#development">Development</a></li><li><a href="#hosting">Hosting</a></li><li><a href="#monitoring">Monitoring</a></li></ul></li><li><a href="#future-work">Future Work</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h1 id="why-self-host-">Why Self-Host ?</h1>
+<ul>
+  <li>Make use of the Raspberry Pi I had laying around.</li>
+  <li>Experiment with some DevOps stuff.</li>
+  <li>Feels cool to have a server running 24x7 in your home.</li>
+</ul>
+
+<h1 id="architecture">Architecture</h1>
+<p>Wanted to keep this as simple as possible.</p>
+<ul>
+  <li>The Rpi is hooked directly into my wifi router using an ethernet cable.
+    <ul>
+      <li>The router is configured to assign a static private IP to the Rpi.</li>
+    </ul>
+  </li>
+  <li><a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/#how-it-works">Cloudflare Tunnels</a> to expose the Rpi to the internet quite securely.
+    <ul>
+      <li>this is completely free ! (as of writing this)</li>
+      <li>More details explained in the <code class="language-plaintext highlighter-rouge">Software</code> section below.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="pure-vs-impure-self-hosting">Pure vs Impure Self-Hosting</h2>
+<p>I understand that relying on a third-party service like Cloudflare, is not actually self-hosting of the purest form. But I am okay with this impurity based on the time saved and features provided.</p>
+
+<h1 id="hardware">Hardware</h1>
+
+<figure class="half ">
+  
+    
+      <img src="https://assets.raspberrypi.com/static/raspberry-pi-4-labelled-f5e5dcdf6a34223235f83261fa42d1e8.png" alt="Raspberry Pi 4B" />
+    
+  
+    
+      <img src="https://cdn.shopify.com/s/files/1/0556/1660/2177/products/AR1-V2_04_350x.jpg" alt="Argon V2 Case" />
+    
+  
+  
+    <figcaption>Raspberry Pi 4B along with Argon V2 Case
+</figcaption>
+  
+</figure>
+
+<ul>
+  <li>Raspberry Pi 4 Model B Rev 1.2
+    <ul>
+      <li>Has 4GB of RAM and 4 core 1.8 Ghz CPU</li>
+      <li>Provisioned to run Raspbian OS.</li>
+      <li>32 GB sdcard for persistent storage (SanDisk Extreme 32GB microSDHC UHS-3 Card)</li>
+    </ul>
+  </li>
+  <li>Argon ONE V2 Case
+    <ul>
+      <li>Integrated fan really helps in keeping temperatures under control</li>
+      <li>Prevents dust build up</li>
+      <li>All ports are neatly accessible on one side</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="software">Software</h1>
+<h2 id="development">Development</h2>
+<p>I wanted to setup a development environment similar to the setup on my work Macbook. Here are few things:</p>
+<ul>
+  <li>Shell: zsh</li>
+  <li>Editor/IDE: neovim (Specifically <a href="https://astronvim.com/">Astronvim</a>)
+    <ul>
+      <li>I had to compile neovim from source because there were no ARM v7 releases for that.</li>
+    </ul>
+  </li>
+  <li>tmux
+    <ul>
+      <li>Pretty much standard to allow long running shell sessions.</li>
+      <li>Can have native iTerm experience with <code class="language-plaintext highlighter-rouge">tmux -CC</code>. More info <a href="https://iterm2.com/documentation-tmux-integration.html">here</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="hosting">Hosting</h2>
+<ul>
+  <li><a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/#how-it-works">Cloudflare Tunnels</a> do the heavy lifting for exposing the pi to the internet.
+    <ul>
+      <li>A daemon runs on the pi which opens a persistent connection with cloudflare infra. The cloudflare infra then receives requests from the internet and forwards them onto your pi via the daemon.</li>
+      <li>You can expose multiple services via a single tunnel and also restrict public access via authentication.</li>
+      <li>Watch <a href="https://www.youtube.com/watch?v=ZvIdFs3M5ic">this</a> for more info.</li>
+      <li>A SystemD service unit file spawns the daemon on every boot.</li>
+    </ul>
+  </li>
+  <li>Docker
+    <ul>
+      <li>I am running all my containers with <code class="language-plaintext highlighter-rouge">--restart=unless-stopped</code>. This will auto run the containers after boot. Check <a href="https://docs.docker.com/config/containers/start-containers-automatically/">this</a> for more info.</li>
+    </ul>
+  </li>
+  <li>Deployment
+    <ul>
+      <li>I run <code class="language-plaintext highlighter-rouge">nginx:alpine</code> container which has the blog’s codebase mounted as a volume during runtime.</li>
+      <li>Since this is a static website, I just go into the directory and do a <code class="language-plaintext highlighter-rouge">git pull</code> and the new version becomes active.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="monitoring">Monitoring</h2>
+<ul>
+  <li>I run <a href="https://n8n.io/">n8n</a> on the pi to monitor services and run other automations.
+    <ul>
+      <li>This is integrated with my Telegram account which acts as a central place to receive notifications</li>
+      <li>Every day it sends me a health report of the pi.</li>
+      <li>I plan to add more workflows in the future for personal projects here.</li>
+    </ul>
+  </li>
+  <li>Cloudflare Tunnel Notifications
+    <ul>
+      <li>This is a neat feature where you will get notified if pi loses internet connectivity.</li>
+    </ul>
+  </li>
+  <li>For metrics I run <a href="https://prometheus.io/">Prometheus</a> on the pi with a retention of 30days
+    <ul>
+      <li>It can collect the pi metrics (temperature, cpu, ram, etc) and also collect metrics from the <a href="https://docs.docker.com/config/daemon/prometheus/">docker daemon</a> about running containers.</li>
+      <li>Once I am able to get the hang of PromQL, I will be Using <a href="https://prometheus.io/docs/alerting/overview/">Alerts</a>.</li>
+    </ul>
+  </li>
+  <li>Also I have a small script which periodically updates my <a href="/about/">about page</a> with my server’s stats.</li>
+</ul>
+
+<h1 id="future-work">Future Work</h1>
+<p>Obviously the things documented in the blog are just the current state and these things will keep on evolving. Here are few things I have in mind:</p>
+<ul>
+  <li>Setup Grafana to plot prometheus metrics.</li>
+  <li>Backups.</li>
+  <li>Related to the above, I thing I would like to look into is automating provisioning of the pi server(s) from scratch.
+    <ul>
+      <li>IMO the playbook or recipe based approaches are difficult to test from scratch, so I would prefer some modifiable “image” based approach (where I can change hostname etc).</li>
+    </ul>
+  </li>
+  <li>Probably Host <a href="https://plausible.io/docs/self-hosting">Plausible Analytics</a> on the Pi for the blog.</li>
+  <li>Setup <a href="https://ikarus.sg/extend-sd-card-lifespan-with-log2ram/">log2ram</a> to buffer writes to the sdcard.</li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2023-05-04T04:35:00+00:00">May 4, 2023</time></p>
+
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/2020/10/02/hacktoberfest-india/" class="pagination--pager" title="Why most Hacktoberfest PRs are from India
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 Pulkit Sharma. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
