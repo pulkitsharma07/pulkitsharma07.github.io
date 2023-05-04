@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://pulkit.cc/feed.xml" rel="self" type="application/atom+xml" /><link href="https://pulkit.cc/" rel="alternate" type="text/html" /><updated>2023-05-04T17:21:13+00:00</updated><id>https://pulkit.cc/</id><title type="html">Pulkit Sharma</title><subtitle>Pulkit Sharma's Personal Blog and Opinions
-</subtitle><author><name>Pulkit Sharma</name></author><entry><title type="html">My Self Hosting Stack for 2023</title><link href="https://pulkit.cc/2023/05/04/self-hosting-blog/" rel="alternate" type="text/html" title="My Self Hosting Stack for 2023" /><published>2023-05-04T04:35:00+00:00</published><updated>2023-05-04T04:35:00+00:00</updated><id>https://pulkit.cc/2023/05/04/self-hosting-blog</id><content type="html" xml:base="https://pulkit.cc/2023/05/04/self-hosting-blog/">&lt;h1 id=&quot;why-self-host-&quot;&gt;Why Self-Host ?&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-05-04T17:53:54+00:00</updated><id>http://0.0.0.0:4000/</id><title type="html">Pulkit Sharma</title><subtitle>Pulkit Sharma's Personal Blog and Opinions
+</subtitle><author><name>Pulkit Sharma</name></author><entry><title type="html">My Self Hosting Stack for 2023</title><link href="http://0.0.0.0:4000/2023/05/04/self-hosting-blog/" rel="alternate" type="text/html" title="My Self Hosting Stack for 2023" /><published>2023-05-04T04:35:00+00:00</published><updated>2023-05-04T04:35:00+00:00</updated><id>http://0.0.0.0:4000/2023/05/04/self-hosting-blog</id><content type="html" xml:base="http://0.0.0.0:4000/2023/05/04/self-hosting-blog/">&lt;h1 id=&quot;why-self-host-&quot;&gt;Why Self-Host ?&lt;/h1&gt;
 &lt;ul&gt;
   &lt;li&gt;Make use of the Raspberry Pi I had laying around.&lt;/li&gt;
   &lt;li&gt;Experiment with some DevOps stuff.&lt;/li&gt;
@@ -62,7 +62,7 @@
 
 &lt;h1 id=&quot;software&quot;&gt;Software&lt;/h1&gt;
 &lt;h2 id=&quot;development&quot;&gt;Development&lt;/h2&gt;
-&lt;p&gt;I wanted to setup a development environment similar to the setup on my work Macbook.&lt;/p&gt;
+&lt;p&gt;I wanted to setup a development environment similar to the setup on my work Macbook. Here are few things:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Shell: zsh&lt;/li&gt;
   &lt;li&gt;Editor/IDE: neovim (Specifically &lt;a href=&quot;https://astronvim.com/&quot;&gt;Astronvim&lt;/a&gt;)
@@ -121,20 +121,22 @@
       &lt;li&gt;Once I am able to get the hang of PromQL, I will be Using &lt;a href=&quot;https://prometheus.io/docs/alerting/overview/&quot;&gt;Alerts&lt;/a&gt;.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
+  &lt;li&gt;Also I have a small script which periodically updates my &lt;a href=&quot;/about/&quot;&gt;about page&lt;/a&gt; with my server’s stats.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;future-work&quot;&gt;Future Work&lt;/h1&gt;
-&lt;p&gt;Obviously the things documented in the blog are just the current state and these things will keep on evolving.&lt;/p&gt;
+&lt;p&gt;Obviously the things documented in the blog are just the current state and these things will keep on evolving. Here are few things I have in mind:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Setup Grafana to plot prometheus metrics.&lt;/li&gt;
-  &lt;li&gt;I definitely need to start taking backups.&lt;/li&gt;
+  &lt;li&gt;Backups.&lt;/li&gt;
   &lt;li&gt;Related to the above, I thing I would like to look into is automating provisioning of the pi server(s) from scratch.
     &lt;ul&gt;
       &lt;li&gt;IMO the playbook or recipe based approaches are difficult to test from scratch, so I would prefer some modifiable “image” based approach (where I can change hostname etc).&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Probably Host &lt;a href=&quot;https://plausible.io/docs/self-hosting&quot;&gt;Plausible Analytics&lt;/a&gt; on the Pi for the blog.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Pulkit Sharma</name></author><summary type="html">Why Self-Host ? Make use of the Raspberry Pi I had laying around. Experiment with some DevOps stuff. Feels cool to have a server running 24x7 in your home.</summary></entry><entry><title type="html">Why most Hacktoberfest PRs are from India</title><link href="https://pulkit.cc/2020/10/02/hacktoberfest-india/" rel="alternate" type="text/html" title="Why most Hacktoberfest PRs are from India" /><published>2020-10-02T09:35:00+00:00</published><updated>2020-10-02T09:35:00+00:00</updated><id>https://pulkit.cc/2020/10/02/hacktoberfest-india</id><content type="html" xml:base="https://pulkit.cc/2020/10/02/hacktoberfest-india/">&lt;blockquote&gt;
+  &lt;li&gt;Setup &lt;a href=&quot;https://ikarus.sg/extend-sd-card-lifespan-with-log2ram/&quot;&gt;log2ram&lt;/a&gt; to buffer writes to the sdcard.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Pulkit Sharma</name></author><summary type="html">Why Self-Host ? Make use of the Raspberry Pi I had laying around. Experiment with some DevOps stuff. Feels cool to have a server running 24x7 in your home.</summary></entry><entry><title type="html">Why most Hacktoberfest PRs are from India</title><link href="http://0.0.0.0:4000/2020/10/02/hacktoberfest-india/" rel="alternate" type="text/html" title="Why most Hacktoberfest PRs are from India" /><published>2020-10-02T09:35:00+00:00</published><updated>2020-10-02T09:35:00+00:00</updated><id>http://0.0.0.0:4000/2020/10/02/hacktoberfest-india</id><content type="html" xml:base="http://0.0.0.0:4000/2020/10/02/hacktoberfest-india/">&lt;blockquote&gt;
   &lt;p&gt;A look into why most of the Hacktoberfest PRs are “manufactured” in India&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -341,7 +343,7 @@ I got motivated (triggered?) to write this post when I saw the following on HN:&
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;em&gt;Find discussion on HackerNews &lt;a href=&quot;https://news.ycombinator.com/item?id=24667488&quot;&gt;here&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-&lt;hr /&gt;</content><author><name>Pulkit Sharma</name></author><summary type="html">A look into why most of the Hacktoberfest PRs are “manufactured” in India</summary></entry><entry><title type="html">Source [1] - Bubbles</title><link href="https://pulkit.cc/2020/06/28/source-1/" rel="alternate" type="text/html" title="Source [1] - Bubbles" /><published>2020-06-28T09:35:00+00:00</published><updated>2020-06-28T09:35:00+00:00</updated><id>https://pulkit.cc/2020/06/28/source-1</id><content type="html" xml:base="https://pulkit.cc/2020/06/28/source-1/">&lt;blockquote&gt;
+&lt;hr /&gt;</content><author><name>Pulkit Sharma</name></author><summary type="html">A look into why most of the Hacktoberfest PRs are “manufactured” in India</summary></entry><entry><title type="html">Source [1] - Bubbles</title><link href="http://0.0.0.0:4000/2020/06/28/source-1/" rel="alternate" type="text/html" title="Source [1] - Bubbles" /><published>2020-06-28T09:35:00+00:00</published><updated>2020-06-28T09:35:00+00:00</updated><id>http://0.0.0.0:4000/2020/06/28/source-1</id><content type="html" xml:base="http://0.0.0.0:4000/2020/06/28/source-1/">&lt;blockquote&gt;
   &lt;p&gt;This essay is in continuation of &lt;a href=&quot;/2020/06/25/source-0/&quot;&gt;Source [0]&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -392,7 +394,7 @@ You see, we are unconsciously aware of this fact, you may not call it a bubble o
 
 &lt;p&gt;With this in mind, I just want to point out that I have often found that expanding our own bubble never hurts and something good often comes out of it. For instance, reading the Bible would not magically convert you into a Christian, you’ll just create your own interpretation of what it is written in it, which will definitely give you a fresh perspective on the world i.e. expand your bubble.&lt;/p&gt;
 
-&lt;p&gt;In the next blog post, I will attempt to introduce you to some concepts related to the study of the nature of god and consciousness in ancient Indian philosophy, hopefully, the bubbles align and help in expanding yours.&lt;/p&gt;</content><author><name>Pulkit Sharma</name></author><summary type="html">This essay is in continuation of Source [0]</summary></entry><entry><title type="html">Source [0]</title><link href="https://pulkit.cc/2020/06/25/source-0/" rel="alternate" type="text/html" title="Source [0]" /><published>2020-06-25T09:35:00+00:00</published><updated>2020-06-25T09:35:00+00:00</updated><id>https://pulkit.cc/2020/06/25/source-0</id><content type="html" xml:base="https://pulkit.cc/2020/06/25/source-0/">&lt;blockquote&gt;
+&lt;p&gt;In the next blog post, I will attempt to introduce you to some concepts related to the study of the nature of god and consciousness in ancient Indian philosophy, hopefully, the bubbles align and help in expanding yours.&lt;/p&gt;</content><author><name>Pulkit Sharma</name></author><summary type="html">This essay is in continuation of Source [0]</summary></entry><entry><title type="html">Source [0]</title><link href="http://0.0.0.0:4000/2020/06/25/source-0/" rel="alternate" type="text/html" title="Source [0]" /><published>2020-06-25T09:35:00+00:00</published><updated>2020-06-25T09:35:00+00:00</updated><id>http://0.0.0.0:4000/2020/06/25/source-0</id><content type="html" xml:base="http://0.0.0.0:4000/2020/06/25/source-0/">&lt;blockquote&gt;
   &lt;p&gt;Series of essays exploring Indian Philosophy/Sprituality&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -451,7 +453,7 @@ Again, these are possible reactions, but just for the sake of reading this text,
 
 &lt;blockquote&gt;
   &lt;p&gt;Next post in continuation of this: &lt;a href=&quot;/2020/06/28/source-1/&quot;&gt;Source [1] - Bubbles&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name>Pulkit Sharma</name></author><summary type="html">Series of essays exploring Indian Philosophy/Sprituality</summary></entry><entry><title type="html">Managing Shell Commands through Vim</title><link href="https://pulkit.cc/2018/08/08/managing-shell-commands/" rel="alternate" type="text/html" title="Managing Shell Commands through Vim" /><published>2018-08-08T22:00:00+00:00</published><updated>2018-08-08T22:00:00+00:00</updated><id>https://pulkit.cc/2018/08/08/managing-shell-commands</id><content type="html" xml:base="https://pulkit.cc/2018/08/08/managing-shell-commands/">&lt;blockquote&gt;
+&lt;/blockquote&gt;</content><author><name>Pulkit Sharma</name></author><summary type="html">Series of essays exploring Indian Philosophy/Sprituality</summary></entry><entry><title type="html">Managing Shell Commands through Vim</title><link href="http://0.0.0.0:4000/2018/08/08/managing-shell-commands/" rel="alternate" type="text/html" title="Managing Shell Commands through Vim" /><published>2018-08-08T22:00:00+00:00</published><updated>2018-08-08T22:00:00+00:00</updated><id>http://0.0.0.0:4000/2018/08/08/managing-shell-commands</id><content type="html" xml:base="http://0.0.0.0:4000/2018/08/08/managing-shell-commands/">&lt;blockquote&gt;
   &lt;p&gt;A look at into how I used Vim to notes about frequently used shell commands at my new job&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -530,7 +532,7 @@ Sweet!&lt;/p&gt;
   &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/2575545/vim-pipe-selected-text-to-shell-cmd-and-receive-output-on-vim-info-command-line/5373376#5373376&quot;&gt;https://stackoverflow.com/questions/2575545/vim-pipe-selected-text-to-shell-cmd-and-receive-output-on-vim-info-command-line/5373376#5373376&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://unix.stackexchange.com/questions/113462/how-can-i-make-shell-aliases-available-when-shelling-out-from-vim/197135#197135&quot;&gt;https://unix.stackexchange.com/questions/113462/how-can-i-make-shell-aliases-available-when-shelling-out-from-vim/197135#197135&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://unix.stackexchange.com/questions/26245/how-to-quickly-store-and-access-often-used-commands/26263#26263&quot;&gt;https://unix.stackexchange.com/questions/26245/how-to-quickly-store-and-access-often-used-commands/26263#26263&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Pulkit Sharma</name></author><summary type="html">A look at into how I used Vim to notes about frequently used shell commands at my new job</summary></entry><entry><title type="html">Using Jekyll and Github Pages (in 2017)</title><link href="https://pulkit.cc/2017/09/23/using-jekyll-and-github-pages/" rel="alternate" type="text/html" title="Using Jekyll and Github Pages (in 2017)" /><published>2017-09-23T13:13:34+00:00</published><updated>2017-09-23T13:13:34+00:00</updated><id>https://pulkit.cc/2017/09/23/using-jekyll-and-github-pages</id><content type="html" xml:base="https://pulkit.cc/2017/09/23/using-jekyll-and-github-pages/">&lt;blockquote&gt;
+&lt;/ul&gt;</content><author><name>Pulkit Sharma</name></author><summary type="html">A look at into how I used Vim to notes about frequently used shell commands at my new job</summary></entry><entry><title type="html">Using Jekyll and Github Pages (in 2017)</title><link href="http://0.0.0.0:4000/2017/09/23/using-jekyll-and-github-pages/" rel="alternate" type="text/html" title="Using Jekyll and Github Pages (in 2017)" /><published>2017-09-23T13:13:34+00:00</published><updated>2017-09-23T13:13:34+00:00</updated><id>http://0.0.0.0:4000/2017/09/23/using-jekyll-and-github-pages</id><content type="html" xml:base="http://0.0.0.0:4000/2017/09/23/using-jekyll-and-github-pages/">&lt;blockquote&gt;
   &lt;p&gt;After reading numerous posts online for using Jekyll and Github Pages together, I faced couple of issues. Lets take a look and see how I addressed some of them.&lt;/p&gt;
 &lt;/blockquote&gt;
 

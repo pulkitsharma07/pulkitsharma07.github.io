@@ -23,7 +23,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Pulkit Sharma">
 <meta property="og:title" content="My Self Hosting Stack for 2023">
-<meta property="og:url" content="https://pulkit.cc/2023/05/04/self-hosting-blog/">
+<meta property="og:url" content="http://0.0.0.0:4000/2023/05/04/self-hosting-blog/">
 
 
   <meta property="og:description" content="Why Self-Host ?    Make use of the Raspberry Pi I had laying around.   Experiment with some DevOps stuff.   Feels cool to have a server running 24x7 in your home.">
@@ -41,7 +41,7 @@
 
 
 
-<link rel="canonical" href="https://pulkit.cc/2023/05/04/self-hosting-blog/">
+<link rel="canonical" href="http://0.0.0.0:4000/2023/05/04/self-hosting-blog/">
 
 
 
@@ -52,7 +52,7 @@
     
       "@type": "Person",
       "name": null,
-      "url": "https://pulkit.cc/"
+      "url": "http://0.0.0.0:4000/"
     
   }
 </script>
@@ -250,7 +250,7 @@
 
 <h1 id="software">Software</h1>
 <h2 id="development">Development</h2>
-<p>I wanted to setup a development environment similar to the setup on my work Macbook.</p>
+<p>I wanted to setup a development environment similar to the setup on my work Macbook. Here are few things:</p>
 <ul>
   <li>Shell: zsh</li>
   <li>Editor/IDE: neovim (Specifically <a href="https://astronvim.com/">Astronvim</a>)
@@ -309,19 +309,21 @@
       <li>Once I am able to get the hang of PromQL, I will be Using <a href="https://prometheus.io/docs/alerting/overview/">Alerts</a>.</li>
     </ul>
   </li>
+  <li>Also I have a small script which periodically updates my <a href="/about/">about page</a> with my server’s stats.</li>
 </ul>
 
 <h1 id="future-work">Future Work</h1>
-<p>Obviously the things documented in the blog are just the current state and these things will keep on evolving.</p>
+<p>Obviously the things documented in the blog are just the current state and these things will keep on evolving. Here are few things I have in mind:</p>
 <ul>
   <li>Setup Grafana to plot prometheus metrics.</li>
-  <li>I definitely need to start taking backups.</li>
+  <li>Backups.</li>
   <li>Related to the above, I thing I would like to look into is automating provisioning of the pi server(s) from scratch.
     <ul>
       <li>IMO the playbook or recipe based approaches are difficult to test from scratch, so I would prefer some modifiable “image” based approach (where I can change hostname etc).</li>
     </ul>
   </li>
   <li>Probably Host <a href="https://plausible.io/docs/self-hosting">Plausible Analytics</a> on the Pi for the blog.</li>
+  <li>Setup <a href="https://ikarus.sg/extend-sd-card-lifespan-with-log2ram/">log2ram</a> to buffer writes to the sdcard.</li>
 </ul>
 
         
