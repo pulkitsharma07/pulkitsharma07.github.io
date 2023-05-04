@@ -1,9 +1,8 @@
 ---
-layout: post
 title:  "Why most Hacktoberfest PRs are from India"
 date:   2020-10-02 15:05:00 +0530
 published: true
-categories: india software blog
+categories: india software
 ---
 
 > A look into why most of the Hacktoberfest PRs are "manufactured" in India

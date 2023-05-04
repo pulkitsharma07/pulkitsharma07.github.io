@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "[TWPOS-1] From AC/DC to Djent to Reality"
 date:   2019-07-13 03:25:00 +0530
 published: false

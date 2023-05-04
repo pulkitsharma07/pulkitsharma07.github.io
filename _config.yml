@@ -14,33 +14,50 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Pulkit Sharma
+subtitle: "Personal Opinions"
 email: avastpulkit@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Pulkit Sharma's Personal Opinions
+  Pulkit Sharma's Personal Blog and Opinions
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://pulkit.cc" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: pulkitsharma07
 
 # Build settings
 markdown: kramdown
-theme: jekyll-whiteglass
-plugins:
-  - jekyll-feed
-  - jekyll-archives
-  - jekyll-paginate
-  - jekyll-sitemap
+theme: minimal-mistakes-jekyll
+minimal_mistakes_skin: dirt
 
 permalink: /:year/:month/:day/:title/
 paginate_path: /posts/:num/
 paginate: 5
 
-jekyll-archives:
-    enabled:
-      - categories
-    layout: category_archives
-    permalinks:
-      category: /categories/:name/
+words_per_minute: 100
 
+author:
+  name: "Pulkit Sharma"
+  avatar: "/assets/images/profile_pic.png"
+  bio: "Software Engineer, Bedroom Musician, and more …" # Note: Markdown is allowed
+  location: "Bangalore, India"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/pulkitsharma07"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/pulkitsharma07/"
+
+encoding: utf-8
+
+defaults:
+# _posts
+- scope:
+    path: ""
+    type: posts
+  values:
+    layout: single
+    read_time: true
+    classes: wide
+      #
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

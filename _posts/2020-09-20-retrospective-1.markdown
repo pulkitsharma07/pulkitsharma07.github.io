@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Retrospective - 1"
 date:   2020-06-28 15:05:00 +0530
 published: false

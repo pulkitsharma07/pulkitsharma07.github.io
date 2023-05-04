@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Managing Shell Commands through Vim"
 date:   2018-08-09 03:30:00 +0530
 categories: shell vim learning

@@ -1,5 +1,7 @@
 ---
-layout: page
+layout: single
+classes: wide
+author_profile: true
 title: "About"
 permalink: /about/
 ---

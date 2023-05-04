@@ -1,8 +1,7 @@
 ---
-layout: post
 title:  "Using Jekyll and Github Pages (in 2017)"
 date:   2017-09-23 18:43:34 +0530
-categories: jekyll blog github
+categories: development
 ---
 
 > After reading numerous posts online for using Jekyll and Github Pages together, I faced couple of issues. Lets take a look and see how I addressed some of them.
