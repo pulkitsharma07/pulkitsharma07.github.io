@@ -47,7 +47,7 @@ I understand that relying on a third-party service like Cloudflare, is not actua
 
 # Software
 ## Development
-I wanted to setup a development environment similar to the setup on my work Macbook.
+I wanted to setup a development environment similar to the setup on my work Macbook. Here are few things:
 * Shell: zsh
 * Editor/IDE: neovim (Specifically [Astronvim](https://astronvim.com/))
   * I had to compile neovim from source because there were no ARM v7 releases for that.
@@ -77,12 +77,13 @@ I wanted to setup a development environment similar to the setup on my work Macb
 * For metrics I run [Prometheus](https://prometheus.io/) on the pi with a retention of 30days
   * It can collect the pi metrics (temperature, cpu, ram, etc) and also collect metrics from the [docker daemon](https://docs.docker.com/config/daemon/prometheus/) about running containers.
   * Once I am able to get the hang of PromQL, I will be Using [Alerts](https://prometheus.io/docs/alerting/overview/).
-
+* Also I have a small script which periodically updates my [about page]({% link _pages/about.md %}) with my server's stats.
 
 # Future Work
-Obviously the things documented in the blog are just the current state and these things will keep on evolving.
+Obviously the things documented in the blog are just the current state and these things will keep on evolving. Here are few things I have in mind:
 * Setup Grafana to plot prometheus metrics.
-* I definitely need to start taking backups.
+* Backups.
 * Related to the above, I thing I would like to look into is automating provisioning of the pi server(s) from scratch.
   * IMO the playbook or recipe based approaches are difficult to test from scratch, so I would prefer some modifiable "image" based approach (where I can change hostname etc).
 * Probably Host [Plausible Analytics](https://plausible.io/docs/self-hosting) on the Pi for the blog.
+* Setup [log2ram](https://ikarus.sg/extend-sd-card-lifespan-with-log2ram/) to buffer writes to the sdcard.
