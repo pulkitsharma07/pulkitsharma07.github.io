@@ -15,7 +15,7 @@ if [ -d "$BUILD_DIR" ]; then
 
     # Change branch to master
     if git checkout rpi_hosted; then
-      echo "SUCCESSFULLY SWITCHED TO MASTER"
+      echo "SUCCESSFULLY SWITCHED TO rpi_hosted"
 
       # Cleanup
       ls | xargs rm -r
