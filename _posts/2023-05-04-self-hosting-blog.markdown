@@ -37,7 +37,8 @@ I understand that relying on a third-party service like Cloudflare, is not actua
 
 * Raspberry Pi 4 Model B Rev 1.2
   * Has 4GB of RAM and 4 core 1.8 Ghz CPU
-  * Provisioned to run Raspbian OS.
+  * Provisioned to run Raspbian OS (64-bit)
+    * I am able to run almost all `arm64` docker images on the pi.
   * 32 GB sdcard for persistent storage (SanDisk Extreme 32GB microSDHC UHS-3 Card)
 
 * Argon ONE V2 Case
@@ -67,14 +68,14 @@ I wanted to setup a development environment similar to the setup on my work Macb
     * I run `nginx:alpine` container which has the blog's codebase mounted as a volume during runtime.
     * Since this is a static website, I just go into the directory and do a `git pull` and the new version becomes active.
 
-## Monitoring
+## Monitoring and Analytics
+* I Host [Plausible Analytics](https://plausible.io/docs/self-hosting) on the Pi to gather web analytics.
 * I run [n8n](https://n8n.io/) on the pi to monitor services and run other automations.
   * This is integrated with my Telegram account which acts as a central place to receive notifications
-  * Every day it sends me a health report of the pi.
   * I plan to add more workflows in the future for personal projects here.
 * Cloudflare Tunnel Notifications
   * This is a neat feature where you will get notified if pi loses internet connectivity.
-* For metrics I run [Prometheus](https://prometheus.io/) on the pi with a retention of 30days
+* For metrics I run [Prometheus](https://prometheus.io/) on the pi to collect them with a retention of 30days
   * It can collect the pi metrics (temperature, cpu, ram, etc) and also collect metrics from the [docker daemon](https://docs.docker.com/config/daemon/prometheus/) about running containers.
   * Once I am able to get the hang of PromQL, I will be Using [Alerts](https://prometheus.io/docs/alerting/overview/).
 * Also I have a small script which periodically updates my [about page]({% link _pages/about.md %}) with my server's stats.
@@ -85,5 +86,4 @@ Obviously the things documented in the blog are just the current state and these
 * Backups.
 * Related to the above, I thing I would like to look into is automating provisioning of the pi server(s) from scratch.
   * IMO the playbook or recipe based approaches are difficult to test from scratch, so I would prefer some modifiable "image" based approach (where I can change hostname etc).
-* Probably Host [Plausible Analytics](https://plausible.io/docs/self-hosting) on the Pi for the blog.
 * Setup [log2ram](https://ikarus.sg/extend-sd-card-lifespan-with-log2ram/) to buffer writes to the sdcard.
