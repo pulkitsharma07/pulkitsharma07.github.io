@@ -23,7 +23,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Pulkit Sharma">
 <meta property="og:title" content="My Self Hosting Stack for 2023">
-<meta property="og:url" content="http://0.0.0.0:4000/2023/05/04/self-hosting-blog/">
+<meta property="og:url" content="https://pulkit.cc/2023/05/04/self-hosting-blog/">
 
 
   <meta property="og:description" content="Why Self-Host ?    Make use of the Raspberry Pi I had laying around.   Experiment with some DevOps stuff.   Feels cool to have a server running 24x7 in your home.">
@@ -41,7 +41,7 @@
 
 
 
-<link rel="canonical" href="http://0.0.0.0:4000/2023/05/04/self-hosting-blog/">
+<link rel="canonical" href="https://pulkit.cc/2023/05/04/self-hosting-blog/">
 
 
 
@@ -52,7 +52,7 @@
     
       "@type": "Person",
       "name": null,
-      "url": "http://0.0.0.0:4000/"
+      "url": "https://pulkit.cc/"
     
   }
 </script>
@@ -184,7 +184,7 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#why-self-host-">Why Self-Host ?</a></li><li><a href="#architecture">Architecture</a><ul><li><a href="#pure-vs-impure-self-hosting">Pure vs Impure Self-Hosting</a></li></ul></li><li><a href="#hardware">Hardware</a></li><li><a href="#software">Software</a><ul><li><a href="#development">Development</a></li><li><a href="#hosting">Hosting</a></li><li><a href="#monitoring">Monitoring</a></li></ul></li><li><a href="#future-work">Future Work</a></li></ul>
+              <ul class="toc__menu"><li><a href="#why-self-host-">Why Self-Host ?</a></li><li><a href="#architecture">Architecture</a><ul><li><a href="#pure-vs-impure-self-hosting">Pure vs Impure Self-Hosting</a></li></ul></li><li><a href="#hardware">Hardware</a></li><li><a href="#software">Software</a><ul><li><a href="#development">Development</a></li><li><a href="#hosting">Hosting</a></li><li><a href="#monitoring-and-analytics">Monitoring and Analytics</a></li></ul></li><li><a href="#future-work">Future Work</a></li></ul>
 
             </nav>
           </aside>
@@ -237,7 +237,11 @@
   <li>Raspberry Pi 4 Model B Rev 1.2
     <ul>
       <li>Has 4GB of RAM and 4 core 1.8 Ghz CPU</li>
-      <li>Provisioned to run Raspbian OS.</li>
+      <li>Provisioned to run Raspbian OS (64-bit)
+        <ul>
+          <li>I am able to run almost all <code class="language-plaintext highlighter-rouge">arm64</code> docker images on the pi.</li>
+        </ul>
+      </li>
       <li>32 GB sdcard for persistent storage (SanDisk Extreme 32GB microSDHC UHS-3 Card)</li>
     </ul>
   </li>
@@ -291,12 +295,12 @@
   </li>
 </ul>
 
-<h2 id="monitoring">Monitoring</h2>
+<h2 id="monitoring-and-analytics">Monitoring and Analytics</h2>
 <ul>
+  <li>I Host <a href="https://plausible.io/docs/self-hosting">Plausible Analytics</a> on the Pi to gather web analytics.</li>
   <li>I run <a href="https://n8n.io/">n8n</a> on the pi to monitor services and run other automations.
     <ul>
       <li>This is integrated with my Telegram account which acts as a central place to receive notifications</li>
-      <li>Every day it sends me a health report of the pi.</li>
       <li>I plan to add more workflows in the future for personal projects here.</li>
     </ul>
   </li>
@@ -305,7 +309,7 @@
       <li>This is a neat feature where you will get notified if pi loses internet connectivity.</li>
     </ul>
   </li>
-  <li>For metrics I run <a href="https://prometheus.io/">Prometheus</a> on the pi with a retention of 30days
+  <li>For metrics I run <a href="https://prometheus.io/">Prometheus</a> on the pi to collect them with a retention of 30days
     <ul>
       <li>It can collect the pi metrics (temperature, cpu, ram, etc) and also collect metrics from the <a href="https://docs.docker.com/config/daemon/prometheus/">docker daemon</a> about running containers.</li>
       <li>Once I am able to get the hang of PromQL, I will be Using <a href="https://prometheus.io/docs/alerting/overview/">Alerts</a>.</li>
@@ -324,7 +328,6 @@
       <li>IMO the playbook or recipe based approaches are difficult to test from scratch, so I would prefer some modifiable “image” based approach (where I can change hostname etc).</li>
     </ul>
   </li>
-  <li>Probably Host <a href="https://plausible.io/docs/self-hosting">Plausible Analytics</a> on the Pi for the blog.</li>
   <li>Setup <a href="https://ikarus.sg/extend-sd-card-lifespan-with-log2ram/">log2ram</a> to buffer writes to the sdcard.</li>
 </ul>
 

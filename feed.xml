@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2023-05-07T18:24:25+00:00</updated><id>http://0.0.0.0:4000/</id><title type="html">Pulkit Sharma</title><subtitle>Pulkit Sharma's Personal Blog and Opinions
-</subtitle><author><name>Pulkit Sharma</name></author><entry><title type="html">My Self Hosting Stack for 2023</title><link href="http://0.0.0.0:4000/2023/05/04/self-hosting-blog/" rel="alternate" type="text/html" title="My Self Hosting Stack for 2023" /><published>2023-05-04T04:35:00+00:00</published><updated>2023-05-04T04:35:00+00:00</updated><id>http://0.0.0.0:4000/2023/05/04/self-hosting-blog</id><content type="html" xml:base="http://0.0.0.0:4000/2023/05/04/self-hosting-blog/">&lt;h1 id=&quot;why-self-host-&quot;&gt;Why Self-Host ?&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://pulkit.cc/feed.xml" rel="self" type="application/atom+xml" /><link href="https://pulkit.cc/" rel="alternate" type="text/html" /><updated>2023-05-11T05:45:49+00:00</updated><id>https://pulkit.cc/</id><title type="html">Pulkit Sharma</title><subtitle>Pulkit Sharma's Personal Blog and Opinions
+</subtitle><author><name>Pulkit Sharma</name></author><entry><title type="html">My Self Hosting Stack for 2023</title><link href="https://pulkit.cc/2023/05/04/self-hosting-blog/" rel="alternate" type="text/html" title="My Self Hosting Stack for 2023" /><published>2023-05-04T04:35:00+00:00</published><updated>2023-05-04T04:35:00+00:00</updated><id>https://pulkit.cc/2023/05/04/self-hosting-blog</id><content type="html" xml:base="https://pulkit.cc/2023/05/04/self-hosting-blog/">&lt;h1 id=&quot;why-self-host-&quot;&gt;Why Self-Host ?&lt;/h1&gt;
 &lt;ul&gt;
   &lt;li&gt;Make use of the Raspberry Pi I had laying around.&lt;/li&gt;
   &lt;li&gt;Experiment with some DevOps stuff.&lt;/li&gt;
@@ -47,7 +47,11 @@
   &lt;li&gt;Raspberry Pi 4 Model B Rev 1.2
     &lt;ul&gt;
       &lt;li&gt;Has 4GB of RAM and 4 core 1.8 Ghz CPU&lt;/li&gt;
-      &lt;li&gt;Provisioned to run Raspbian OS.&lt;/li&gt;
+      &lt;li&gt;Provisioned to run Raspbian OS (64-bit)
+        &lt;ul&gt;
+          &lt;li&gt;I am able to run almost all &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;arm64&lt;/code&gt; docker images on the pi.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
       &lt;li&gt;32 GB sdcard for persistent storage (SanDisk Extreme 32GB microSDHC UHS-3 Card)&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
@@ -101,12 +105,12 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;monitoring&quot;&gt;Monitoring&lt;/h2&gt;
+&lt;h2 id=&quot;monitoring-and-analytics&quot;&gt;Monitoring and Analytics&lt;/h2&gt;
 &lt;ul&gt;
+  &lt;li&gt;I Host &lt;a href=&quot;https://plausible.io/docs/self-hosting&quot;&gt;Plausible Analytics&lt;/a&gt; on the Pi to gather web analytics.&lt;/li&gt;
   &lt;li&gt;I run &lt;a href=&quot;https://n8n.io/&quot;&gt;n8n&lt;/a&gt; on the pi to monitor services and run other automations.
     &lt;ul&gt;
       &lt;li&gt;This is integrated with my Telegram account which acts as a central place to receive notifications&lt;/li&gt;
-      &lt;li&gt;Every day it sends me a health report of the pi.&lt;/li&gt;
       &lt;li&gt;I plan to add more workflows in the future for personal projects here.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
@@ -115,7 +119,7 @@
       &lt;li&gt;This is a neat feature where you will get notified if pi loses internet connectivity.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;For metrics I run &lt;a href=&quot;https://prometheus.io/&quot;&gt;Prometheus&lt;/a&gt; on the pi with a retention of 30days
+  &lt;li&gt;For metrics I run &lt;a href=&quot;https://prometheus.io/&quot;&gt;Prometheus&lt;/a&gt; on the pi to collect them with a retention of 30days
     &lt;ul&gt;
       &lt;li&gt;It can collect the pi metrics (temperature, cpu, ram, etc) and also collect metrics from the &lt;a href=&quot;https://docs.docker.com/config/daemon/prometheus/&quot;&gt;docker daemon&lt;/a&gt; about running containers.&lt;/li&gt;
       &lt;li&gt;Once I am able to get the hang of PromQL, I will be Using &lt;a href=&quot;https://prometheus.io/docs/alerting/overview/&quot;&gt;Alerts&lt;/a&gt;.&lt;/li&gt;
@@ -134,9 +138,8 @@
       &lt;li&gt;IMO the playbook or recipe based approaches are difficult to test from scratch, so I would prefer some modifiable “image” based approach (where I can change hostname etc).&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Probably Host &lt;a href=&quot;https://plausible.io/docs/self-hosting&quot;&gt;Plausible Analytics&lt;/a&gt; on the Pi for the blog.&lt;/li&gt;
   &lt;li&gt;Setup &lt;a href=&quot;https://ikarus.sg/extend-sd-card-lifespan-with-log2ram/&quot;&gt;log2ram&lt;/a&gt; to buffer writes to the sdcard.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Pulkit Sharma</name></author><summary type="html">Why Self-Host ? Make use of the Raspberry Pi I had laying around. Experiment with some DevOps stuff. Feels cool to have a server running 24x7 in your home.</summary></entry><entry><title type="html">Why most Hacktoberfest PRs are from India</title><link href="http://0.0.0.0:4000/2020/10/02/hacktoberfest-india/" rel="alternate" type="text/html" title="Why most Hacktoberfest PRs are from India" /><published>2020-10-02T09:35:00+00:00</published><updated>2020-10-02T09:35:00+00:00</updated><id>http://0.0.0.0:4000/2020/10/02/hacktoberfest-india</id><content type="html" xml:base="http://0.0.0.0:4000/2020/10/02/hacktoberfest-india/">&lt;blockquote&gt;
+&lt;/ul&gt;</content><author><name>Pulkit Sharma</name></author><summary type="html">Why Self-Host ? Make use of the Raspberry Pi I had laying around. Experiment with some DevOps stuff. Feels cool to have a server running 24x7 in your home.</summary></entry><entry><title type="html">Why most Hacktoberfest PRs are from India</title><link href="https://pulkit.cc/2020/10/02/hacktoberfest-india/" rel="alternate" type="text/html" title="Why most Hacktoberfest PRs are from India" /><published>2020-10-02T09:35:00+00:00</published><updated>2020-10-02T09:35:00+00:00</updated><id>https://pulkit.cc/2020/10/02/hacktoberfest-india</id><content type="html" xml:base="https://pulkit.cc/2020/10/02/hacktoberfest-india/">&lt;blockquote&gt;
   &lt;p&gt;A look into why most of the Hacktoberfest PRs are “manufactured” in India&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -343,7 +346,7 @@ I got motivated (triggered?) to write this post when I saw the following on HN:&
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;em&gt;Find discussion on HackerNews &lt;a href=&quot;https://news.ycombinator.com/item?id=24667488&quot;&gt;here&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-&lt;hr /&gt;</content><author><name>Pulkit Sharma</name></author><summary type="html">A look into why most of the Hacktoberfest PRs are “manufactured” in India</summary></entry><entry><title type="html">Source [1] - Bubbles</title><link href="http://0.0.0.0:4000/2020/06/28/source-1/" rel="alternate" type="text/html" title="Source [1] - Bubbles" /><published>2020-06-28T09:35:00+00:00</published><updated>2020-06-28T09:35:00+00:00</updated><id>http://0.0.0.0:4000/2020/06/28/source-1</id><content type="html" xml:base="http://0.0.0.0:4000/2020/06/28/source-1/">&lt;blockquote&gt;
+&lt;hr /&gt;</content><author><name>Pulkit Sharma</name></author><summary type="html">A look into why most of the Hacktoberfest PRs are “manufactured” in India</summary></entry><entry><title type="html">Source [1] - Bubbles</title><link href="https://pulkit.cc/2020/06/28/source-1/" rel="alternate" type="text/html" title="Source [1] - Bubbles" /><published>2020-06-28T09:35:00+00:00</published><updated>2020-06-28T09:35:00+00:00</updated><id>https://pulkit.cc/2020/06/28/source-1</id><content type="html" xml:base="https://pulkit.cc/2020/06/28/source-1/">&lt;blockquote&gt;
   &lt;p&gt;This essay is in continuation of &lt;a href=&quot;/2020/06/25/source-0/&quot;&gt;Source [0]&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -394,7 +397,7 @@ You see, we are unconsciously aware of this fact, you may not call it a bubble o
 
 &lt;p&gt;With this in mind, I just want to point out that I have often found that expanding our own bubble never hurts and something good often comes out of it. For instance, reading the Bible would not magically convert you into a Christian, you’ll just create your own interpretation of what it is written in it, which will definitely give you a fresh perspective on the world i.e. expand your bubble.&lt;/p&gt;
 
-&lt;p&gt;In the next blog post, I will attempt to introduce you to some concepts related to the study of the nature of god and consciousness in ancient Indian philosophy, hopefully, the bubbles align and help in expanding yours.&lt;/p&gt;</content><author><name>Pulkit Sharma</name></author><summary type="html">This essay is in continuation of Source [0]</summary></entry><entry><title type="html">Source [0]</title><link href="http://0.0.0.0:4000/2020/06/25/source-0/" rel="alternate" type="text/html" title="Source [0]" /><published>2020-06-25T09:35:00+00:00</published><updated>2020-06-25T09:35:00+00:00</updated><id>http://0.0.0.0:4000/2020/06/25/source-0</id><content type="html" xml:base="http://0.0.0.0:4000/2020/06/25/source-0/">&lt;blockquote&gt;
+&lt;p&gt;In the next blog post, I will attempt to introduce you to some concepts related to the study of the nature of god and consciousness in ancient Indian philosophy, hopefully, the bubbles align and help in expanding yours.&lt;/p&gt;</content><author><name>Pulkit Sharma</name></author><summary type="html">This essay is in continuation of Source [0]</summary></entry><entry><title type="html">Source [0]</title><link href="https://pulkit.cc/2020/06/25/source-0/" rel="alternate" type="text/html" title="Source [0]" /><published>2020-06-25T09:35:00+00:00</published><updated>2020-06-25T09:35:00+00:00</updated><id>https://pulkit.cc/2020/06/25/source-0</id><content type="html" xml:base="https://pulkit.cc/2020/06/25/source-0/">&lt;blockquote&gt;
   &lt;p&gt;Series of essays exploring Indian Philosophy/Sprituality&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -453,7 +456,7 @@ Again, these are possible reactions, but just for the sake of reading this text,
 
 &lt;blockquote&gt;
   &lt;p&gt;Next post in continuation of this: &lt;a href=&quot;/2020/06/28/source-1/&quot;&gt;Source [1] - Bubbles&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name>Pulkit Sharma</name></author><summary type="html">Series of essays exploring Indian Philosophy/Sprituality</summary></entry><entry><title type="html">Managing Shell Commands through Vim</title><link href="http://0.0.0.0:4000/2018/08/08/managing-shell-commands/" rel="alternate" type="text/html" title="Managing Shell Commands through Vim" /><published>2018-08-08T22:00:00+00:00</published><updated>2018-08-08T22:00:00+00:00</updated><id>http://0.0.0.0:4000/2018/08/08/managing-shell-commands</id><content type="html" xml:base="http://0.0.0.0:4000/2018/08/08/managing-shell-commands/">&lt;blockquote&gt;
+&lt;/blockquote&gt;</content><author><name>Pulkit Sharma</name></author><summary type="html">Series of essays exploring Indian Philosophy/Sprituality</summary></entry><entry><title type="html">Managing Shell Commands through Vim</title><link href="https://pulkit.cc/2018/08/08/managing-shell-commands/" rel="alternate" type="text/html" title="Managing Shell Commands through Vim" /><published>2018-08-08T22:00:00+00:00</published><updated>2018-08-08T22:00:00+00:00</updated><id>https://pulkit.cc/2018/08/08/managing-shell-commands</id><content type="html" xml:base="https://pulkit.cc/2018/08/08/managing-shell-commands/">&lt;blockquote&gt;
   &lt;p&gt;A look at into how I used Vim to notes about frequently used shell commands at my new job&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -532,7 +535,7 @@ Sweet!&lt;/p&gt;
   &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/2575545/vim-pipe-selected-text-to-shell-cmd-and-receive-output-on-vim-info-command-line/5373376#5373376&quot;&gt;https://stackoverflow.com/questions/2575545/vim-pipe-selected-text-to-shell-cmd-and-receive-output-on-vim-info-command-line/5373376#5373376&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://unix.stackexchange.com/questions/113462/how-can-i-make-shell-aliases-available-when-shelling-out-from-vim/197135#197135&quot;&gt;https://unix.stackexchange.com/questions/113462/how-can-i-make-shell-aliases-available-when-shelling-out-from-vim/197135#197135&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://unix.stackexchange.com/questions/26245/how-to-quickly-store-and-access-often-used-commands/26263#26263&quot;&gt;https://unix.stackexchange.com/questions/26245/how-to-quickly-store-and-access-often-used-commands/26263#26263&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Pulkit Sharma</name></author><summary type="html">A look at into how I used Vim to notes about frequently used shell commands at my new job</summary></entry><entry><title type="html">Using Jekyll and Github Pages (in 2017)</title><link href="http://0.0.0.0:4000/2017/09/23/using-jekyll-and-github-pages/" rel="alternate" type="text/html" title="Using Jekyll and Github Pages (in 2017)" /><published>2017-09-23T13:13:34+00:00</published><updated>2017-09-23T13:13:34+00:00</updated><id>http://0.0.0.0:4000/2017/09/23/using-jekyll-and-github-pages</id><content type="html" xml:base="http://0.0.0.0:4000/2017/09/23/using-jekyll-and-github-pages/">&lt;blockquote&gt;
+&lt;/ul&gt;</content><author><name>Pulkit Sharma</name></author><summary type="html">A look at into how I used Vim to notes about frequently used shell commands at my new job</summary></entry><entry><title type="html">Using Jekyll and Github Pages (in 2017)</title><link href="https://pulkit.cc/2017/09/23/using-jekyll-and-github-pages/" rel="alternate" type="text/html" title="Using Jekyll and Github Pages (in 2017)" /><published>2017-09-23T13:13:34+00:00</published><updated>2017-09-23T13:13:34+00:00</updated><id>https://pulkit.cc/2017/09/23/using-jekyll-and-github-pages</id><content type="html" xml:base="https://pulkit.cc/2017/09/23/using-jekyll-and-github-pages/">&lt;blockquote&gt;
   &lt;p&gt;After reading numerous posts online for using Jekyll and Github Pages together, I faced couple of issues. Lets take a look and see how I addressed some of them.&lt;/p&gt;
 &lt;/blockquote&gt;
 
