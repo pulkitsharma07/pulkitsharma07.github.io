@@ -297,8 +297,8 @@
 
 <h2 id="monitoring-and-analytics">Monitoring and Analytics</h2>
 <ul>
-  <li>I Host <a href="https://plausible.io/docs/self-hosting">Plausible Analytics</a> on the Pi to gather web analytics.</li>
-  <li>I run <a href="https://n8n.io/">n8n</a> on the pi to monitor services and run other automations.
+  <li><a href="https://plausible.io/docs/self-hosting">Plausible Analytics</a> running on the Pi to gather web analytics.</li>
+  <li><a href="https://n8n.io/">n8n</a> is setup to monitor services and run other workflows
     <ul>
       <li>This is integrated with my Telegram account which acts as a central place to receive notifications</li>
       <li>I plan to add more workflows in the future for personal projects here.</li>
@@ -321,11 +321,11 @@
 <h1 id="future-work">Future Work</h1>
 <p>Obviously the things documented in the blog are just the current state and these things will keep on evolving. Here are few things I have in mind:</p>
 <ul>
-  <li>Setup Grafana to plot prometheus metrics.</li>
-  <li>Backups.</li>
+  <li>Setup <a href="https://grafana.com/">Grafana</a> to create dashboards from prometheus metrics.</li>
+  <li>Backups (probably using <a href="https://restic.net/">restic</a>)</li>
   <li>Related to the above, I thing I would like to look into is automating provisioning of the pi server(s) from scratch.
     <ul>
-      <li>IMO the playbook or recipe based approaches are difficult to test from scratch, so I would prefer some modifiable “image” based approach (where I can change hostname etc).</li>
+      <li>IMO the playbook or recipe based approaches are difficult to test from scratch, so I would prefer some “image” based approach (where I can change hostname etc).</li>
     </ul>
   </li>
   <li>Setup <a href="https://ikarus.sg/extend-sd-card-lifespan-with-log2ram/">log2ram</a> to buffer writes to the sdcard.</li>

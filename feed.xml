@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://pulkit.cc/feed.xml" rel="self" type="application/atom+xml" /><link href="https://pulkit.cc/" rel="alternate" type="text/html" /><updated>2023-05-11T05:45:49+00:00</updated><id>https://pulkit.cc/</id><title type="html">Pulkit Sharma</title><subtitle>Pulkit Sharma's Personal Blog and Opinions
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://pulkit.cc/feed.xml" rel="self" type="application/atom+xml" /><link href="https://pulkit.cc/" rel="alternate" type="text/html" /><updated>2023-05-12T12:23:23+00:00</updated><id>https://pulkit.cc/</id><title type="html">Pulkit Sharma</title><subtitle>Pulkit Sharma's Personal Blog and Opinions
 </subtitle><author><name>Pulkit Sharma</name></author><entry><title type="html">My Self Hosting Stack for 2023</title><link href="https://pulkit.cc/2023/05/04/self-hosting-blog/" rel="alternate" type="text/html" title="My Self Hosting Stack for 2023" /><published>2023-05-04T04:35:00+00:00</published><updated>2023-05-04T04:35:00+00:00</updated><id>https://pulkit.cc/2023/05/04/self-hosting-blog</id><content type="html" xml:base="https://pulkit.cc/2023/05/04/self-hosting-blog/">&lt;h1 id=&quot;why-self-host-&quot;&gt;Why Self-Host ?&lt;/h1&gt;
 &lt;ul&gt;
   &lt;li&gt;Make use of the Raspberry Pi I had laying around.&lt;/li&gt;
@@ -107,8 +107,8 @@
 
 &lt;h2 id=&quot;monitoring-and-analytics&quot;&gt;Monitoring and Analytics&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;I Host &lt;a href=&quot;https://plausible.io/docs/self-hosting&quot;&gt;Plausible Analytics&lt;/a&gt; on the Pi to gather web analytics.&lt;/li&gt;
-  &lt;li&gt;I run &lt;a href=&quot;https://n8n.io/&quot;&gt;n8n&lt;/a&gt; on the pi to monitor services and run other automations.
+  &lt;li&gt;&lt;a href=&quot;https://plausible.io/docs/self-hosting&quot;&gt;Plausible Analytics&lt;/a&gt; running on the Pi to gather web analytics.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://n8n.io/&quot;&gt;n8n&lt;/a&gt; is setup to monitor services and run other workflows
     &lt;ul&gt;
       &lt;li&gt;This is integrated with my Telegram account which acts as a central place to receive notifications&lt;/li&gt;
       &lt;li&gt;I plan to add more workflows in the future for personal projects here.&lt;/li&gt;
@@ -131,11 +131,11 @@
 &lt;h1 id=&quot;future-work&quot;&gt;Future Work&lt;/h1&gt;
 &lt;p&gt;Obviously the things documented in the blog are just the current state and these things will keep on evolving. Here are few things I have in mind:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Setup Grafana to plot prometheus metrics.&lt;/li&gt;
-  &lt;li&gt;Backups.&lt;/li&gt;
+  &lt;li&gt;Setup &lt;a href=&quot;https://grafana.com/&quot;&gt;Grafana&lt;/a&gt; to create dashboards from prometheus metrics.&lt;/li&gt;
+  &lt;li&gt;Backups (probably using &lt;a href=&quot;https://restic.net/&quot;&gt;restic&lt;/a&gt;)&lt;/li&gt;
   &lt;li&gt;Related to the above, I thing I would like to look into is automating provisioning of the pi server(s) from scratch.
     &lt;ul&gt;
-      &lt;li&gt;IMO the playbook or recipe based approaches are difficult to test from scratch, so I would prefer some modifiable “image” based approach (where I can change hostname etc).&lt;/li&gt;
+      &lt;li&gt;IMO the playbook or recipe based approaches are difficult to test from scratch, so I would prefer some “image” based approach (where I can change hostname etc).&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Setup &lt;a href=&quot;https://ikarus.sg/extend-sd-card-lifespan-with-log2ram/&quot;&gt;log2ram&lt;/a&gt; to buffer writes to the sdcard.&lt;/li&gt;
