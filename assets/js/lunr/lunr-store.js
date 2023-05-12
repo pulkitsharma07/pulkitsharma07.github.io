@@ -29,7 +29,7 @@ var store = [{
         "url": "/2020/10/02/hacktoberfest-india/",
         "teaser": null
       },{
-        "title": "My Self Hosting Stack for 2023",
+        "title": "My Self Hosting Stack in 2023",
         "excerpt":"Why Self-Host ? Make use of the Raspberry Pi I had laying around. Experiment with some DevOps stuff. Feels cool to have a server running 24x7 in your home. Architecture Wanted to keep this as simple as possible. The Rpi is hooked directly into my wifi router using an ethernet...","categories": ["software"],
         "tags": [],
         "url": "/2023/05/04/self-hosting-blog/",
