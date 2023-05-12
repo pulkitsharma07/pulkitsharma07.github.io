@@ -1,5 +1,5 @@
 ---
-title:  "My Self Hosting Stack for 2023"
+title:  "My Self Hosting Stack in 2023"
 date:   2023-05-04 10:05:00 +0530
 published: true
 categories: software
