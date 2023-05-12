@@ -69,8 +69,8 @@ I wanted to setup a development environment similar to the setup on my work Macb
     * Since this is a static website, I just go into the directory and do a `git pull` and the new version becomes active.
 
 ## Monitoring and Analytics
-* I Host [Plausible Analytics](https://plausible.io/docs/self-hosting) on the Pi to gather web analytics.
-* I run [n8n](https://n8n.io/) on the pi to monitor services and run other automations.
+* [Plausible Analytics](https://plausible.io/docs/self-hosting) running on the Pi to gather web analytics.
+* [n8n](https://n8n.io/) is setup to monitor services and run other workflows
   * This is integrated with my Telegram account which acts as a central place to receive notifications
   * I plan to add more workflows in the future for personal projects here.
 * Cloudflare Tunnel Notifications
@@ -82,8 +82,8 @@ I wanted to setup a development environment similar to the setup on my work Macb
 
 # Future Work
 Obviously the things documented in the blog are just the current state and these things will keep on evolving. Here are few things I have in mind:
-* Setup Grafana to plot prometheus metrics.
-* Backups.
+* Setup [Grafana](https://grafana.com/) to create dashboards from prometheus metrics.
+* Backups (probably using [restic](https://restic.net/))
 * Related to the above, I thing I would like to look into is automating provisioning of the pi server(s) from scratch.
-  * IMO the playbook or recipe based approaches are difficult to test from scratch, so I would prefer some modifiable "image" based approach (where I can change hostname etc).
+  * IMO the playbook or recipe based approaches are difficult to test from scratch, so I would prefer some "image" based approach (where I can change hostname etc).
 * Setup [log2ram](https://ikarus.sg/extend-sd-card-lifespan-with-log2ram/) to buffer writes to the sdcard.
