@@ -43,6 +43,7 @@ I understand that relying on a third-party service like Cloudflare, is not actua
 
 * Argon ONE V2 Case
   * Integrated fan really helps in keeping temperatures under control
+    * Using `argonone-config` I can map fan speeds to different CPU temperatures.
   * Prevents dust build up
   * All ports are neatly accessible on one side
 
