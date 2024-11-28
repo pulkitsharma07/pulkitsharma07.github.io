@@ -1,11 +1,12 @@
 ---
 title:  "Svelte: The frontend framework I have finally started to get into"
 date:   2023-05-22 10:05:00 +0530
-published: true
+published: false
 categories: software
 toc: true
 toc_sticky: true
 ---
+
 # Background
 When I starting learning javascript around 10 years ago, I used to make user interfaces using the hundreds of `document.findElementBy....` calls and trying to wrangle multiple things like DOM events mixed with some jquery to make something work. Using CSS was painful as well, and there were no clear opinionated ways of doing things. In short, I never felt comfortable with  frontend development. I used to start with some goals, but then those goals seemed impossible to achieve and I had to get okay with just making things work somehow. So I stopped keeping any goals with frontend development, apart from functionality. I was never able to think of a design/feature and replicate it exactly using HTML/CSS/JS. My process was more around tweaking few things and to get the design as close as possible. Hence I decided that "frontend" was not my cup of tea. 
 
