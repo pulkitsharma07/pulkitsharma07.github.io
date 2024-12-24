@@ -1,6 +1,6 @@
 ---
 title:  "About 'Permutation City'"
-date:   2024-10-01 10:00:00 +0530
+date:   2024-12-25 10:00:00 +0530
 published: true
 categories: personal learning books
 toc: true
