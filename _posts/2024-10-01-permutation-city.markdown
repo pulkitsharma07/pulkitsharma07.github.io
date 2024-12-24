@@ -23,8 +23,7 @@ You should read this book:
     * The book doesn't exactly touch on these but if you are interested in these things, the concepts covered in the book might be of interest to you as well.
 * At times you question the nature of consciousness / reality.
 
-## If you have not read this book, thank you for reading this blog post, you can leave now _/\_
-
+## If you have not read this book, thank you for reading this blog post, you can leave now
 
 
 # For People Who Have Read this Book (Heavy Spoilers)
