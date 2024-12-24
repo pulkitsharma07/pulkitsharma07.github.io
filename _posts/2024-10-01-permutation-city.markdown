@@ -18,7 +18,7 @@ I found it to be immensely helpful to keep track of what was happening and saved
 This was my second sci-fi book. There were times where I had to keep the book down and just re-read and try to grasp what the author was conveying. These challenging bits were the most interesting to me, and it also lead me down to discover the FAQ of the book hosted online by the author (Greg Egan).
 
 You should read this book:
-* If you have some any work around creating games or simulations.
+* If you have done some work around creating games or simulations.
 * If you are interested in learning about recursion, fractals, etc
     * The book doesn't exactly touch on these but if you are interested in these things, the concepts covered in the book might be of interest to you as well.
 * At times you question the nature of consciousness / reality.
@@ -85,6 +85,7 @@ In the beginning there is one company which outbids everyone to buy significant 
 I can go on about what I liked and did not like about the book, but those are just my personal opinions based on my comprehension abilities (and memory). Needless, to say this is the best book I have ever read. Scifi books like this provokes thought as well as inspires me to write.
 I think this quote from a reader from `r/gregegan` gave my good direction to think in:
 > Permutation City was my first Egan read and I can only awe at the ideas and their execution. Interpretation has never seemed necessary for me to enjoy the novel.
-> ...acting this way is a metaphor for something rather than an explanation for the reader to decipher
+
+> <A particular character> acting this way is a metaphor for something rather than an explanation for the reader to decipher
 
 Need to balance and understand: reduction, fiction, metaphor, emotions
