@@ -7,6 +7,8 @@ title: "Title"
 date: `date` 
 description: A description
 categories: personal 
-social_image: add here
+published: true
+toc: true
+toc_sticky: true
 ---
 EOF

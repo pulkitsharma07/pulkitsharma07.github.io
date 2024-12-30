@@ -2,6 +2,9 @@
 title: "Using Cursor"
 date: Mon 30 Dec 2024 21:08:58 IST 
 categories: personal learning  
+published: true
+toc: true
+toc_sticky: true
 ---
 
 ## Cursor - The AI Editor
