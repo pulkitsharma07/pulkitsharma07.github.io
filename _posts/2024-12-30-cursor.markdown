@@ -1,5 +1,5 @@
 ---
-title: "Using Cursor"
+title: "My Experience with Cursor"
 date:   2024-12-30 10:00:00 +0530
 categories: personal learning  
 published: true
@@ -8,36 +8,37 @@ toc_sticky: true
 ---
 
 ## Cursor - The AI Editor
-A little background, For those who are not aware `Cursor` is a AI first fork of the very popular Visual Studio Code editor. More info [here](https://www.cursor.com/).
+A little background, For those who are not aware `Cursor` is an AI-first fork of the very popular Visual Studio Code editor. More info [here](https://www.cursor.com/).
 I guess I am late to the party, but I never really gave any of these AI IDEs a shot...until now.
 
 # A New Codebase
-At work, we were exploring approaches to quickly spawn up nodes in one of our K8s cluster, turns out this is NOT a solved problem. One of the k8s components which spawns new nodes when needed is the `autoscaler`. It is written in Golang (as most of the K8s codebase) and calls the underlying cloud provider APIs (AWS, GCP, Azure etc) to spawn new nodes when needed, i.e. when there are pending pods in the cluster. Another well known auto-scaling solution for K8s is `Karpenter`.
+At work, we were exploring approaches to quickly spawn up nodes in one of our K8s cluster. The Windows EC2 machines in particular take a looong time to boot up ( > 15 minutes sometimes). Although AWS provides [ Windows FastLaunch](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/win-ami-config-fast-launch.html), it's not that fast, and sometimes the nodes fail to bootup. 
+In k8s, the component which spawns new nodes when needed is the `autoscaler`. It is written in Golang (as most of the K8s codebase) and calls the underlying cloud provider APIs (AWS, GCP, Azure etc) to spawn new nodes when needed, i.e. when there are pending pods in the cluster. Another well known auto-scaling solution for K8s is `Karpenter`.
 
-I had proposed an idea to the team to patch `autoscaler` for our custom usecase. I had never contributed to any K8s internals land all of this was pretty new to me. The autoscaler repo has a pretty good readme for end users, but it doesn't have much information around it's code architecture, or maybe it has but I wasn't able to find it.
+I had proposed an idea to the team to patch `autoscaler` for our custom usecase. I had never contributed to any K8s internals land all of this was pretty new to me. The autoscaler repo has a pretty good readme for end users, but it doesn't have much information about its code architecture, or maybe it has but I wasn't able to find it.
 
 So, there were three approaches for me to move ahead:
-* Either I take few hours to understand the codebase and find the relevant methods which I can modify.
-* Or use some AI flavour-of-the-month tool to aid in the same.
+* Either I take a few hours to understand the codebase and find the relevant methods that I can modify.
+* Or use some AI flavor-of-the-month tool to aid in the same.
 * Or try to play whack-a-mole with searching random terms relevant to my task in the codebase (something very common if you are into reverse engineering).
 
 ### Starting with the Old Skool way
-I went ahead with the third approach as sometimes it gets the job done real fast. A Good ol full text search using `ag` over the entire codebase with some keywords which I felt could be related to my task: `scaleup`, `AddNode`, `SpawnNode`, etc.
+I went ahead with the third approach as sometimes it gets the job done real fast. A Good ol full-text search using `ag` over the entire codebase with some keywords which I felt could be related to my task: `scaleup`, `AddNode`, `SpawnNode`, etc.
 
-Eventually I found some interesting code areas, so I went into VSCode to understand the code flow further. Using the `Go To Definition` and `Go To References` bindings I was able to quickly get a good overview of the call hierarchy and started to develop some mental image of the code base.
-But I was still not sure I was looking at the correct code area for the thing I wanted to achieve, after 10-15 minutes I eventually noticed `../oci/..` in one of the file paths I was checking... Apparently I spent the last 30 minutes reading code which was completely irrelevant to my usecase, here oci = Oracle Cloud Infrastructure. While going blind into a new codebase the file path may sometimes convey *more* information than the file contents...
+Eventually, I found some interesting code areas, so I went into VSCode to understand the code flow further. Using the `Go To Definition` and `Go To References` bindings I was able to quickly get a good overview of the call hierarchy and started to develop some mental image of the code base.
+But I was still not sure I was looking at the correct code area for the thing I wanted to achieve, after 10-15 minutes I eventually noticed `../oci/..` in one of the file paths I was checking... Apparently, I had spent the last 30 minutes reading code that was completely irrelevant to my use-case, here oci = Oracle Cloud Infrastructure. While going blind into a new codebase the file path may sometimes convey *more* information than the file contents...
 
-But now I had an idea, I need to look into the codebase under the `../aws/..` directory..Eventually I found a relevant method which seemed to be something related to what I wanted to change.. but I still wasn't sure, the method was more than 100 lines long. 
+I then looked into the codebase under the `../aws/..` directory and eventually, I found a relevant method that seemed to be something related to what I wanted to do.. but I still wasn't sure, the method was more than 100 lines long. 
 
 I tried to eyeball sections of the code, looking at just variable names and function names to quickly develop some crude understanding of the flow. Then I thought... AI ....Why not use use the AI magic here, we have tools for this now. Since my Github Copilot trial had expired, I wanted to give `Cursor` a shot.
 
 ### Enter: Cursor
-Installing Cursor was blazing first, I opened the codebase and all of my existing VSCode extensions were installed automatically and I was already in Vim mode, nice. I quickly opened the file I was checking out earlier and went straight to the function. And that's when I noticed the Cursor prompt: `Cmd+L to generate, Cmd+K to chat`, without thinking twice I selected the entire method in visual mode -> `cmd+K` -> `"Explain this and let me know if this is the right place to do <my task>"` .. almost instantly I got a summarized version of that 100 line method and I got confirmation from Claude (the underlying LLM) that I was on the right track.
+Installing Cursor was blazing first, I opened the codebase, and all of my existing VSCode extensions were installed automatically and I was already in Vim mode, nice. I quickly opened the file I was checking out earlier and went straight to the function. And that's when I noticed the Cursor prompt: `Cmd+L to generate, Cmd+K to chat`, without thinking twice I selected the entire method in visual mode -> `cmd+K` -> `"Explain this and let me know if this is the right place to do <my task>"` .. almost instantly I got a summarized version of that 100 line method and I got confirmation from Claude (the underlying LLM) that I was on the right track.
 
-Next I wanted to check if Cursor understands the call hierarchy of this method and eventually how this method is invoked by the autoscaler. I am not sure how many tokens it consumed, but yes it did give me some information but it was not exactly correct, there were some methods which it mentioned which were not actually present in the codebase.
+Next, I wanted to check if Cursor understands the call hierarchy of this method and eventually how this method is invoked by the autoscaler. I am not sure how many tokens it consumed, but yes it did give me some information but it was not exactly correct, there were some methods that it mentioned that were not actually present in the codebase.
 But I was not expecting it to be correct in the first place. Most of the things it mentioned were correct and now I had a very basic understanding of the scale-up phase of the autoscaler.
 
-On this day, Cursor had saved me around an 30-40 minutes of dev effort. Rest of the coding had to be done manually, as I had to do changes in multiple files (update interfaces, change method signatures, etc), I was not really sure how to prompt Cursor for these usecases. Plus the overall codebase was quite big, so I am not sure how would Cursor do RAG just based on my prompts. Maybe I could provide a detailed prompt with which it could select the relevant files. But I felt it would be faster (and less error prone) to just do those changes manually as I knew what I had to do.
+On this day, Cursor had saved me around 30-40 minutes of dev effort. The rest of the coding had to be done manually, as I had to make changes in multiple files (update interfaces, change method signatures, etc), I was not really sure how to prompt Cursor for these use cases. Plus the overall codebase was quite big, so I am not sure how would Cursor do RAG just based on my prompts. Maybe I could provide a detailed prompt with which it could select the relevant files. But I felt it would be faster (and less error-prone) to just do those changes manually as I knew what I had to do.
 
 Plus Go being a language with excellent VSCode support (and documentation), writing code in it is always a breeze.
 
@@ -45,22 +46,22 @@ Plus Go being a language with excellent VSCode support (and documentation), writ
 To ensure my proposal around patching autoscaler works, I had to make sure that some interactions between the autoscaler and Windows EC2 node work properly. After some chatgpting and googling I was now ready to tweak the `userdata` script for Windows (generated by EKSctl). This `userdata` script configures the EC2 machine to join the K8s cluster on boot (and also does some config related tasks/cleanup). For Windows, this script was written in `PowerShell`, and this is when I became a fan of Cursor.
 
 ### Programming in Natural Language
-This time I utilised the `Cmd+L` shortcut in Cursor, and I just gave it instructions of things I wanted to do. I was not sure how to create `systemd` like services which run on reboot in Windows, so I just asked Cursor to do that. I was not sure if powershell even supported functions, So I asked Cursor to just create a function for logging and call it in relevant places. It generated the function and also updated the script to call that function.
+This time I utilized the `Cmd+L` shortcut in Cursor, and I just gave it instructions on things I wanted to do. I was not sure how to create `systemd` like services that run on reboot in Windows, so I just asked Cursor to do that. I was not sure if powershell even supported functions, So I asked Cursor to just create a function for logging and call it in relevant places. It generated the function and also updated the script to call that function.
 
-Not having to do the loop of: goto browser, goto chatgpt/google/stackoverflow, type query, read, select relevant part of code (if any), copy, paste in editor, refactor/rename variables... was a real time saver. Especially with PowerShell which I had zero experience of.
+Not having to do the loop of: goto browser, goto chatgpt/google/stackoverflow, type query, read, select the relevant part of code (if any), copy, paste in editor, refactor/rename variables... was a real time saver. Especially with PowerShell which I had zero experience of.
 
 ### Seeing Cursor Think
-Another feature I loved about Cursor is the way it processes some large chunk of code, it highlights each line as it is processing it, editing it only if it is required to do so. Instead of dumping your entire code into an LLM and replacing with the response, it seems Cursor is doing something more "intelligent". It goes over each line (or batches of lines) and highlights it neatly as it is doing so. It suggests the edit as a git diff which you can apply or reject... and then you continue a conversation while it keeps tracks of the diffs internally.
+Another feature I loved about Cursor is the way it processes large chunks of code, it highlights each line as it is processing it, editing it only if it is required to do so. Instead of dumping your entire code into an LLM and replacing it with the response, it seems Cursor is doing something more "intelligent". It goes over each line (or batches of lines) and highlights it neatly as it is doing so. It suggests the edit as a git diff which you can apply or reject... and then you continue a conversation while it keeps track of the diffs internally.
 
 ### Less tech debt with higher speed
-This reads like an ad, but using Cursor really helped me to reduce tech-debt. Most of the times I would spread out lots of `TODOs` in my code, as I don't find it relevant to spend time on things which are not actually making a noticeable impact in short term. With Cursor, instead of leaving a `TODO` in the codebase, I can just ask it to do it. For example, I asked it to `Move all logging behind a environment variable named DEBUG`.
+This reads like an ad, but using Cursor really helped me to reduce tech debt in my code. Traditionally, I would write copious amounts of `TODOs` in my code, as I don't find it relevant to spend time on things that are not actually making a noticeable impact in the short term. With Cursor, instead of leaving `TODOs` in the codebase, I can just ask it to do it. For example, I asked it to `Move all logging behind an environment variable named DEBUG`.
 
-At this point I had easily saved about 5-6 hours of effort (and pain) in writing Powershell scripts and corner cases around reboots, string escaping and exit codes. This saving may seem small, but I think it helped me deliver the final implementation 2-3 days earlier than planned, which is a lot since I had planned to deliver everything under two weeks.
+At this point, I had easily saved about 5-6 hours of effort (and pain) in writing Powershell scripts and corner cases around reboots, string escaping, and exit codes. This saving may seem small, but I think it helped me deliver the final implementation 2-3 days earlier than planned, which is a lot since I had planned to deliver everything under two weeks.
 
 ### Better Readme
-One unexpected win for Cursor was writing documentation(`README.md`). I like writing detailed documentation around anything I work on. I never really thought about how predictable or "LLMable" this task is. With just few words Cursor (or rather Claude) was able to suggest what I wanted to write. It felt stupid to not accept the suggestions. Ofcourse some suggestions were wrong, I can just write those things, I am not expecting it to complete the entire documentation on its own. Overall I saved a lot of time writing the readme and I re-invested this saved time into it again to make the documentation even better.
+One unexpected win for Cursor was writing documentation(`README.md`). I like writing detailed documentation around anything I work on. I never really thought about how predictable or "LLMable" this task is. With just a few words Cursor (or rather Claude) was able to suggest what I wanted to write. It felt stupid to not accept the suggestions. Of course, some suggestions were wrong, I can just write those things, I am not expecting it to complete the entire documentation on its own. Overall I saved a lot of time writing the readme and I re-invested this saved time into it again to make the documentation even better.
 
 # Final Thoughts
-Having AI integration right into the IDE is a game changer. Dealing with "text" is what LLMs are great at and coding is just "text" data, so IMO AI will have a massive impact on coding (especially via these AI first IDEs). I don't think this postively about tools like Devin which claim to do pretty much anything related to coding. I am willing to bet that tools which improve humans will actually thrive more than the tools which aim to replace humans.
+Having AI integration right into the IDE is a game changer. Dealing with "text" is what LLMs are great at and coding is just "text" data, so IMO AI will have a massive impact on coding (especially via these AI-first IDEs). I don't think this positively about tools like Devin which claim to do pretty much anything related to coding. I am willing to bet that tools that improve humans will actually thrive more than the tools that aim to replace humans.
 
-Using Cursor was a massive productivity boost for me which I had not really anticipated (even after using chatgpt extensively) and I recommend anyone who has already written a lot of code to give it a shot (I don't recommend using any AI tool for beginners).
+Using Cursor was a massive productivity boost for me which I had not really anticipated (even after using ChatGPT extensively), and I am happy to recommend it to any developer who has considerable coding experience. As for new developers, please stick to non-AI tools for now as it can really hinder your learning experience.
