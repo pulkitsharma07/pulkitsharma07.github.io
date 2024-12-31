@@ -12,7 +12,7 @@ A little background, For those who are not aware `Cursor` is an AI-first fork of
 I guess I am late to the party, but I never really gave any of these AI IDEs a shot...until now.
 
 # A New Codebase
-At work, we were exploring approaches to quickly spawn up nodes in one of our K8s cluster. The Windows EC2 machines in particular take a looong time to boot up ( > 15 minutes sometimes). Although AWS provides [ Windows FastLaunch](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/win-ami-config-fast-launch.html), it's not that fast, and sometimes the nodes fail to bootup. 
+At work, we were exploring approaches to quickly spawn up nodes in one of our K8s cluster. The Windows EC2 machines in particular take a looong time to boot up ( > 15 minutes sometimes). Although AWS provides [ Windows FastLaunch](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/win-ami-config-fast-launch.html), but it has limitations on how frequently you can launch new machines and the boot up time was still quite high for our usecase.
 In k8s, the component which spawns new nodes when needed is the `autoscaler`. It is written in Golang (as most of the K8s codebase) and calls the underlying cloud provider APIs (AWS, GCP, Azure etc) to spawn new nodes when needed, i.e. when there are pending pods in the cluster. Another well known auto-scaling solution for K8s is `Karpenter`.
 
 I had proposed an idea to the team to patch `autoscaler` for our custom usecase. I had never contributed to any K8s internals land all of this was pretty new to me. The autoscaler repo has a pretty good readme for end users, but it doesn't have much information about its code architecture, or maybe it has but I wasn't able to find it.
