@@ -1,11 +1,13 @@
 ---
 layout: page
-title: Work
-permalink: /work/
+title: Tech
+permalink: /tech/
 layout: single
 classes: wide
 author_profile: true
 ---
+
+The following is a list of technologies I have worked with (professionally and personally) over the years.
 
 ## Development
 *Frontend*: React, Next.js, Svelte, Tailwind CSS, Shadcn UI
