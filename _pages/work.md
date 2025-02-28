@@ -2,6 +2,9 @@
 layout: page
 title: Work
 permalink: /work/
+layout: single
+classes: wide
+author_profile: true
 ---
 
 ## Development
