@@ -3,5 +3,7 @@
 main:
   - title: "About"
     url: /about/
+  - title: "Work"
+    url: /work/
   - title: "Categories"
     url: /categories/
