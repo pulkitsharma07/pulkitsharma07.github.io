@@ -120,7 +120,7 @@ My learnings from this project has reinforced what I knew theoretically from cou
 * Do not build something which you will not use yourself.
 
 ### Open Sourcing
-After making exactly 0 dollars (and spending around 20 dollars on domain, infra & LLM tokens), I decided to stop working on it further. On the bright side I learnt a lot of things around web development, UI/UX and marketing. I never had any big hopes to begin with, so I did not feel like some kind of failure at the end of this all. If this would have taken off, I would be really happy with it. If you are interested here is the Github Repo: https://github.com/pulkitsharma07/spelltastic.io and the website is live here: https://spelltastic.io.
+After making exactly 0 dollars (and spending around 20 dollars on domain, infra & LLM tokens), I decided to stop working on it further. On the bright side I learnt a lot of things around web development, UI/UX and marketing. I never had any big hopes to begin with, so I did not feel like some kind of failure at the end of this all. If this would have taken off, I would be really happy with it. If you are interested here is the Github Repo: [https://github.com/pulkitsharma07/spelltastic.io](https://github.com/pulkitsharma07/spelltastic.io) and the website is live here: [https://spelltastic.io](https://spelltastic.io).
 
 If you plan to build something using this or want to discuss some other ideas, please reach out to me !
 
