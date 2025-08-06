@@ -1,5 +1,5 @@
 ---
-title: "You can't lose if you didn't set out to win"
+title: "You Can't Lose If You Didn't Set Out To Win"
 date: Mon 31 Mar 2025 21:46:50 IST 
 description: A tale about a side-project which I built to learn more about frontend development and marketing.
 categories: personal 
