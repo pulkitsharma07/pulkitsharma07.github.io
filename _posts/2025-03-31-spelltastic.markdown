@@ -67,21 +67,7 @@ But all this was not generating a single visit on my website. I had a free no si
 ### Reddit
 After some days I got an idea to do a "free page scanning" post on one of the sub reddits for indiehackers and builders. That post got pretty good response, I scanned close to 30 websites. The product was working, the people were happy with the issues it was finding but again no one actually signed up :-(
 
-Eventually I posted again on Reddit to get some guidance around the product and how to launch it. I got some really good and constructive feedback. The common theme here was "vitamin vs painkiller" analogy, almost everyone felt that this product is a vitamin and not a painkiller. And they were right, I found several landing pages with some mistakes, but those were not "critical" mistakes in order to catch anyone's attention. Most of the product on a baseline had good enough "copy" (that's what they call the "landing page copy" in the marketing world).
-
-### Urges
-I did some more iterations on the product (thanks to rapid developmen with Cursor), I thought maybe the landing page is not intuitive, or maybe the feature descriptions are missing logos and numerous other reasons as to why I am not getting any users. In a non-AI world, I would not have spent so much time on the UI, as it takes a lot of time to do manually (for me). But with Cursor, I was just acting like a frantic product manager asking my dev team to create multiple alternatives hoping something would just work.
-
-I then did a small course on  SEO with NextJS and created dedicated pages, like "free landing page scanner". I scanned some more websites and sent cold emails to some of the founders/agencies who were developing websites in order to get their attention. I create a new LinkedIn account and reached out to some web dev agency owners, but none replied. I spent a lot of time to go through their projects, find their org structure, and determine the correct people to reach out to.
-
-At one point I had to resist the urge to automate the entire chain:
-1. get newly launched websites from ProductHunt.
-2. Scan their landing pages.
-3. If there are any issues found, create a publicly shareable link.
-4. Fetch email ids from Apollo or similar websites.
-5. Send them a personalised email with the link to their report.
-    * utilising LLMs for create the mail content etc.
-6. Add tracking params to these links and send an alert if someone visits / creates an account etc.
+Eventually I posted again on Reddit to get some guidance around the product and how to launch it. I got some really good and constructive feedback. The common theme here was "vitamin vs painkiller" analogy, almost everyone felt that this product is a vitamin and not a painkiller. And they were right, I found several landing pages with some mistakes, but those were not "critical" mistakes in order to catch anyone's attention. Most of the product on a baseline had good enough "copy" (that's what they call the "text" in the marketing world).
 
 ### Product Hunt and The Growth Hacker Call
 Without any other option in sight, I decided to launch on Product Hunt (and similar alternatives). That's when I realised the sheer amount of products which are being launched everyday...do people use these ? Are there so many people searching for new products everyday ? voting, commenting on products, giving feedback ?
@@ -91,20 +77,52 @@ The only thing I could understand from all this was the need for someone to "hun
 
 So I reached out to one very famous growth hacker / product hunter on LinkedIn and we connected over a call. He gave some good inputs, but eventually it came down to the "offerings". They had different packages, under some packages they would create high quality Reddit posts from high Karma users to boost visibility and under some they would completely take over your marketing (SEO, blogs, etc), other ones would provide high quality backlinks to the website. There were lots of "tactics" under this so called "Growth Hacking" strategy and according to him that's the only way to get a new unknown product out in the world.
 
-That's when I decided that I am too deep in this rabbit hole for now...
+## Vibe Coding Bike Shedding
+
+After the call with the growth hacker, I decided it's time to make the product really good, I won't fall for these cheap growth tactics (not actually cheap, they cost $$$).
+
+So anyways I did not stop at just making a basic Chrome Extension, I went on to create screenshots, demo videos, and logo for the extension. 
+
+I did some more iterations on the landing page, I thought I am not getting users because the feature descriptions are missing nice logos or maybe I am missing an FAQ section or maybe my pricing page is not looking good on a mobile device..
+
+In a non-AI world, I would not have spent so much time on these useless improvements, as it takes a lot of time to do changes on the UI (for me), but armed with a paid 1 year Cursor plan, I was not going to stop..
+
+Basically with frontend there is a lot of trial and error involved to get things to look how you imagine it in your head. That's not the case for me when writing non-web code (like an API endpoint, CLI, script, SQL, etc), you sort of know the exact way things will work (barring some non determinism due to infra related issues for instance). Maybe experienced frontend developers can just write tailwindCSS code and it works the first time in the browser, but for me it's a lot of trial and error (even with the help from Cursor).
+
+But because of Cursor, I was just acting like a frantic product manager asking my dev team (me) to do random changes on the frontend. Like create a toggle for dark mode etc, I thought these things were easy to implement, just change some CSS variables and BOOM now your entire website is in dark mode... But no, that's not how it works..
+
+I was going to dive into A/B testing my landing page but thankfully I stopped and then I did a course on SEO with NextJS :-) . I created dedicated pages, like "free landing page scanner".
+
+I integrated OpenGraph meta tags to create link previews for reports, blogs and other sections of the page. I wanted my imaginary users to have a good experience when they would share my reports in their non existing company Slack channels... All this because of Cursor, it fed my ADHD all day everyday and kept my dopamine receptors fried.
+
+I scanned some more websites and sent cold emails to some of the founders/agencies who were building in public, in order to get their attention. I create a new LinkedIn account and reached out to some web dev agency owners, but none replied. I spent a lot of time to go through their projects, find their org structure, and determine the correct people to reach out to.
+
+At one point I had to resist the urge to automate the entire chain:
+
+1. get newly launched websites from ProductHunt.
+2. Scan their landing pages.
+3. If there are any issues found, create a publicly shareable link.
+4. Fetch email ids from Apollo or similar websites.
+5. Send them a personalised email with the link to their report.
+    * utilising LLMs for create the mail content etc.
+6. Add tracking params to these links and send an alert if someone visits / creates an account etc.
+
+I was going to vibe code this away, but then I stopped.
+
 
 ## Giving Up
-I did a "Show HN" on HackerNews as one last attempt to get some traction and as you might have guessed, it did not get any attention. I did not want to spend more time on marketing the product, as all those felt shots on the dark. My learnings from this project has reinforced what I knew theoretically from countless other blogs posts and tips:
+I did a "Show HN" on HackerNews as one last attempt to get some traction and as you might have guessed, it did not get any attention. I did not want to spend more time on marketing the product, as all those felt shots on the dark.
 
-* Building a product is not the hard part, it's getting users to use it and even harder: getting users to pay for it.
-* Get users first before building.
-* Do not build something which you will not use.
+My learnings from this project has reinforced what I knew theoretically from countless other blogs posts and tips:
+
+* Building a product is not the hard part in most cases, it's getting users to use it and even harder: getting users to pay for it.
+* So get users first before building anything. I don't have any answer or secret formula for this. Most of the times the users are not searching for a product. It depends on a lot of factors.
+* Do not build something which you will not use yourself.
 
 ### Open Sourcing
-
-After making exactly 0 dollars (and spending around 20 dollars on domain, infra & LLM tokens), I decided to stop working on it further. On the bright side I learnt a lot of things around development, UI/UX and marketing. I never had any big hopes to begin with, so I did not feel like some kind of failure at the end of this all. If this would have taken off, I would be really happy with it. If you are interested here is the Github Repo: https://github.com/pulkitsharma07/spelltastic.io and the website is live here: https://spelltastic.io.
+After making exactly 0 dollars (and spending around 20 dollars on domain, infra & LLM tokens), I decided to stop working on it further. On the bright side I learnt a lot of things around web development, UI/UX and marketing. I never had any big hopes to begin with, so I did not feel like some kind of failure at the end of this all. If this would have taken off, I would be really happy with it. If you are interested here is the Github Repo: https://github.com/pulkitsharma07/spelltastic.io and the website is live here: https://spelltastic.io.
 
 If you plan to build something using this or want to discuss some other ideas, please reach out to me !
 
 ### Is this Blog part of the growth strategy for the product ?
-For the curious ones, no. This post is not in any way to get any growth for my product. I am writing this blog to document my journey and learnings from this project (and writing a retrospective post at the end of it all was always the goal). If anything, this blog post is a growth strategy for my personal self, so that people can know the kind of things I have worked on / built and my thought process behind those. This blog post is being written to close the loop on this entire thing.
+Good point ! But, No. This post is not in any way to get any growth for my product. I am writing this blog to document my journey and learnings from this project, writing a retrospective post at the end of it all was always my goal. If anything, this blog post is a growth strategy for my personal brand, so that people can know the kind of things I have worked on / built / regretted and my thought process behind those. This blog post is being written to close the loop on this entire thing.
